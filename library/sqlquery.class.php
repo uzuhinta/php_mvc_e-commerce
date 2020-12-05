@@ -19,7 +19,8 @@ class SQLQuery {
 
     /** Connects to database **/
 	
-    function connect($address, $account, $pwd, $name) {
+    function connect($address, $account, $pwd, $name): int
+    {
         $this->_dbHandle = mysqli_connect($address, $account, $pwd);
         if ($this->_dbHandle != null) {
             if (mysqli_select_db($this->_dbHandle ,$name)) {
@@ -36,7 +37,8 @@ class SQLQuery {
  
     /** Disconnects from database **/
 
-    function disconnect() {
+    function disconnect(): int
+    {
         if (mysqli_close($this->_dbHandle) != 0) {
             return 1;
         }  else {
@@ -314,7 +316,8 @@ class SQLQuery {
 
     /** Delete an Object **/
 
-	function delete() {
+	function delete(): int
+    {
 		if ($this->id) {
 			$query = 'DELETE FROM '.$this->_table.' WHERE `id`=\''.mysqli_real_escape_string($this->_dbHandle,$this->id).'\'';		
 			$this->_result = mysqli_query( $this->_dbHandle, $query);

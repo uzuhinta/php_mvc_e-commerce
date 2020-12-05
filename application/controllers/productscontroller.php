@@ -15,6 +15,15 @@ class ProductsController extends VanillaController {
 		
 	}
 
+    function page ($pageNumber = 1) {
+        $this->Product->setPage($pageNumber);
+        $this->Product->setLimit('2');
+        $products = $this->Product->search();
+        $totalPages = $this->Product->totalPages();
+        $this->set('totalPages',$totalPages);
+        $this->set('products',$products);
+        $this->set('currentPageNumber',$pageNumber);
+    }
 
 	function afterAction() {
 

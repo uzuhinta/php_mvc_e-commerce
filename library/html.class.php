@@ -20,7 +20,7 @@ class HTML {
 	}
 
 	function sanitize($data) {
-		return mysql_real_escape_string($data);
+		return mysqli_real_escape_string($data);
 	}
 
 	function link($text,$path,$prompt = null,$confirmMessage = "Are you sure?") {
@@ -33,13 +33,14 @@ class HTML {
 		return $data;
 	}
 
-	function includeJs($fileName) {
-		$data = '<script src="'.BASE_PATH.'/js/'.$fileName.'.js"></script>';
+    function includeJs($fileName) {
+        $data = '<script src="'.BASE_PATH.'/js/'.$fileName.'.js'.'"> </script>';
 		return $data;
 	}
 
 	function includeCss($fileName) {
-		$data = '<style href="'.BASE_PATH.'/css/'.$fileName.'.css"></script>';
+        $data = '<style src="'.BASE_PATH.'/css/'.$fileName.'.css'.'"> </style>';
+//		$data = '<style href="'.BASE_PATH.'/css/'.$fileName.'.css"></style>';
 		return $data;
 	}
 }

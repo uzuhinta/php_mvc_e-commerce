@@ -101,3 +101,55 @@ INSERT INTO `tags` VALUES(1, 'Tag A');
 INSERT INTO `tags` VALUES(2, 'Tag B');
 INSERT INTO `tags` VALUES(3, 'Tag C');
 INSERT INTO `tags` VALUES(4, 'Tag D');
+-- 00000000000000000000000000000000
+
+CREATE TABLE `users` (
+    `id` int(10) unsigned NOT NULL auto_increment,
+    `name` varchar(45) NOT NULL,
+    `status` varchar(45) NOT NULL default "OFF",
+    `role` varchar(45) NOT NULL default "users",
+    `phone` varchar(45) NOT NULL default "123456",
+    `address` varchar(45) NOT NULL default "dia chi",
+    `avatar_id` varchar(45) NOT NULL default 1,
+    PRIMARY KEY (`id`)
+);
+
+INSERT INTO `users` (id, name) VALUES (1, "Quan A");
+INSERT INTO `users` (id, name) VALUES (2, "Quan B");
+INSERT INTO `users` (id, name) VALUES (3, "Quan C");
+INSERT INTO `users` (id, name) VALUES (4, "Quan D");
+
+CREATE TABLE `avatars` (
+    `id` int(10) unsigned NOT NULL auto_increment,
+    `name` varchar(45) NOT NULL,
+    PRIMARY KEY (`id`)
+)
+
+INSERT INTO `avatars` VALUES (1, "AVATAR A1");
+INSERT INTO `avatars` VALUES (2, "AVATAR A2");
+INSERT INTO `avatars` VALUES (3, "AVATAR A3");
+INSERT INTO `avatars` VALUES (4, "AVATAR A4");
+INSERT INTO `avatars` VALUES (5, "AVATAR A5");
+INSERT INTO `avatars` VALUES (6, "AVATAR A6");
+
+CREATE TABLE `orders` (
+    `id` int(10) unsigned NOT NULL auto_increment,
+    `user_id` int(10) unsigned NOT NULL,
+    `date` datetime default CURRENT_TIMESTAMP,
+    PRIMARY KEY (`id`)
+)
+
+INSERT INTO `orders` (id, user_id) VALUES (1, 1);
+INSERT INTO `orders` (id, user_id) VALUES (2, 2);
+INSERT INTO `orders` (id, user_id) VALUES (3, 3);
+
+CREATE TABLE `categories` (
+    `id` int(10) unsigned NOT NULL auto_increment,
+    `name` varchar(45) NOT NULL,
+    PRIMARY KEY (`id`)
+)
+
+INSERT INTO `categories` VALUES (1, "categories A1");
+INSERT INTO `categories` VALUES (2, "categories A2");
+INSERT INTO `categories` VALUES (3, "categories A3");
+

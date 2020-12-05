@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f6f20645-18e4-4857-9f89-545b7ea388e4" name="Default Changelist" comment="" />
+    <list default="true" id="f6f20645-18e4-4857-9f89-545b7ea388e4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/application/controllers/orderscontroller.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/controllers/userscontroller.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/models/order.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/models/user.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/views/orders/view.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/views/products/page.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/views/users/view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/productscontroller.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/productscontroller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/categories/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/categories/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/framework-20090330111635.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db/framework-20090330111635.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/html.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/html.class.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/sqlquery.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/sqlquery.class.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/describecategories" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/describecategories" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -9,6 +24,9 @@
   </component>
   <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
     <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpDebugGeneral" xdebug_debug_port="9090" />
   <component name="PhpServers">
@@ -20,6 +38,7 @@
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
   <component name="PhpXdebugProxy" ide_key="PHPSTORM" />
   <component name="ProjectId" id="1l6wxOgRC34nRSy3RnSeR3gM8pB" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -35,9 +54,25 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../week3mvc" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.debug" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -54,11 +89,26 @@
       <workItem from="1606989123044" duration="239000" />
       <workItem from="1606989613583" duration="6225000" />
       <workItem from="1607017001442" duration="733000" />
+      <workItem from="1607017751591" duration="727000" />
+      <workItem from="1607070115043" duration="4928000" />
+      <workItem from="1607130560237" duration="18093000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -70,28 +120,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/library/cache.class.php</url>
-          <line>4</line>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/library/cache.class.php</url>
           <line>16</line>
           <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/application/models/category.php</url>
-          <line>3</line>
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/application/models/category.php</url>
-          <line>4</line>
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/library/sqlquery.class.php</url>
-          <line>253</line>
-          <option name="timeStamp" value="22" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/application/controllers/categoriescontroller.php</url>
@@ -100,38 +130,85 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/application/views/categories/index.php</url>
-          <line>7</line>
+          <line>9</line>
           <option name="timeStamp" value="27" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/library/shared.php</url>
-          <line>74</line>
-          <option name="timeStamp" value="30" />
+          <line>98</line>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/library/inflection.class.php</url>
+          <line>154</line>
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/library/cache.class.php</url>
+          <line>4</line>
+          <option name="timeStamp" value="44" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/library/shared.php</url>
-          <line>73</line>
-          <option name="timeStamp" value="31" />
+          <line>102</line>
+          <option name="timeStamp" value="48" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/library/shared.php</url>
-          <line>84</line>
-          <option name="timeStamp" value="32" />
+          <url>file://$PROJECT_DIR$/library/inflection.class.php</url>
+          <line>92</line>
+          <option name="timeStamp" value="49" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/library/shared.php</url>
-          <line>85</line>
-          <option name="timeStamp" value="33" />
+          <url>file://$PROJECT_DIR$/library/inflection.class.php</url>
+          <line>100</line>
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/library/inflection.class.php</url>
+          <line>109</line>
+          <option name="timeStamp" value="51" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/library/sqlquery.class.php</url>
+          <line>255</line>
+          <option name="timeStamp" value="52" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/library/html.class.php</url>
+          <line>32</line>
+          <option name="timeStamp" value="53" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/application/views/categories/index.php</url>
+          <option name="timeStamp" value="54" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/application/views/categories/index.php</url>
+          <line>15</line>
+          <option name="timeStamp" value="57" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/application/controllers/userscontroller.php</url>
+          <line>10</line>
+          <option name="timeStamp" value="60" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/application/controllers/orderscontroller.php</url>
+          <line>9</line>
+          <option name="timeStamp" value="62" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="index.php">
-        <watch expression="$inflect" language="PHP" />
-        <watch expression="$this-&gt;_result" language="PHP" />
-        <watch expression="$this-&gt;_table" language="PHP" />
-        <watch expression="$this-&gt;_model" language="PHP" />
+        <watch expression="$this-&gt;variables" language="PHP" />
+        <watch expression="extract($this-&gt;variables)" language="PHP" />
+        <watch expression="$categories" language="PHP" />
+        <watch expression="$data" language="PHP" />
       </configuration>
+      <inline-watch fileUrl="file://$PROJECT_DIR$/library/sqlquery.class.php" line="96">
+        <watch expression="$singularAlias" language="PHP" />
+      </inline-watch>
     </watches-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
