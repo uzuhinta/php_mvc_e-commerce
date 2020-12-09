@@ -8,9 +8,7 @@
 
     </div>
     <?php endforeach?>
-<!--    <script src=" --><?php //echo $html->includeJs() ?><!-- "></script>-->
+
     <?php echo $html->includeJs("generic"); ?>
 
 </div>
-
-

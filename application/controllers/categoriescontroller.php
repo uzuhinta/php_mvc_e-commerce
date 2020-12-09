@@ -19,7 +19,6 @@ class CategoriesController extends VanillaController {
 	
 		$this->set('subcategories',$subcategories);
 		$this->set('category',$category);
-
 	}
 	
 	

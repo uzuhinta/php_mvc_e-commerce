@@ -123,7 +123,7 @@ CREATE TABLE `avatars` (
     `id` int(10) unsigned NOT NULL auto_increment,
     `name` varchar(45) NOT NULL,
     PRIMARY KEY (`id`)
-)
+);
 
 INSERT INTO `avatars` VALUES (1, "AVATAR A1");
 INSERT INTO `avatars` VALUES (2, "AVATAR A2");
@@ -137,7 +137,7 @@ CREATE TABLE `orders` (
     `user_id` int(10) unsigned NOT NULL,
     `date` datetime default CURRENT_TIMESTAMP,
     PRIMARY KEY (`id`)
-)
+);
 
 INSERT INTO `orders` (id, user_id) VALUES (1, 1);
 INSERT INTO `orders` (id, user_id) VALUES (2, 2);
@@ -147,7 +147,7 @@ CREATE TABLE `categories` (
     `id` int(10) unsigned NOT NULL auto_increment,
     `name` varchar(45) NOT NULL,
     PRIMARY KEY (`id`)
-)
+);
 
 INSERT INTO `categories` VALUES (1, "categories A1");
 INSERT INTO `categories` VALUES (2, "categories A2");

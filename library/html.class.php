@@ -33,14 +33,31 @@ class HTML {
 		return $data;
 	}
 
+	function linkSrc($model, $action, $param = null){
+//	    $data = '"' .BASE_PATH . '/' . $model . '/' . $action . '.php' . '"';
+	    if($param){
+
+        }else{
+            $data = '"' .BASE_PATH . '/' . $model . '/' . $action  . '"';
+        }
+	    return $data;
+    }
+
     function includeJs($fileName) {
         $data = '<script src="'.BASE_PATH.'/js/'.$fileName.'.js'.'"> </script>';
 		return $data;
 	}
 
 	function includeCss($fileName) {
-        $data = '<style src="'.BASE_PATH.'/css/'.$fileName.'.css'.'"> </style>';
-//		$data = '<style href="'.BASE_PATH.'/css/'.$fileName.'.css"></style>';
+        $data = '<link rel="stylesheet" href="'.BASE_PATH.'/css/'.$fileName.'.css'.'"> </link>';
 		return $data;
 	}
+
+    function includeImg($fileName) {
+//        src="img/LogoPingPong.png"
+        $data = 'src="'.BASE_PATH.'/img/'.$fileName.'.png'.'"';
+        return $data;
+    }
+
+
 }

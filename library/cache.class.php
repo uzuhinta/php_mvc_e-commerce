@@ -1,6 +1,5 @@
 <?php
 class Cache {
-
 	function get($fileName) {
 		$fileName = ROOT.DS.'tmp'.DS.'cache'.DS.$fileName;
 		if (file_exists($fileName)) {
@@ -12,12 +11,10 @@ class Cache {
 			return null;
 		}
 	}
-	
 	function set($fileName,$variable) {
 		$fileName = ROOT.DS.'tmp'.DS.'cache'.DS.$fileName;
 		$handle = fopen($fileName, 'a');
 		fwrite($handle, serialize($variable));
 		fclose($handle);
 	}
-
 }
