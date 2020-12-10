@@ -23,12 +23,17 @@ class CategoriesController extends VanillaController {
 	
 	
 	function index() {
-		$this->Category->orderBy('name','ASC');
-		$this->Category->showHasOne();
-		$this->Category->showHasMany();
-		$this->Category->where('parent_id','0');
-		$categories = $this->Category->search();
-		$this->set('categories',$categories);
+        session_start();
+	    if(isset($_SESSION["loggedin"])){
+            $this->Category->orderBy('name','ASC');
+            $this->Category->showHasOne();
+            $this->Category->showHasMany();
+            $this->Category->where('parent_id','0');
+            $categories = $this->Category->search();
+            $this->set('categories',$categories);
+            var_dump($categories);
+        }
+
 	
 	}
 

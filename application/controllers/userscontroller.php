@@ -15,13 +15,15 @@ class UsersController extends VanillaController {
     }
 
     function index(){
-        $this->doNotRenderHeader=1;
     }
 
     function login(){
-        $fdsfsa = 1;
-        echo $fdsfsa;
-        header('Location: http://www.example.com/');
+        session_start();
+        if($_POST["uname"]  == "q"){
+            $_SESSION["loggedin"] = true;
+            header('Location: http://localhost/framework/categories');
+        }
+
     }
 
     function afterAction() {

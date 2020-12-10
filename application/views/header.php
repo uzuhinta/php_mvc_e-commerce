@@ -16,6 +16,7 @@
     <meta charset="UTF-8"/>
     <title>Ping Pong</title>
     <?php echo $html->includeCss("header"); ?>
+    <?php echo $html->includeCss("style_login"); ?>
 </head>
 <body>
 <div class="container">
