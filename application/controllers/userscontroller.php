@@ -16,21 +16,22 @@ class UsersController extends VanillaController
         $this->set('user', $user);
     }
 
-    function index()
-    {
-    }
 
     function home()
     {
     }
 
+    function register()
+    {
+    }
+
     function login()
     {
-        session_start();
-        if ($_POST["uname"]  == "q") {
-            $_SESSION["loggedin"] = true;
-            header('Location: http://localhost/framework/categories');
-        }
+        // session_start();
+        // if ($_POST["uname"]  == "q") {
+        //     $_SESSION["loggedin"] = true;
+        //     header('Location: http://localhost/framework/categories');
+        // }
     }
 
     function afterAction()

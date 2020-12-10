@@ -1,5 +1,5 @@
 <div id="main">
-    <img src="img/nen1.jpg" alt="No" class="image_main" />
+    <img <?php echo $html->includeImg("nen1", "jpg"); ?> alt="No" class="image_main" />
     <card>
         <form class="login-form" autocomplete="off" action="#">
             <p class="title">Đăng nhập ngay mua liền tay</p>
