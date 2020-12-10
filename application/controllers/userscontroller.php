@@ -20,6 +20,10 @@ class UsersController extends VanillaController
     {
     }
 
+    function home()
+    {
+    }
+
     function login()
     {
         session_start();
