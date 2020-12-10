@@ -1,114 +1,49 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>My E-Commerce Website</title>
-<style>
-html, body, div, span, applet, object, iframe,
-h2, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, font, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	outline: 0;
-	font-weight: inherit;
-	font-style: inherit;
-	font-size: 100%;
-	font-family: inherit;
-	vertical-align: baseline;
-}
-/* remember to define focus styles! */
-:focus {
-	outline: 0;
-}
-body {
-	line-height: 1;
-	color: black;
-	background: white;
-	
-}
-ol, ul {
-	list-style: none;
-}
-
-table {
-	border-collapse: separate;
-	border-spacing: 0;
-}
-caption, th, td {
-	text-align: left;
-	font-weight: normal;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: "";
-}
-blockquote, q {
-	quotes: "" "";
-}
-html { overflow: -moz-scrollbars-vertical; }
-html { overflow-x: auto; }
-
-
-
-h1 {
-color:#000000;
-font-family: Cambria, serif;
-font-size: 34px;
-font-style: normal;
-font-weight: bold;
-text-transform: uppercase;
-letter-spacing: 1px;
-line-height: 1.7em;
-padding:0;
-margin:0;
-padding:10px;
-}
-
-h2 {
-color:#000000;
-font-family: Cambria, serif;
-font-size: 14px;
-font-style: normal;
-font-weight: bold;
-text-transform: uppercase;
-letter-spacing: 1px;
-line-height: 1.7em;
-padding:0;
-margin:0;
-padding:10px;
-}
-
-.category {
-font-family: Georgia, "Times New Roman", Times, serif;
-margin:10px;
-margin-left:0px;
-margin-bottom:20px;
-}
-
-.tag {
-font-family: Georgia, "Times New Roman", Times, serif;
-
-padding:10px;
-}
-
-.category a {
-font-size:14px;
-padding:10px;
-color:#333333;
-text-decoration:none;
-}
-
-.category a:hover{ 
-background-color:#FFFF33
-}
-	</style>
+	<meta charset="UTF-8" />
+	<title>Ping Pong</title>
+	<?php echo $html->includeCss("header"); ?>
 </head>
 
 <body>
-<div class="navigation"><h1>My E-Commerce Website</h1>
+	<div class="container">
+		<header>
+			<div class="header">
+				<ul>
+					<li id="logo">
+						<a href="#"><img width="160" height="85" <?php echo $html->includeImg("LogoPingPong"); ?> alt="No" /></a>
+					</li>
+					<li>
+						<a href="#">
+							<img width="160" height="50" <?php echo $html->includeImg("LogotenTrangchu"); ?> alt="No" /></a>
+					</li>
+					<li>
+						<a href="#">
+							<img width="180" height="50" <?php echo $html->includeImg("Logohomnayangi"); ?> alt="No" /></a>
+					</li>
+					<li>
+						<a href="#">
+							<img width="200" height="50" <?php echo $html->includeImg("LogoSieusalesieuhot"); ?> alt="No" /></a>
+					</li>
+					<li>
+						<a href="#">
+							<img width="120" height="45" <?php echo $html->includeImg("logoLienhe"); ?> alt="No" /></a>
+					</li>
+				</ul>
+				<div class="header-right">
+					<ul>
+						<li>
+							<a href="#">
+								<img width="120" height="45" <?php echo $html->includeImg("dangnhap"); ?> alt="No" /></a>
+						</li>
+						<li>
+							<a href="#">
+								<img width="120" height="45" <?php echo $html->includeImg("dangky"); ?> alt="No" /></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</header>
+	</div>
