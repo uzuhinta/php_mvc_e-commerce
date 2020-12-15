@@ -37,11 +37,11 @@
             <div class="header-right">
                 <ul>
                     <li>
-                        <a href="#">
+                        <a href=<?php echo $html->linkSrc("users", "login") ?>>
                             <img width="120" height="45" <?php echo $html->includeImg("dangnhap", "png"); ?> alt="No" /></a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href=<?php echo $html->linkSrc("users", "register") ?>>
                             <img width="120" height="45" <?php echo $html->includeImg("dangky", "png"); ?> alt="No" /></a>
                     </li>
                 </ul>
