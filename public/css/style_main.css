@@ -1,0 +1,98 @@
+main .header-main {
+    padding: 0px;
+    height: 423px;
+}
+
+main .header-main input {
+    width: 900px;
+    height: 50px;
+    border: 1px solid white;
+    background-color: white;
+    text-decoration-color: #ff0000;
+    position: fixed;
+    top: 50%;
+    left: 20%;
+    border-radius: 15px;
+    opacity: 0.7;
+    font-size: 20px;
+    background-image: url("img/iconSearch.png");
+    background-position: 10px 15px;
+    background-size: 60px;
+    background-repeat: no-repeat;
+    padding: 10px 20px 10px 70px;
+    position: absolute;
+}
+
+main .header-maininput[type="text"]:focus {
+    border: 1px solid white;
+}
+
+.image_main {
+    width: 100%;
+    position: relative;
+    height: 100%;
+}
+
+main .header-bottom .header-bottom-left {
+    float: left;
+}
+main .header-bottom .header-bottom-right {
+    background: white;
+    float: left;
+}
+
+main .header-bottom .header-bottom-right ul {
+    list-style: none;
+}
+
+main .header-bottom .header-bottom-right ul li {
+    float: right;
+    margin: 25px;
+    border-radius: 5%;
+}
+
+main .header-bottom .header-bottom-right ul li .test {
+    border-radius: 15%;
+    border: 2px solid #ff0000;
+    background: #ff0000;
+}
+
+main .header-bottom .header-bottom-right ul li .test a img {
+    border-radius: 16%;
+}
+
+main .header-bottom .header-bottom-right ul li .test .content {
+    font-size: 15px;
+}
+
+.name {
+    text-align: right;
+    margin: 5px;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+
+    font-weight: bold;
+}
+
+.price {
+    margin: 5px;
+}
+
+.priceStart {
+    color: #fff;
+    font-size: 13px;
+    text-decoration: line-through;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+.priceEnd {
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+#first {
+    margin-left: 15px;
+}

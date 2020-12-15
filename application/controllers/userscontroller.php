@@ -18,12 +18,20 @@ class UsersController extends VanillaController {
     }
 
     function login(){
-        session_start();
-        if($_POST["uname"]  == "q"){
+//        session_start();
+//        if($_POST["uname"]  == "q"){
             $_SESSION["loggedin"] = true;
-            header('Location: http://localhost/framework/categories');
-        }
+//            header('Location: http://localhost/framework/categories');
+//        }
 
+    }
+
+    function home(){
+
+    }
+
+    function register(){
+//        var_dump("fsafdsfas");
     }
 
     function afterAction() {

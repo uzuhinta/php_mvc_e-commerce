@@ -1,28 +1,25 @@
 * {
   padding: 0;
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 18px;
 }
 
 .container {
-  width: 1283px;
+  width: 100%;
   margin: 0 auto;
 }
 
-header {
-  padding: 0px;
-}
-
-header .header-top {
+header .header {
   background: #ff0000;
   height: 90px;
 }
 
-header .header-top ul {
+header .header ul {
   list-style: none;
 }
 
-header .header-top ul li {
+header .header ul li {
   float: left;
   padding: 0px;
   margin: 15px;
@@ -32,111 +29,13 @@ header .header-top ul li {
   margin: 0px;
 }
 
-header .header-top ul a {
+header .header ul a {
   color: #fff;
   font-size: 12px;
   text-decoration: none;
 }
 
-header .header-top-right ul li {
+header .header-right ul li {
   float: right;
   margin: 20px;
-}
-
-header .header-main {
-  padding: 0px;
-  height: 423px;
-}
-
-input {
-  width: 900px;
-  height: 50px;
-  border: 1px solid white;
-  background-color: white;
-  text-decoration-color: #ff0000;
-  position: fixed;
-  top: 35%;
-  left: 20%;
-  border-radius: 15px;
-  opacity: 0.7;
-  font-size: 20px;
-  font-family: "Courier New", Courier, monospace;
-  background-image: url("img/iconSearch.png");
-  background-position: 10px 15px;
-  background-size: 60px;
-  background-repeat: no-repeat;
-  padding: 10px 20px 10px 70px;
-  position: absolute;
-}
-
-input[type="text"]:focus {
-  border: 1px solid white;
-}
-
-.image_main {
-  position: relative;
-}
-
-header .header-bottom .header-bottom-left {
-  float: left;
-}
-header .header-bottom .header-bottom-right {
-  background: white;
-  float: left;
-}
-
-header .header-bottom .header-bottom-right ul {
-  list-style: none;
-}
-
-header .header-bottom .header-bottom-right ul li {
-  float: right;
-  margin: 25px;
-  border-radius: 5%;
-}
-
-header .header-bottom .header-bottom-right ul li .test {
-  border-radius: 15%;
-  border: 2px solid #ff0000;
-  background: #ff0000;
-}
-
-header .header-bottom .header-bottom-right ul li .test a img {
-  border-radius: 16%;
-}
-
-header .header-bottom .header-bottom-right ul li .test .content {
-  font-size: 15px;
-}
-
-.name {
-  text-align: right;
-  margin: 5px;
-  color: white;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-
-  font-weight: bold;
-}
-
-.price {
-  margin: 5px;
-}
-
-.priceStart {
-  color: #fff;
-  font-size: 13px;
-  text-decoration: line-through;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-  "Lucida Sans", Arial, sans-serif;
-}
-.priceEnd {
-  color: #fff;
-  font-size: 16px;
-  text-decoration: none;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-  "Lucida Sans", Arial, sans-serif;
-}
-
-#first {
-  margin-left: 15px;
 }

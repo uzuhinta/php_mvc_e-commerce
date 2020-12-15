@@ -20,12 +20,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f6f20645-18e4-4857-9f89-545b7ea388e4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/css/style_login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/views/users/home.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/views/users/login.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/views/users/register.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/nen1.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/controllers/categoriescontroller.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/categoriescontroller.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/controllers/userscontroller.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/userscontroller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/footer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/users/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/users/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/users/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/public/.htaccess" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/header.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/style_login.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style_login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/test.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style_main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/describecategories" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/describecategories" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/describeusers" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/describeusers" afterDir="false" />
     </list>
@@ -50,7 +58,9 @@
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
   <component name="PhpXdebugProxy" ide_key="PHPSTORM" />
   <component name="ProjectId" id="1l6wxOgRC34nRSy3RnSeR3gM8pB" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -66,15 +76,18 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/css" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/img" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.debug" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\framework\application\views\users" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\framework\public\css" />
       <recent name="C:\xampp\htdocs\framework\public\img" />
+      <recent name="C:\xampp\htdocs\framework\public\css" />
     </key>
   </component>
   <component name="RunManager">
@@ -202,6 +215,10 @@
       <screen x="0" y="0" width="1440" height="770" />
     </state>
     <state width="1398" height="52" key="GridCell.Tab.2.right/0.0.1440.770@0.0.1440.770" timestamp="1607534741364" />
+    <state x="555" y="309" key="NewPhpFileDialog" timestamp="1608021703459">
+      <screen x="0" y="0" width="1440" height="770" />
+    </state>
+    <state x="555" y="309" key="NewPhpFileDialog/0.0.1440.770@0.0.1440.770" timestamp="1608021703459" />
     <state width="498" height="446" key="SwitcherDM" timestamp="1607527892875">
       <screen x="0" y="0" width="1440" height="770" />
     </state>
