@@ -30,6 +30,7 @@ main .header-maininput[type="text"]:focus {
 .image_main {
   width: 100%;
   position: relative;
+  background-size: cover;
   height: 100%;
 }
 
