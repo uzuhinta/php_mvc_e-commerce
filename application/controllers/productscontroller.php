@@ -25,6 +25,12 @@ class ProductsController extends VanillaController {
         $this->set('currentPageNumber',$pageNumber);
     }
 
+    function findProducts ($categoryId = null, $categoryName = null) {
+        $this->Product->where('category_id',$categoryId);
+        $this->Product->orderBy('name');
+        return $this->Product->search();
+    }
+
 	function afterAction() {
 
 	}

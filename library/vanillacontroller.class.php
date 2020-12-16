@@ -24,6 +24,16 @@ class VanillaController {
 
 	}
 
+//	validate input
+    function validate_input($data) {
+	    if($data != null){
+            $data = trim($data);
+            $data = stripslashes($data);
+            $data = htmlspecialchars($data);
+        }
+        return $data;
+    }
+
 	function set($name,$value) {
 		$this->_template->set($name,$value);
 	}

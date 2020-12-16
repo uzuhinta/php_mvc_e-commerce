@@ -51,7 +51,14 @@ function performAction($controller,$action,$queryString = null,$render = 0) {
 	$controllerName = ucfirst($controller).'Controller';
 	$dispatch = new $controllerName($controller,$action);
 	$dispatch->render = $render;
-	return call_user_func_array(array($dispatch,$action),$queryString);
+//	return call_user_func_array(array($dispatch,$action),$queryString);
+    if ((int)method_exists($controllerName, $action)) {
+        call_user_func_array(array($dispatch,"beforeAction"),$queryString);
+        call_user_func_array(array($dispatch,$action),$queryString);
+        call_user_func_array(array($dispatch,"afterAction"),$queryString);
+    } else {
+        /* Error Generation Code Here */
+    }
 }
 
 /** Routing **/
@@ -85,7 +92,7 @@ function callHook() {
 		$urlArray = explode("/",$url);
 		$controller = $urlArray[0];
 		array_shift($urlArray);
-		if (isset($urlArray[0])) {
+		if (isset($urlArray[0]) && trim($urlArray[0]) != "" ) {
 			$action = $urlArray[0];
 			array_shift($urlArray);
 		} else {
@@ -143,7 +150,7 @@ function gzipOutput() {
 /** Get Required Files **/
 
 gzipOutput() || ob_start("ob_gzhandler");
-
+session_start();
 
 $cache = new Cache();
 $inflect = new Inflection();

@@ -35,16 +35,33 @@
 					</li>
 				</ul>
 				<div class="header-right">
+                    <?php if (isset($_SESSION['loggedin']) && $_SESSION["loggedin"] == true): ?>
 					<ul>
 						<li>
-							<a href="#">
-								<img width="120" height="45" <?php echo $html->includeImg("dangnhap", "png"); ?> alt="No" /></a>
+							da dang nhap
 						</li>
 						<li>
-							<a href="#">
-								<img width="120" height="45" <?php echo $html->includeImg("dangky", "png"); ?> alt="No" /></a>
+							bang session
 						</li>
+                        <li>
+                            <button><a href=<?php echo $html->linkSrc("users", "logout")?>>dang xuat</a></button>
+                        </li>
+                        <li>
+                            <button><a href=<?php echo $html->linkSrc("users", "logout")?>>Gio hang</a></button>
+                        </li>
 					</ul>
+                    <?php else:?>
+                    <ul>
+                        <li>
+                            <a href=<?php echo $html->linkSrc("users", "login")?>>
+                                <img width="120" height="45" <?php echo $html->includeImg("dangnhap", "png"); ?> alt="No" /></a>
+                        </li>
+                        <li>
+                            <a href=<?php echo $html->linkSrc("users", "register")?>>
+                                <img width="120" height="45" <?php echo $html->includeImg("dangky", "png"); ?> alt="No" /></a>
+                        </li>
+                    </ul>
+                    <?php endif; ?>
 				</div>
 			</div>
 		</header>

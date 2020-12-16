@@ -11,10 +11,11 @@ class OrdersController extends VanillaController
         $this->Order->showHasOne();
         $order = $this->Order->search();
         $this->set('order',$order);
-
+//        var_dump($order);
     }
 
     function afterAction() {
 
     }
+
 }
