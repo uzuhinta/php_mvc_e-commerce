@@ -35,7 +35,38 @@ main .header-maininput[type="text"]:focus {
 
 main .header-bottom .header-bottom-left {
   float: left;
+  border-bottom: 4px solid #ff0000;
 }
+
+main .header-bottom .header-bottom-left a {
+  height: 0;
+}
+
+main .header-bottom .header-bottom-left ul {
+  list-style: none;
+}
+
+main .header-bottom .header-bottom-left ul li {
+  float: left;
+  margin-right: 15px;
+}
+
+main .header-bottom .header-bottom-left ul li div {
+  height: 60px;
+  margin-top: 10px;
+}
+
+main .header-bottom .header-bottom-left ul li input {
+  height: 60px;
+  margin: 0;
+  width: 500px;
+  padding-left: 10px;
+  text-decoration-color: #ff0000;
+  background: #f79999;
+  border: none;
+  border-radius: 15px;
+}
+
 main .header-bottom .header-bottom-right {
   background: white;
   float: left;
@@ -100,4 +131,10 @@ main .header-bottom .header-bottom-right ul li .test .content {
 .image-footer {
   width: 100%;
   height: 175px;
+}
+
+.chen-gach-chan {
+  background: #ff0000;
+  width: 100%;
+  height: 5px;
 }

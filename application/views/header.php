@@ -34,7 +34,7 @@
 							<img width="120" height="45" <?php echo $html->includeImg("logoLienhe", "png"); ?> alt="No" /></a>
 					</li>
 				</ul>
-				<div class="header-right">
+				<div class="header-right" >
 					<ul>
 						<li>
 							<a href="#">
