@@ -36,7 +36,7 @@ class UsersController extends VanillaController
             header('Location: http://localhost/framework/users/home');
         }
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            $value = performAction("users", "index");
+
             if(isset($_POST['name']) && isset($_POST['password'])){
 
                 $username = $this->validate_input($_POST["name"]);

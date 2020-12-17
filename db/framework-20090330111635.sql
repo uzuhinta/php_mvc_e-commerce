@@ -162,7 +162,7 @@ INSERT INTO `categories` VALUES (5, "Com trua", 1);
 INSERT INTO `categories` VALUES (6, "Com toi", 1);
 
 CREATE TABLE `posts` (
-    `id` int(100) unsigned NOT NULL auto_increment,
+    `id` int(10) unsigned NOT NULL auto_increment,
     `title` varchar(100) NOT NULL,
     `description` varchar(200) default "No info",
     `created_at` datetime default CURRENT_TIMESTAMP,
@@ -176,3 +176,27 @@ INSERT INTO `posts` (title, category_id, price) VALUES ("Com chay", "1", 100);
 INSERT INTO `posts` (title, category_id, price) VALUES ("Com chay 1", "1", 100);
 INSERT INTO `posts` (title, category_id, price, sale) VALUES ("Com chay 11", "1", 100, 50);
 
+-- Detail order
+CREATE TABLE `orders_posts`(
+    `id` int(10) unsigned NOT NULL auto_increment,
+    `order_id`  int(10) unsigned NOT NULL,
+    `post_id` int(10) unsigned NOT NULL,
+    PRIMARY KEY  (`id`)
+);
+
+INSERT INTO `orders_posts` (order_id, post_id) VALUES (1, 2);
+INSERT INTO `orders_posts` (order_id, post_id) VALUES (1, 2);
+INSERT INTO `orders_posts` (order_id, post_id) VALUES (1, 3);
+
+CREATE TABLE `feedbacks`(
+    `id` int(10) unsigned NOT NULL auto_increment,
+    `post_id` int(10) unsigned NOT NULL ,
+    `user_id` int(10) unsigned NOT NULL,
+    `content` varchar(255) NOT NULL,
+    `created_at` datetime default CURRENT_TIMESTAMP,
+    PRIMARY KEY (`id`)
+);
+
+INSERT INTO `feedbacks` (post_id, user_id, content) VALUES (1, 1, "Ngon");
+INSERT INTO `feedbacks` (post_id, user_id, content) VALUES (1, 2, "Bo");
+INSERT INTO `feedbacks` (post_id, user_id, content) VALUES (1, 3, "Re");
