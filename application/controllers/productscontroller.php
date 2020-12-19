@@ -27,7 +27,7 @@ class ProductsController extends VanillaController {
 
     function index($pageNumber = 0){
         $this->Product->setPage($pageNumber);
-        $this->Product->setLimit('2');
+        $this->Product->setLimit('11');
         $products = $this->Product->search();
         $totalPages = $this->Product->totalPages();
         $this->set('totalPages',$totalPages);
