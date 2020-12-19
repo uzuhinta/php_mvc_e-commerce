@@ -12,8 +12,16 @@
 
     <!-- admin_content -->
     <div class="admin_content">
+        <div class="button">
+            <a href=<?php echo $html->linkSrc("categories", "index") ?>>Quản lý loại sp</a>
+        </div>
         <div class="content">
             <h2 class="page_title">Thêm loại sản phẩm</h2>
+            <form action=<?php echo $html->linkSrc("categories", "add") ?> method="POST" class="login-form">
+                <label class="title">Tên</label>
+                <input type=" text" name="name_category" class="register-input2">
+                <input type="submit" value="Thêm">
+            </form>
 
         </div>
     </div>

@@ -13,7 +13,7 @@
     <!-- admin_content -->
     <div class="admin_content">
         <div class="button">
-            <a href="#">Thêm sản phẩm</a>
+            <a href=<?php echo $html->linkSrc("products", "add") ?>>Thêm sản phẩm</a>
         </div>
         <div class="content">
             <h2 class="page_title">Quản lý sản phẩm</h2>

@@ -37,6 +37,9 @@ class ProductsController extends VanillaController
     function index()
     {
     }
+    function add()
+    {
+    }
 
     function afterAction()
     {

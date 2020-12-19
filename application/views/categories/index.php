@@ -13,7 +13,7 @@
     <!-- admin_content -->
     <div class="admin_content">
         <div class="button">
-            <a href="#">Thêm loại sp</a>
+            <a href=<?php echo $html->linkSrc("categories", "add") ?>>Thêm loại sp</a>
         </div>
         <div class="content">
             <h2 class="page_title">Quản lý loại sản phẩm</h2>
