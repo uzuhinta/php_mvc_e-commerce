@@ -42,6 +42,7 @@ class HTML
 	{
 		//	    $data = '"' .BASE_PATH . '/' . $model . '/' . $action . '.php' . '"';
 		if ($param) {
+            $data = '"' . BASE_PATH . '/' . $model . '/' . $action . '/' . $param . '"';
 		} else {
 			$data = '"' . BASE_PATH . '/' . $model . '/' . $action  . '"';
 		}

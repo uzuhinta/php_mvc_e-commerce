@@ -71,43 +71,18 @@
                         </div>
                     </li>
                 <?php endforeach; ?>
-                <?php for ($i = 1; $i <= $totalPages; $i++):?>
-                    <div>
-                        <?php if ($i == $currentPageNumber):?>
-                            <?php echo $currentPageNumber?>
-                        <?php else: ?>
-                            <?php echo $html->link($i,'posts/index/'.$i)?>
-                        <?php endif?>
-                    </div>
-                <?php endfor?>
-<!--                <li id="first">-->
-<!--                    <div class="test">-->
-<!--                        <a href="#">-->
-<!--                            <img width="150" height="100" --><?php //echo $html->includeImg("com-chay", "jpg"); ?><!-- alt="No" /></a>-->
-<!--                        <div class="content">-->
-<!--                            <div class="name">Cơm cháy</div>-->
-<!--                            <div class="price">-->
-<!--                                <div class="priceStart">20.000 đ</div>-->
-<!--                                <div class="priceEnd">15.000 đ</div>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </li>-->
-<!---->
-<!--                <li>-->
-<!--                    <div class="test">-->
-<!--                        <a href="#">-->
-<!--                            <img width="150" height="100" --><?php //echo $html->includeImg("com-chay", "jpg"); ?><!-- alt="No" /></a>-->
-<!--                        <div class="content">-->
-<!--                            <div class="name">Cơm cháy</div>-->
-<!--                            <div class="price">-->
-<!--                                <div class="priceStart">20.000 đ</div>-->
-<!--                                <div class="priceEnd">15.000 đ</div>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </li>-->
             </ul>
+            <h1>fsd</h1>
+            <div class="pagination" style="display: inline; clear: both;">
+                <?php for ($i = 1; $i <= $totalPages; $i++):?>
+                    <?php if ($i == $currentPageNumber):?>
+                        <a class="active" style="  color: black;float: left;padding: 8px 16px;text-decoration: none;  background-color: #4CAF50 !important;color: white;"><?php echo $currentPageNumber?></a>
+                    <?php else: ?>
+                        <?php // echo $html->link($i,'posts/index/'.$i)?>
+                        <a style="  color: black;float: left;padding: 8px 16px;text-decoration: none; background-color: #ddd;"  href= <?php echo $html->linkSrc("posts", "index", $i)?>  > <?php echo $i; ?> </a>
+                    <?php endif?>
+                <?php endfor?>
+            </div>
         </div>
 
     </div>
