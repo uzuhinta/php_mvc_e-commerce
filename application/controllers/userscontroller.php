@@ -5,8 +5,6 @@ class UsersController extends VanillaController
 
     function beforeAction()
     {
-        $var = 1;
-        echo $var;
     }
 
     function view($id = null)
@@ -31,24 +29,22 @@ class UsersController extends VanillaController
 
     function login()
     {
-//        session_start();
         if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] == true) {
             header('Location: http://localhost/framework/users/home');
         }
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
             if(isset($_POST['name']) && isset($_POST['password'])){
-
                 $username = $this->validate_input($_POST["name"]);
+                //use md5 for password
                 $pwd = $this->validate_input($_POST['password']);
                 $this->User->where("nameLogin", $username);
                 $info = $this->User->search();
-                $_SESSION["loggedin"] = true;
-                header('Location: http://localhost/framework/users/home');
-
-            }else{
-                $_SESSION['loggedin'] = false;
+                if((isset($info[0]["User"]) == true) && ($info[0]["User"]["password"] == $pwd)){
+                    $_SESSION["loggedin"] = true;
+                    return header('Location: http://localhost/framework/users/home');
+                }
             }
+            $_SESSION['loggedin'] = false;
 
         }
     }
@@ -60,7 +56,12 @@ class UsersController extends VanillaController
 
     function register()
     {
-//        var_dump("fsafdsfas");
+        if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] == true) {
+            header('Location: http://localhost/framework/users/home');
+        }
+        if($_SERVER["REQUEST_METHOD"] == "POST"){
+
+        }
     }
 
     function afterAction()

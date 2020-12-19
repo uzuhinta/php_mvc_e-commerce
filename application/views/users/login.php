@@ -10,7 +10,8 @@
 
             <div class="button">
                 <a href="#" class="forgot">Quên mật khẩu?</a>
-                <input type="submit" value="Đăng nhập"> <button>Đăng nhập</button> </input>
+                <input type="submit" value="Đăng nhập">
+                <button>Đăng nhập</button> </input>
             </div>
             <?php if (isset($login) == true) {var_dump($login);}; ?>
         </form>
