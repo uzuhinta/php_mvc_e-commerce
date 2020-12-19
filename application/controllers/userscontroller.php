@@ -12,7 +12,7 @@ class UsersController extends VanillaController
         $this->User->id = $id;
         $this->User->showHasOne();
         $user = $this->User->search();
-//        $this->doNotRenderHeader=1;
+        //        $this->doNotRenderHeader=1;
         $this->set('user', $user);
     }
 
@@ -21,7 +21,7 @@ class UsersController extends VanillaController
         $this->User->id = 1;
         $this->User->showHasOne();
         $user = $this->User->search();
-//        $this->doNotRenderHeader=1;
+        //        $this->doNotRenderHeader=1;
         $this->set('user', $user);
         var_dump($user);
         return $user;
@@ -96,8 +96,5 @@ class UsersController extends VanillaController
 
     function afterAction()
     {
-
     }
-
-
 }
