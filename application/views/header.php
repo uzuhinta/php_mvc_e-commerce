@@ -7,11 +7,12 @@
 	<?php echo $html->includeCss("header"); ?>
 	<?php echo $html->includeCss("style_login"); ?>
 	<?php echo $html->includeCss("style_main"); ?>
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 
 <body>
 	<div class="container">
-		<header style="position:fixed;">
+		<header style="position:sticky;">
 			<div class="header">
 				<ul>
 					<li id="logo">
@@ -35,33 +36,33 @@
 					</li>
 				</ul>
 				<div class="header-right">
-                    <?php if (isset($_SESSION['loggedin']) && $_SESSION["loggedin"] == true): ?>
-					<ul>
-						<li>
-							da dang nhap
-						</li>
-						<li>
-							bang session
-						</li>
-                        <li>
-                            <button><a href=<?php echo $html->linkSrc("users", "logout")?>>dang xuat</a></button>
-                        </li>
-                        <li>
-                            <button><a href=<?php echo $html->linkSrc("users", "logout")?>>Gio hang</a></button>
-                        </li>
-					</ul>
-                    <?php else:?>
-                    <ul>
-                        <li>
-                            <a href=<?php echo $html->linkSrc("users", "login")?>>
-                                <img width="120" height="45" <?php echo $html->includeImg("dangnhap", "png"); ?> alt="No" /></a>
-                        </li>
-                        <li>
-                            <a href=<?php echo $html->linkSrc("users", "register")?>>
-                                <img width="120" height="45" <?php echo $html->includeImg("dangky", "png"); ?> alt="No" /></a>
-                        </li>
-                    </ul>
-                    <?php endif; ?>
+					<?php if (isset($_SESSION['loggedin']) && $_SESSION["loggedin"] == true) : ?>
+						<ul>
+							<li>
+								da dang nhap
+							</li>
+							<li>
+								bang session
+							</li>
+							<li>
+								<button><a href=<?php echo $html->linkSrc("users", "logout") ?>>dang xuat</a></button>
+							</li>
+							<li>
+								<button><a href=<?php echo $html->linkSrc("users", "logout") ?>>Gio hang</a></button>
+							</li>
+						</ul>
+					<?php else : ?>
+						<ul>
+							<li>
+								<a href=<?php echo $html->linkSrc("users", "login") ?>>
+									<img width="120" height="45" <?php echo $html->includeImg("dangnhap", "png"); ?> alt="No" /></a>
+							</li>
+							<li>
+								<a href=<?php echo $html->linkSrc("users", "register") ?>>
+									<img width="120" height="45" <?php echo $html->includeImg("dangky", "png"); ?> alt="No" /></a>
+							</li>
+						</ul>
+					<?php endif; ?>
 				</div>
 			</div>
 		</header>

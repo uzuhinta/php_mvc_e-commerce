@@ -259,3 +259,29 @@ input[type="submit"] {
   float: right;
   display: block;
 }
+
+input#file_input {
+  display: none;
+}
+.file_product {
+  padding: 8px;
+  color: #fe2e2e;
+  font-size: 25px;
+  font-weight: bold;
+  border: 1px solid #f5a9a9;
+  background-color: #f5a9a9;
+  border-radius: 9px;
+}
+.file {
+  margin-top: 10px;
+  display: block;
+}
+.file_product:hover {
+  background-color: #f79999;
+  border-color: #fe2e2e;
+  cursor: pointer;
+}
+.upload_file {
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}

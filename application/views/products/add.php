@@ -38,9 +38,16 @@
                     <label class="title" for="price_sale">Giá sale</label>
                     <input type="number" min="0" name="price_sale" class="register-input2" id="price_sale">
                 </div>
-                <div>
-                    <label class="title" for="name_product">Ảnh sản phẩm</label>
-                    <input type="text" name="name_product" class="register-input2" id="name_product">
+                <div class="upload_file">
+                    <label class="title">Ảnh sản phẩm</label>
+                    <div class="file">
+                        <label class="file_product" for="file_input"> <i class="fas fa-upload"></i>&nbsp;Chọn ảnh...</label>
+                        <span style="color: red">
+                            <strong>Chọn file: </strong>
+                            <span id="file_name">None</span>
+                        </span>
+                    </div>
+                    <input type="file" name="file_input" id="file_input">
                 </div>
                 <input type="submit" value="Thêm">
             </form>
