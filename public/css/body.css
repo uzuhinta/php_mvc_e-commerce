@@ -1,8 +1,16 @@
+/*body{*/
+/*    position: relative;*/
+/*}*/
+
 .salehot{
     position: absolute;
     top: 30%;
     left: 0;
     cursor: pointer;
+}
+
+.panel {
+    position: relative;
 }
 
 #panel-input {
@@ -19,6 +27,7 @@
     padding-left: 20px;
     background: rgba(255, 255, 255, 0.7);
     border-radius: 30px;
+    /*background-image: url("../img/banhDauXanh.jpg");*/
 }
 
 .filter {
@@ -31,6 +40,7 @@
     height: 60px;
     width: auto;
     margin-left: 5px;
+    cursor: pointer;
 }
 
 .filter input{

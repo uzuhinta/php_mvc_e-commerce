@@ -20,7 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f6f20645-18e4-4857-9f89-545b7ea388e4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/public/css/style_main.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style_main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/posts/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/posts/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/body.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/body.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/describeusers" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/describeusers" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -227,10 +231,11 @@
       <screen x="0" y="0" width="1440" height="770" />
     </state>
     <state x="273" y="114" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1440.770@0.0.1440.770" timestamp="1608357085546" />
-    <state x="655" y="64" width="579" height="534" key="find.popup" timestamp="1608388893516">
-      <screen x="0" y="0" width="1440" height="770" />
+    <state x="655" y="67" width="579" height="562" key="find.popup" timestamp="1608398494582">
+      <screen x="0" y="0" width="1440" height="810" />
     </state>
     <state x="655" y="64" width="579" height="534" key="find.popup/0.0.1440.770@0.0.1440.770" timestamp="1608388893516" />
+    <state x="655" y="67" width="579" height="562" key="find.popup/0.0.1440.810@0.0.1440.810" timestamp="1608398494582" />
     <state x="384" y="93" width="672" height="678" key="search.everywhere.popup" timestamp="1608385331752">
       <screen x="0" y="0" width="1440" height="770" />
     </state>
