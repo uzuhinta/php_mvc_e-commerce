@@ -86,4 +86,13 @@ card {
   outline: none;
   max-width: 20rem;
   border-radius: 5rem;
+  margin: 0 auto;
+}
+
+.login-form .type_submit {
+  text-align: center;
+}
+
+.login-form input[type="submit"] {
+  display: inline-block;
 }

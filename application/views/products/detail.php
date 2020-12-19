@@ -1,26 +1,59 @@
-<div id="main">
-    <img <?php echo $html->includeImg("back", "jpg"); ?> alt="No" class="image_main" />
-    <div class="content">
-        <p class="label">CƠM CHÁY</p>
-        <p class="sub_title"> Đặc sản Ninh Bình
-            Khi nhắc đến ấm thực của đất cố đô Ninh Bình, không thể không nhớ
-            đến câu "rượu ngon, cơm cháy, thịt dê".</p>
-        <p class="description">
-            Tương truyền cơm cháy đã xuất hiện khoảng 100 năm trước, do chàng thanh niên Ninh Bình tên Hoàng Thăng tạo ra từ một món ăn
-            của người Hoa. Từ đó đến nay cơm cháy đã phát triển và trở thành đặc sản của vùng đất Ninh Bình.
-            Cơm cháy, thoạt nghe đã thấy đơn sơ và giản dị, nhưng các công đoạn chế biến lại không hề đơn giản.
-            Tất cả đều được làm thủ công và theo bí quyết gia truyền riêng. Gạo vo sạch, cho vào nồi và nấu chín.
-            Gạo để nấu cơm được lựa chọn kỹ càng từ những loại gạo dẻo, đặc biệt là gạo tám thơm Hải Hậu (Nam Định).
-            Nồi nấu được chọn từ những nồi gang đáy dày.
-            Nếu đặc sản dê núi đá đã trở thành thương hiệu nổi tiếng, thường xuất hiện tại những trung tâm ẩm thực lớn của đất nước
-            như Hà Nội, Sài Gòn, Hạ Long…Rượu Kim Sơn nổi tiếng với hương vị đặc trưng và "sức mạnh" có thể làm gục ngã bất cứ "tay chơi"
-            sành sỏi nào. Thì cơm cháy, thứ đặc sản hàng trăm năm của mảnh đất Cố đô lại là món quà độc đáo cho du khách thập phương khi
-            tới đây thăm quan.
-        </p>
+<div class="detail_main">
+    <div class="detail">
+        <div class="card_detail">
+            <div class="images">
+                <a href="#">
+                    <img <?php echo $html->includeImg("com-chay", "jpg"); ?> alt="No" />
+                </a>
+            </div>
+            <div class="info">
+                <h1>Name</h1>
+                <div class="price">
+                    <h3 class="price-begin">20.000 đ</h3>
+                    <h3>15.000 đ</h3>
+                </div>
+                <div class="info-content">
+                    <h3>Mô tả</h3>
+                    <p>
+                        Do mình thấy nhiều trường hợp mua iPhone nhưng bên trong là cục gạch, nên trước khi nhận hàng mình có gọi cho shop Điện Tử Thuỷ Chi 0333929238, mình yêu cầu bảo đơn hàng có giá trị cao mình muốn kiểm hàng. Xong 1 hồi gọi shop k nghe máy, r mình lấy Sđt khác gọi và shop nghe máy, shop bảo do nhầ
+                    </p>
+                </div>
+                <div class="buttons">
+                    <a href="#" class="button"><i class="fas fa-cart-plus"></i> &nbsp;Thêm vào giỏ hàng</a>
+                </div>
+            </div>
+
+        </div>
     </div>
-    <div class="bottom">
-        <img <?php echo $html->includeImg("com-chay", "jpg"); ?> alt="No" class="image" />
-        <p class="price">Giá: </p>
-        <input type="number" style="height: 2rem" />
+
+</div>
+
+<div class="feedback">
+    <form class="login-form">
+        <input type="text" name="address" class="register-input2" placeholder="Bạn có thích sản phẩm này không?" />
+        <div class="type_submit"><input type="submit" value="Đánh giá"></div>
+    </form>
+    <div>
+        <table>
+            <tbody>
+                <tr>
+                    <td>Hằng Vũ</td>
+                    <td>Cơm cháy này ngon lắm, lần sau mình sẽ ủng hộ tiếp</td>
+                </tr>
+                <tr>
+                    <td>Bá Quân</td>
+                    <td>Cơm cháy khô gà phô mai lá chanh là một bản hoà ca hoàn hảo, là sự kết hợp “bùng nổ” giữa miếng cơm giòn rụm, vị khô gà mằn mặn và phô mai béo ngậy, tạo nên vẻ bề ngoài bắt mắt và hương vị khó có thể chối từ.</td>
+                </tr>
+                <tr>
+                    <td>Minh Nhật</td>
+                    <td>Cơm cháy</td>
+                </tr>
+                <tr>
+                    <td>Mèo béo</td>
+                    <td>Cơm cháy</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
+</div>
 </div>

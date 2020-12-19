@@ -14,10 +14,7 @@
             <input type="password" name="password" class="register-input1" placeholder="Mật khẩu" />
             <input type="password" name="typepassword" class="register-input1" style="margin-left:2.9%;" placeholder="Xác nhận mật khẩu" />
 
-            <input type="submit" value="Đăng ký" style="margin: 0 auto; padding-bottom: 15px">
-            <div class="button">
-                <button>Đăng ký</button>
-            </div>
+            <div class="type_submit"><input type="submit" value="Đăng ký"></div>
         </form>
     </card>
 </div>
