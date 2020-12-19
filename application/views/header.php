@@ -7,6 +7,7 @@
 	<?php echo $html->includeCss("header"); ?>
 	<?php echo $html->includeCss("style_login"); ?>
 	<?php echo $html->includeCss("style_main"); ?>
+    <?php echo $html->includeCss("body"); ?>
 </head>
 
 <body>
@@ -46,9 +47,9 @@
                         <li>
                             <button><a href=<?php echo $html->linkSrc("users", "logout")?>>dang xuat</a></button>
                         </li>
-                        <li>
-                            <button><a href=<?php echo $html->linkSrc("users", "logout")?>>Gio hang</a></button>
-                        </li>
+<!--                        <li>-->
+<!--                            <button><a href=--><?php //echo $html->linkSrc("users", "logout")?><!-->Gio hang</a></button>-->
+<!--                        </li>-->
 					</ul>
                     <?php else:?>
                     <ul>

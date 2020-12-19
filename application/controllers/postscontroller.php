@@ -27,7 +27,7 @@ class PostsController extends VanillaController {
 
     function index($pageNumber = 1){
         $this->Post->setPage($pageNumber);
-        $this->Post->setLimit('11');
+        $this->Post->setLimit('10');
 //        $this->Post->custom("Select * from posts");
         $posts = $this->Post->search();
         $totalPages = $this->Post->totalPages();

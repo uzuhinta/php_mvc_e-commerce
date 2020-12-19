@@ -1,0 +1,202 @@
+.salehot{
+    position: absolute;
+    top: 30%;
+    left: 0;
+    cursor: pointer;
+}
+
+#panel-input {
+    position: absolute;
+    box-sizing: border-box;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    height: 60px;
+    border: none;
+    color: #fe2e2e;
+    font-size: 25px;
+    padding-left: 20px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 30px;
+}
+
+.filter {
+    margin-left: 0px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.filter img{
+    height: 60px;
+    width: auto;
+    margin-left: 5px;
+}
+
+.filter input{
+    width: 350px;
+    margin-left: 10px;
+    height: 50px;
+    border-radius: 5px;
+    color: black;
+    border: none;
+    padding-left: 5px;
+    box-sizing: border-box;
+    background: rgba(255, 51, 0, 0.5);
+}
+
+/*list post*/
+.list-post{
+    display: flex;
+    width: 90%;
+    margin-left: 5%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.list-post .card {
+    position: relative;
+    box-sizing: border-box;
+    width: 230px;
+    height: 300px;
+    background: rgb(255,51,0);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    overflow: hidden;
+    margin: 10px 10px;
+}
+
+
+.list-post .card img {
+    margin: 5px 5px;
+    width: 220px;
+    height: 290px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.list-post .card .sale {
+    position: absolute;
+    top: -5px;
+    left: -70px;
+    width: 200px;
+    height: 70px;
+    text-align: center;
+    color: white;
+    background: #fe2e2e;
+    transform: rotate(-45deg);
+}
+
+.list-post .card .sale span{
+    display: block;
+    margin-top: 25px;
+}
+
+.list-post .text {
+    display: flex;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    background: rgb(255,51,0);
+    width: 100%;
+    height: 25%;
+    border-radius: 0px 0px 5px 5px;
+}
+
+.list-post .text .price{
+    width: 50%;
+    margin: 0px;
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 0px 0px 0px 5px;
+    height: 100%;
+}
+
+.list-post .text .price span{
+    display: block;
+    margin-top: 25px;
+    color: white;
+    font-weight: bold;
+    transition: all 0.4s ease;
+}
+
+.list-post .text .name{
+    box-sizing: border-box;
+    margin: 0px;
+    border-radius: 0px 0px 5px 0px;
+    text-align: center;
+    width: 50%;
+    height: 100%;
+}
+
+.list-post .text .name span{
+    display: block;
+    margin-top: 25px;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    transition: all 0.4s ease;
+}
+
+.list-post .before{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    text-align: center;
+    transition: all 0s ease;
+    visibility: hidden;
+    font-weight: bold;
+    font-size: 5px;
+    color: #fe2e2e;
+}
+
+.list-post .before .addCard{
+    margin-top: 50px;
+    padding: 10px;
+}
+
+/*hover card */
+.card:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card:hover .before{
+    visibility: visible;
+    background: rgba(255,255,255, 0.5);
+    transition: all 0.4s ease;
+}
+
+.card:hover .text .name span{
+    margin-top: 5px;
+    font-size: 30px;
+}
+
+
+.card:hover .text .price span{
+    margin-top: 20px;
+    font-size: 25px;
+}
+
+.pagination {
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: center;
+}
+
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.pagination a.active {
+    background-color: rgb(255,51,0);
+    color: white;
+}
+
+.pagination a:hover:not(.active) {background-color: #ddd;}
