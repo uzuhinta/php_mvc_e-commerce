@@ -1,3 +1,5 @@
+<?php var_dump($products) ?>
+
 <?php foreach ($products as $product):?>
     <div>
         <?php echo $product['Product']['name']?>

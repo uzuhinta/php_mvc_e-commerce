@@ -11,7 +11,7 @@
 
 <body>
 	<div class="container">
-		<header style="position:fixed;">
+		<header>
 			<div class="header">
 				<ul>
 					<li id="logo">

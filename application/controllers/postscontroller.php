@@ -1,19 +1,19 @@
 <?php
 
-class ProductsController extends VanillaController {
-	
-	function beforeAction () {
+class PostsController extends VanillaController {
 
-	}
+    function beforeAction () {
 
-	function view($id = null) {
-		$this->Product->id = $id;
-		$this->Product->showHasOne();
-		$this->Product->showHMABTM();
-		$product = $this->Product->search();
-		$this->set('product',$product);
-		
-	}
+    }
+
+    function view($id = null) {
+        $this->Product->id = $id;
+        $this->Product->showHasOne();
+        $this->Product->showHMABTM();
+        $product = $this->Product->search();
+        $this->set('product',$product);
+
+    }
 
     function page ($pageNumber = 1) {
         $this->Product->setPage($pageNumber);
@@ -25,13 +25,14 @@ class ProductsController extends VanillaController {
         $this->set('currentPageNumber',$pageNumber);
     }
 
-    function index($pageNumber = 0){
-        $this->Product->setPage($pageNumber);
-        $this->Product->setLimit('2');
-        $products = $this->Product->search();
-        $totalPages = $this->Product->totalPages();
+    function index($pageNumber = 1){
+        $this->Post->setPage($pageNumber);
+        $this->Post->setLimit('2');
+//        $this->Post->custom("Select * from posts");
+        $posts = $this->Post->search();
+        $totalPages = $this->Post->totalPages();
         $this->set('totalPages',$totalPages);
-        $this->set('products',$products);
+        $this->set('posts',$posts);
         $this->set('currentPageNumber',$pageNumber);
     }
 
@@ -41,9 +42,9 @@ class ProductsController extends VanillaController {
         return $this->Product->search();
     }
 
-	function afterAction() {
+    function afterAction() {
 
-	}
-	
+    }
+
 
 }

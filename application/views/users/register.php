@@ -6,11 +6,10 @@
 
             <input type="text" name="name" class="register-input1" placeholder="Họ và tên" />
             <input type="text" name="phone" class="register-input1" style="margin-left:2.9%;" placeholder="SĐT" />
-
             <input type="text" name="address" class="register-input2" placeholder="Địa chỉ" />
-            <input type="text" name="email" class="register-input2" placeholder="Email" />
-            <input type="text" name="username" class="register-input2" placeholder="Tên đăng nhập" />
 
+            <input type="text" name="username" class="register-input2" placeholder="Tên đăng nhập" />
+<!--            <input type="text" name="email" class="register-input2" placeholder="Email" />-->
             <input type="password" name="password" class="register-input1" placeholder="Mật khẩu" />
             <input type="password" name="typepassword" class="register-input1" style="margin-left:2.9%;" placeholder="Xác nhận mật khẩu" />
 
@@ -18,6 +17,7 @@
             <div class="button">
                 <button>Đăng ký</button>
             </div>
+            <?php var_dump($message); ?>
         </form>
     </card>
 </div>
