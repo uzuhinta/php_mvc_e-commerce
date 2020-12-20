@@ -28,8 +28,8 @@ class OrdersController extends VanillaController
 //        var_dump($order[0]['Order']['id']);
 //        return var_dump($order[0]["Post"][0]["orders_posts"]["number"]);
 //        return var_dump($orders[0]["Post"][0]["orders_posts"]);
+        var_dump($orders);
         $okAdd = 1;
-        if($number != 1)
         if($orders != null){
             foreach ($orders[0]["Post"] as $post){
                 var_dump($post["orders_posts"]["post_id"]);
@@ -45,14 +45,20 @@ class OrdersController extends VanillaController
             }
 
             if ($okAdd == 1){
-                $result = $this->Order->addOther("INSERT INTO orders_posts (order_id, post_id) VALUES (". $orders[0]['Order']['id'] . ", " . $idPost .") ");
+                $result = $this->Order->customSQL("INSERT INTO orders_posts (order_id, post_id) VALUES (". $orders[0]['Order']['id'] . ", " . $idPost ."); ");
 //                $this->Order->custom("INSERT INTO orders_posts (order_id, post_id) VALUES (" . $orders[0]['Order']['id'] . "," . $idPost . ")");
 //                var_dump($result);
                 echo "Truy van thanh cong";
 //                return header('Location: ' . BASE_PATH . '/posts');
             }
         }
-        return header('Location: ' . BASE_PATH . '/posts/detail/'. $idPost);
+
+        if($number != 1){
+            $getIfd = $thí->Order->customSQL("SELECT * FROM ")
+            $result = $this->Order->customSQL("UPDATE orders_posts SET number = 100 WHERE id = 2; ");
+        }
+
+//        return header('Location: ' . BASE_PATH . '/posts/detail/'. $idPost);
     }
 
 

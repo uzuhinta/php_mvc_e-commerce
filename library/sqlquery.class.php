@@ -292,7 +292,7 @@ class SQLQuery {
 
     /** Custom insert other table */
 
-    function addOther($query){
+    function customSQL($query){
         $this->_result = mysqli_query( $this->_dbHandle, $query);
         if ($this->_result == 0) {
             /** Error Generation **/
