@@ -139,6 +139,7 @@ CREATE TABLE `orders` (
     `user_id` int(10) unsigned NOT NULL,
     `temp` BOOLEAN default true,
     `date` datetime default CURRENT_TIMESTAMP,
+    `price` int(10) default 0,
     PRIMARY KEY (`id`)
 );
 

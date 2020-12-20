@@ -22,13 +22,10 @@
     <list default="true" id="f6f20645-18e4-4857-9f89-545b7ea388e4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/controllers/orderscontroller.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/orderscontroller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/userscontroller.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/userscontroller.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/posts/detail.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/posts/detail.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/users/cart.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/orders/cart.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/orders/cart.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/orders/cart.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/framework-20090330111635.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db/framework-20090330111635.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/bootstrap.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/bootstrap.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/generic.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/generic.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,54 +174,54 @@
       <screen x="0" y="0" width="1440" height="770" />
     </state>
     <state width="464" height="466" key="DebuggerActiveHint/0.0.1440.770@0.0.1440.770" timestamp="1608362990631" />
-    <state width="1398" height="106" key="GridCell.Tab.0.bottom" timestamp="1608490939607">
+    <state width="1398" height="15" key="GridCell.Tab.0.bottom" timestamp="1608501233871">
       <screen x="0" y="0" width="1440" height="770" />
     </state>
-    <state width="1398" height="106" key="GridCell.Tab.0.bottom/0.0.1440.770@0.0.1440.770" timestamp="1608490939607" />
-    <state width="1398" height="106" key="GridCell.Tab.0.center" timestamp="1608490939607">
+    <state width="1398" height="15" key="GridCell.Tab.0.bottom/0.0.1440.770@0.0.1440.770" timestamp="1608501233871" />
+    <state width="1398" height="15" key="GridCell.Tab.0.center" timestamp="1608501233871">
       <screen x="0" y="0" width="1440" height="770" />
     </state>
-    <state width="1398" height="106" key="GridCell.Tab.0.center/0.0.1440.770@0.0.1440.770" timestamp="1608490939607" />
-    <state width="1398" height="106" key="GridCell.Tab.0.left" timestamp="1608490939607">
+    <state width="1398" height="15" key="GridCell.Tab.0.center/0.0.1440.770@0.0.1440.770" timestamp="1608501233871" />
+    <state width="1398" height="15" key="GridCell.Tab.0.left" timestamp="1608501233871">
       <screen x="0" y="0" width="1440" height="770" />
     </state>
-    <state width="1398" height="106" key="GridCell.Tab.0.left/0.0.1440.770@0.0.1440.770" timestamp="1608490939607" />
-    <state width="1398" height="106" key="GridCell.Tab.0.right" timestamp="1608490939607">
+    <state width="1398" height="15" key="GridCell.Tab.0.left/0.0.1440.770@0.0.1440.770" timestamp="1608501233871" />
+    <state width="1398" height="15" key="GridCell.Tab.0.right" timestamp="1608501233871">
       <screen x="0" y="0" width="1440" height="770" />
     </state>
-    <state width="1398" height="106" key="GridCell.Tab.0.right/0.0.1440.770@0.0.1440.770" timestamp="1608490939607" />
-    <state width="1398" height="106" key="GridCell.Tab.1.bottom" timestamp="1608490939607">
+    <state width="1398" height="15" key="GridCell.Tab.0.right/0.0.1440.770@0.0.1440.770" timestamp="1608501233871" />
+    <state width="1398" height="15" key="GridCell.Tab.1.bottom" timestamp="1608501233765">
       <screen x="0" y="0" width="1440" height="770" />
     </state>
-    <state width="1398" height="106" key="GridCell.Tab.1.bottom/0.0.1440.770@0.0.1440.770" timestamp="1608490939607" />
-    <state width="1398" height="106" key="GridCell.Tab.1.center" timestamp="1608490939607">
+    <state width="1398" height="15" key="GridCell.Tab.1.bottom/0.0.1440.770@0.0.1440.770" timestamp="1608501233765" />
+    <state width="1398" height="15" key="GridCell.Tab.1.center" timestamp="1608501233765">
       <screen x="0" y="0" width="1440" height="770" />
     </state>
-    <state width="1398" height="106" key="GridCell.Tab.1.center/0.0.1440.770@0.0.1440.770" timestamp="1608490939607" />
-    <state width="1398" height="106" key="GridCell.Tab.1.left" timestamp="1608490939607">
+    <state width="1398" height="15" key="GridCell.Tab.1.center/0.0.1440.770@0.0.1440.770" timestamp="1608501233765" />
+    <state width="1398" height="15" key="GridCell.Tab.1.left" timestamp="1608501233765">
       <screen x="0" y="0" width="1440" height="770" />
     </state>
-    <state width="1398" height="106" key="GridCell.Tab.1.left/0.0.1440.770@0.0.1440.770" timestamp="1608490939607" />
-    <state width="1398" height="106" key="GridCell.Tab.1.right" timestamp="1608490939607">
+    <state width="1398" height="15" key="GridCell.Tab.1.left/0.0.1440.770@0.0.1440.770" timestamp="1608501233765" />
+    <state width="1398" height="15" key="GridCell.Tab.1.right" timestamp="1608501233765">
       <screen x="0" y="0" width="1440" height="770" />
     </state>
-    <state width="1398" height="106" key="GridCell.Tab.1.right/0.0.1440.770@0.0.1440.770" timestamp="1608490939607" />
-    <state width="1398" height="106" key="GridCell.Tab.2.bottom" timestamp="1608490939607">
+    <state width="1398" height="15" key="GridCell.Tab.1.right/0.0.1440.770@0.0.1440.770" timestamp="1608501233765" />
+    <state width="1398" height="15" key="GridCell.Tab.2.bottom" timestamp="1608501233765">
       <screen x="0" y="0" width="1440" height="770" />
     </state>
-    <state width="1398" height="106" key="GridCell.Tab.2.bottom/0.0.1440.770@0.0.1440.770" timestamp="1608490939607" />
-    <state width="1398" height="106" key="GridCell.Tab.2.center" timestamp="1608490939607">
+    <state width="1398" height="15" key="GridCell.Tab.2.bottom/0.0.1440.770@0.0.1440.770" timestamp="1608501233765" />
+    <state width="1398" height="15" key="GridCell.Tab.2.center" timestamp="1608501233765">
       <screen x="0" y="0" width="1440" height="770" />
     </state>
-    <state width="1398" height="106" key="GridCell.Tab.2.center/0.0.1440.770@0.0.1440.770" timestamp="1608490939607" />
-    <state width="1398" height="106" key="GridCell.Tab.2.left" timestamp="1608490939607">
+    <state width="1398" height="15" key="GridCell.Tab.2.center/0.0.1440.770@0.0.1440.770" timestamp="1608501233765" />
+    <state width="1398" height="15" key="GridCell.Tab.2.left" timestamp="1608501233765">
       <screen x="0" y="0" width="1440" height="770" />
     </state>
-    <state width="1398" height="106" key="GridCell.Tab.2.left/0.0.1440.770@0.0.1440.770" timestamp="1608490939607" />
-    <state width="1398" height="106" key="GridCell.Tab.2.right" timestamp="1608490939607">
+    <state width="1398" height="15" key="GridCell.Tab.2.left/0.0.1440.770@0.0.1440.770" timestamp="1608501233765" />
+    <state width="1398" height="15" key="GridCell.Tab.2.right" timestamp="1608501233765">
       <screen x="0" y="0" width="1440" height="770" />
     </state>
-    <state width="1398" height="106" key="GridCell.Tab.2.right/0.0.1440.770@0.0.1440.770" timestamp="1608490939607" />
+    <state width="1398" height="15" key="GridCell.Tab.2.right/0.0.1440.770@0.0.1440.770" timestamp="1608501233765" />
     <state x="555" y="309" key="NewPhpFileDialog" timestamp="1608374413180">
       <screen x="0" y="0" width="1440" height="770" />
     </state>
@@ -237,10 +234,10 @@
       <screen x="0" y="0" width="1440" height="770" />
     </state>
     <state x="273" y="114" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1440.770@0.0.1440.770" timestamp="1608357085546" />
-    <state x="655" y="64" width="579" height="534" key="find.popup" timestamp="1608496353613">
+    <state x="655" y="64" width="579" height="534" key="find.popup" timestamp="1608498229151">
       <screen x="0" y="0" width="1440" height="770" />
     </state>
-    <state x="655" y="64" width="579" height="534" key="find.popup/0.0.1440.770@0.0.1440.770" timestamp="1608496353613" />
+    <state x="655" y="64" width="579" height="534" key="find.popup/0.0.1440.770@0.0.1440.770" timestamp="1608498229151" />
     <state x="655" y="67" width="579" height="562" key="find.popup/0.0.1440.810@0.0.1440.810" timestamp="1608398494582" />
     <state x="379" y="175" key="run.anything.popup" timestamp="1608439620607">
       <screen x="0" y="0" width="1440" height="770" />
@@ -293,11 +290,6 @@
           <url>file://$PROJECT_DIR$/index.php</url>
           <line>2</line>
           <option name="timeStamp" value="88" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/library/shared.php</url>
-          <line>105</line>
-          <option name="timeStamp" value="96" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/library/inflection.class.php</url>
@@ -415,22 +407,22 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/application/controllers/postscontroller.php</url>
-          <line>49</line>
+          <line>37</line>
           <option name="timeStamp" value="134" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/application/controllers/postscontroller.php</url>
-          <line>110</line>
+          <line>90</line>
           <option name="timeStamp" value="135" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/application/controllers/postscontroller.php</url>
-          <line>113</line>
+          <line>93</line>
           <option name="timeStamp" value="136" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/application/controllers/postscontroller.php</url>
-          <line>111</line>
+          <line>91</line>
           <option name="timeStamp" value="138" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
@@ -449,57 +441,32 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/application/controllers/postscontroller.php</url>
-          <line>167</line>
+          <line>153</line>
           <option name="timeStamp" value="142" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/application/controllers/postscontroller.php</url>
-          <line>114</line>
+          <line>94</line>
           <option name="timeStamp" value="143" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/application/controllers/postscontroller.php</url>
-          <line>116</line>
+          <line>96</line>
           <option name="timeStamp" value="144" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/application/controllers/postscontroller.php</url>
-          <line>173</line>
+          <line>159</line>
           <option name="timeStamp" value="145" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/application/controllers/postscontroller.php</url>
-          <line>175</line>
+          <line>161</line>
           <option name="timeStamp" value="146" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/library/html.class.php</url>
-          <line>44</line>
-          <option name="timeStamp" value="147" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/library/html.class.php</url>
-          <line>46</line>
-          <option name="timeStamp" value="148" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/library/html.class.php</url>
-          <line>47</line>
-          <option name="timeStamp" value="149" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/library/html.class.php</url>
-          <line>49</line>
-          <option name="timeStamp" value="150" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/library/html.class.php</url>
-          <line>51</line>
-          <option name="timeStamp" value="151" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/application/controllers/postscontroller.php</url>
-          <line>41</line>
+          <line>42</line>
           <option name="timeStamp" value="153" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
@@ -514,12 +481,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/application/controllers/postscontroller.php</url>
-          <line>42</line>
+          <line>43</line>
           <option name="timeStamp" value="156" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/application/controllers/postscontroller.php</url>
-          <line>43</line>
+          <line>44</line>
           <option name="timeStamp" value="157" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
@@ -558,12 +525,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/application/controllers/orderscontroller.php</url>
-          <line>25</line>
-          <option name="timeStamp" value="172" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/application/controllers/orderscontroller.php</url>
-          <line>31</line>
+          <line>34</line>
           <option name="timeStamp" value="173" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
@@ -573,13 +535,43 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/application/controllers/orderscontroller.php</url>
-          <line>56</line>
+          <line>59</line>
           <option name="timeStamp" value="175" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/application/controllers/orderscontroller.php</url>
-          <line>26</line>
-          <option name="timeStamp" value="176" />
+          <line>75</line>
+          <option name="timeStamp" value="177" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/application/controllers/orderscontroller.php</url>
+          <line>70</line>
+          <option name="timeStamp" value="178" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/library/shared.php</url>
+          <line>105</line>
+          <option name="timeStamp" value="179" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/library/shared.php</url>
+          <line>107</line>
+          <option name="timeStamp" value="180" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/application/controllers/orderscontroller.php</url>
+          <line>27</line>
+          <option name="timeStamp" value="181" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/application/controllers/orderscontroller.php</url>
+          <line>28</line>
+          <option name="timeStamp" value="182" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/application/controllers/orderscontroller.php</url>
+          <line>60</line>
+          <option name="timeStamp" value="183" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php-line-method">
           <url>file://$PROJECT_DIR$/library/template.class.php</url>
@@ -601,7 +593,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php-line-method">
           <url>file://$PROJECT_DIR$/application/controllers/postscontroller.php</url>
-          <line>104</line>
+          <line>107</line>
           <properties>
             <option name="className" value="\PostsController" />
             <option name="methodName" value="add" />

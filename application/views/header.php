@@ -34,7 +34,7 @@
 							<img width="200" height="50" <?php echo $html->includeImg("LogoSieusalesieuhot", "png"); ?> alt="No" /></a>
 					</li>
 					<li>
-						<a href="#">
+						<a href=<?php echo $html->linkSrc("users", "contact") ?>>
 							<img width="120" height="45" <?php echo $html->includeImg("logoLienhe", "png"); ?> alt="No" /></a>
 					</li>
 				</ul>

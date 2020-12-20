@@ -1,5 +1,6 @@
 <main>
     <div class="header-bottom">
+        <?php if ($total != 0): ?>
         <div class="login-form" style="max-width: 55rem;">
             <p class="title" style="text-align: center;">Thông tin</p>
             <br>
@@ -34,7 +35,7 @@
                 </th>
             </thead>
             <tbody>
-                <?php $counter = 0; ?>
+                <?php $counter = 1; ?>
                 <?php  foreach ($infos as $info): ?>
                     <?php if(($info["Post"]["sale"]) == 0){ $price =  ($info["Post"]["price"]);}else{$price = ($info["Post"]["sale"]);} ?>
                     <?php $number = $info["orders_posts"]["number"]; ?>
@@ -52,6 +53,10 @@
         </table>
         <p class="title" style="text-align: center;font-size: 32px; margin-top: 16px;">Thành tiền: <?php echo $total;?> đ</p>
         <input type="Submit" value="Đặt hàng" style="margin-left: 50%; transform: translateX(-50%)">
+        <?php else: ?>
+            <p class="title" style="text-align: center; margin: 190px auto;">Vui lòng đặt hàng?</p>
+        <?php endif; ?>
+
     </div>
 </main>
 </div>

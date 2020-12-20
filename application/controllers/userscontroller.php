@@ -107,6 +107,8 @@ class UsersController extends VanillaController
     {
     }
 
+    function contact(){}
+
     function afterAction()
     {
     }

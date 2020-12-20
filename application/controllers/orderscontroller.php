@@ -21,14 +21,17 @@ class OrdersController extends VanillaController
             $_SESSION["saveLink"] = $_REQUEST["url"];
             return header('Location: ' . BASE_PATH . '/users/login');
         }
-//        $this->Order->where("user_id", $_SESSION["userid"]);
-        $this->Order->where("user_id", 1);
+        $this->Order->where("user_id", $_SESSION["userid"]);
+        $this->Order->orderBy("temp", "ASC");
+        $orders = $this->Order->search();
+
+        if(!isset($orders[0]) || $orders[0]["Order"]['temp'] == 0){
+            $this->Order->custom("INSERT INTO orders (user_id) values ( " . $_SESSION["userid"] . " );");
+        }
+        $this->Order->where("user_id", $_SESSION["userid"]);
+        $this->Order->orderBy("temp", "ASC");
         $this->Order->showHMABTM();
         $orders = $this->Order->search();
-//        var_dump($order[0]['Order']['id']);
-//        return var_dump($order[0]["Post"][0]["orders_posts"]["number"]);
-//        return var_dump($orders[0]["Post"][0]["orders_posts"]);
-//        var_dump($orders[0]["Order"]["id"]);
         $okAdd = 1;
         if($orders != null){
             foreach ($orders[0]["Post"] as $post){
@@ -63,9 +66,13 @@ class OrdersController extends VanillaController
     }
 
     function cart(){
-        $this->Order->where("user_id", 1);
+        $this->Order->where("user_id", $_SESSION["userid"]);
+        $this->Order->orderBy("temp", "ASC");
         $this->Order->showHMABTM();
         $cart = $this->Order->search();
+        if(!isset($cart[0])){
+            return $this->set("total", 0);
+        }
 //        var_dump($cart[0]["Post"]);
         $total = 0;
         foreach ($cart[0]["Post"] as $value){
@@ -79,8 +86,14 @@ class OrdersController extends VanillaController
 //            var_dump($number);
             $total += $price * $number;
         }
+        $this->Order->custom("UPDATE orders SET price = ". $total ." WHERE user_id = ". $_SESSION["userid"] .";");
         $this->set("infos", $cart[0]["Post"]);
         $this->set("total", $total);
+    }
+
+    function checkout(){
+        $this->Order->custom("UPDATE orders SET temp = 0 WHERE user_id = ". $_SESSION["userid"] .";");
+        return header('Location: ' . BASE_PATH . '/posts');
     }
 
 
