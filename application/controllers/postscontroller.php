@@ -38,8 +38,10 @@ class PostsController extends VanillaController
         $this->Post->id = $id;
         $this->Post->showHasOne();
         $post = $this->Post->search();
-        var_dump($post);
+//        var_dump($post);
+        $feed = performAction("feedbacks", "view", array($id));
         $this->set("post", $post);
+        $this->set("feedback", $feed);
     }
 
     function uploadimg()
@@ -95,6 +97,7 @@ class PostsController extends VanillaController
         }
 
         $this->Post->id = null;
+        $this->Post->showHasOne();
         $infoPost = $this->Post->search();
         $this->set("infoPost", $infoPost);
     }

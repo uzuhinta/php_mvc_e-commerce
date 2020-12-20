@@ -197,7 +197,14 @@ main .header-bottom .header-bottom-right ul li .test .content {
   color: red;
   text-transform: uppercase;
 }
-
+/*Quan*/
+.admin_content .content table tbody tr{
+  transition: all 0.4s ease;
+}
+.admin_content .content table tbody tr:hover{
+  background: rgba(0,0,0,0.2);
+}
+/**/
 table {
   width: 100%;
   border-collapse: collapse;

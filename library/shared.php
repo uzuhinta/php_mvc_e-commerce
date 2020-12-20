@@ -53,9 +53,9 @@ function performAction($controller,$action,$queryString = null,$render = 0) {
 	$dispatch->render = $render;
 //	return call_user_func_array(array($dispatch,$action),$queryString);
     if ((int)method_exists($controllerName, $action)) {
-        call_user_func_array(array($dispatch,"beforeAction"),$queryString);
-        call_user_func_array(array($dispatch,$action),$queryString);
-        call_user_func_array(array($dispatch,"afterAction"),$queryString);
+//        call_user_func_array(array($dispatch,"beforeAction"),$queryString);
+        return call_user_func_array(array($dispatch,$action),$queryString);
+//        call_user_func_array(array($dispatch,"afterAction"),$queryString);
     } else {
         /* Error Generation Code Here */
     }

@@ -1,5 +1,3 @@
-
-
 <div class="admin_wrapper">
     <!-- left_sidebar -->
     <div class="left_sidebar">
@@ -33,40 +31,30 @@
                     <th>
                         Giá tiền
                     </th>
+                    <th>
+                        Giá tiền
+                    </th>
                     <th colspan="3">
                         Hoạt động
                     </th>
                 </thead>
                 <tbody>
+                    <?php
+                    $counter = 1;
+                    foreach ($infoPost as $post): ?>
                     <tr>
-                        <td>1</td>
-                        <td>Cơm cháy</td>
-                        <td>Cơm</td>
-                        <td>20.000 đ</td>
-                        <td>
-                            <a href="" class="edit">Sửa</a>
-                        </td>
+                        <td> <?php echo $counter; $counter++; ?> </td>
+                        <td> <?php echo $post["Post"]["title"]; ?> </td>
+                        <td><?php echo $post["Category"]["name"]; ?></td>
+                        <td><?php echo $post["Post"]["price"]; ?></td>
+                        <td><?php echo $post["Post"]["sale"]; ?></td>
+<!--                        <td>-->
+<!--                            <a href="" class="edit">Sửa</a>-->
+<!--                        </td>-->
                         <td><a href="" class="delete">Xóa</a></td>
-                        <td><a href="" class="publish">Ẩn/Hiện</a></td>
+<!--                        <td><a href="" class="publish">Ẩn/Hiện</a></td>-->
                     </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Cơm cháy</td>
-                        <td>Cơm</td>
-                        <td>20.000 đ</td>
-                        <td><a href="" class="edit">Sửa</a></td>
-                        <td><a href="" class="delete">Xóa</a></td>
-                        <td><a href="" class="publish">Ẩn/Hiện</a></td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Cơm cháy</td>
-                        <td>Cơm</td>
-                        <td>20.000 đ</td>
-                        <td><a href="" class="edit">Sửa</a></td>
-                        <td><a href="" class="delete">Xóa</a></td>
-                        <td><a href="" class="publish">Ẩn/Hiện</a></td>
-                    </tr>
+                    <?php endforeach;?>
                 </tbody>
             </table>
         </div>
