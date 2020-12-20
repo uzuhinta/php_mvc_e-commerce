@@ -49,9 +49,9 @@
                             <td><?php echo $post["Category"]["name"]; ?></td>
                             <td><?php echo $post["Post"]["price"]; ?></td>
                             <td><?php echo $post["Post"]["sale"]; ?></td>
-                            <!--                        <td>-->
-                            <!--                            <a href="" class="edit">Sửa</a>-->
-                            <!--                        </td>-->
+                            <td>
+                                <a href=<?php echo $html->linkSrc("posts", "edit", $post["Post"]["id"]) ?> class="edit">Sửa</a>
+                            </td>
                             <td><a href=<?php echo $html->linkSrc("posts", "delete", $post["Post"]["id"]) ?> class="delete">Xóa</a></td>
                             <!--                        <td><a href="" class="publish">Ẩn/Hiện</a></td>-->
                         </tr>
