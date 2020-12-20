@@ -20,15 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f6f20645-18e4-4857-9f89-545b7ea388e4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/application/views/posts/orderby.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/postscontroller.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/postscontroller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/userscontroller.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/userscontroller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/posts/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/posts/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/framework" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/html.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/html.class.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/body.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/body.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/describeposts" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/views/products/detail.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/views/users/eatWhat.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/back.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/nem-nuong.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/users/cart.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/users/cart.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/style_login.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style_login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/style_main.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style_main.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

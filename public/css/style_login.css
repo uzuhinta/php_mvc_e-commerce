@@ -56,7 +56,9 @@ card {
 .login-form input:focus {
   border-color: #fe2e2e;
 }
-
+.cart-form input:focus {
+  border-color: #fe2e2e;
+}
 .login-form .forgot {
   display: inline-block;
   color: #f78181;
