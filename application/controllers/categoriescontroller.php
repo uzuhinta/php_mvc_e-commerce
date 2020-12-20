@@ -44,6 +44,10 @@ class CategoriesController extends VanillaController
 
     }
 
+    function manager()
+    {
+    }
+
     function add()
     {
     }

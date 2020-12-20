@@ -2,10 +2,10 @@
     <!-- left_sidebar -->
     <div class="left_sidebar">
         <ul>
-            <li><a href=<?php echo $html->linkSrc("users", "index") ?>>Manger Users</a></li>
-            <li><a href=<?php echo $html->linkSrc("categories", "index") ?>>Manger Categories</a></li>
-            <li class="active"><a href=<?php echo $html->linkSrc("products", "index") ?>>Manger Products</a></li>
-            <li><a href=<?php echo $html->linkSrc("orders", "index") ?>>Manger Orders</a></li>
+            <li><a href=<?php echo $html->linkSrc("users", "manager") ?>>Manger Users</a></li>
+            <li class="active"><a href=<?php echo $html->linkSrc("categories", "manager") ?>>Manger Categories</a></li>
+            <li><a href=<?php echo $html->linkSrc("posts", "manager") ?>>Manger Posts</a></li>
+            <li><a href=<?php echo $html->linkSrc("orders", "manager") ?>>Manger Orders</a></li>
         </ul>
     </div>
     <!--end left_sidebar -->
@@ -13,10 +13,10 @@
     <!-- admin_content -->
     <div class="admin_content">
         <div class="button">
-            <a href=<?php echo $html->linkSrc("products", "add") ?>>Thêm sản phẩm</a>
+            <a href=<?php echo $html->linkSrc("categories", "add") ?>>Thêm loại sp</a>
         </div>
         <div class="content">
-            <h2 class="page_title">Quản lý sản phẩm</h2>
+            <h2 class="page_title">Quản lý loại sản phẩm</h2>
             <table>
                 <thead>
                     <th>

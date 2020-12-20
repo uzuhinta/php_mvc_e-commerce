@@ -17,7 +17,7 @@ class OrdersController extends VanillaController
     }
 
 
-    function index()
+    function manager()
     {
     }
 
