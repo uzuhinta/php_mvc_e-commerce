@@ -45,7 +45,12 @@
                 <?php if($feedback != null) : ?>
                     <?php foreach ($feedback as $value): ?>
                         <tr>
-                            <td> <?php echo $value["User"]["name"] ?> </td>
+                            <td> <?php if($value["User"]["name"] == ""){
+                                    echo "Người dùng ẩn danh";
+                                }else{
+                                    echo $value["User"]["name"];
+                                } ?>
+                            </td>
                             <td>  <?php echo $value["Feedback"]["content"] ?> </td>
                         </tr>
                     <?php endforeach; ?>

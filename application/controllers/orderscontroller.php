@@ -54,7 +54,7 @@ class OrdersController extends VanillaController
         }
 
         if($number != 1){
-            $getIfd = $thí->Order->customSQL("SELECT * FROM ")
+            $getIfd = $this->Order->customSQL("SELECT * FROM ");
             $result = $this->Order->customSQL("UPDATE orders_posts SET number = 100 WHERE id = 2; ");
         }
 

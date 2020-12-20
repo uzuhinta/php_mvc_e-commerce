@@ -22,7 +22,7 @@
     <list default="true" id="f6f20645-18e4-4857-9f89-545b7ea388e4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/controllers/orderscontroller.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/orderscontroller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/sqlquery.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/sqlquery.class.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/posts/detail.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/posts/detail.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -264,7 +264,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/library/sqlquery.class.php</url>
-          <line>257</line>
+          <line>264</line>
           <option name="timeStamp" value="52" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
@@ -319,7 +319,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/library/sqlquery.class.php</url>
-          <line>96</line>
+          <line>104</line>
           <option name="timeStamp" value="105" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
@@ -374,22 +374,22 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/library/sqlquery.class.php</url>
-          <line>85</line>
+          <line>93</line>
           <option name="timeStamp" value="122" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/application/controllers/userscontroller.php</url>
-          <line>82</line>
+          <line>83</line>
           <option name="timeStamp" value="125" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/application/controllers/userscontroller.php</url>
-          <line>71</line>
+          <line>72</line>
           <option name="timeStamp" value="126" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/application/controllers/userscontroller.php</url>
-          <line>80</line>
+          <line>81</line>
           <option name="timeStamp" value="127" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
@@ -432,7 +432,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/application/views/categories/add.php</url>
-          <line>6</line>
+          <line>4</line>
           <option name="timeStamp" value="140" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
