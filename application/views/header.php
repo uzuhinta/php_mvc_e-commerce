@@ -44,7 +44,7 @@
 							<li style="cursor: pointer;">
                                 <a href=<?php echo $html->linkSrc("orders", "cart") ?>>
 								<i class="fas fa-shopping-cart" style="font-size: 30px; cursor: pointer; "></i>
-								<small class="number_product">1</small>
+<!--								<small class="number_product">1</small>-->
                                 </a>
 							</li>
 							<li class="dropdown">

@@ -52,7 +52,7 @@
             </tbody>
         </table>
         <p class="title" style="text-align: center;font-size: 32px; margin-top: 16px;">Thành tiền: <?php echo $total;?> đ</p>
-        <input type="Submit" value="Đặt hàng" style="margin-left: 50%; transform: translateX(-50%)">
+        <a href=<?php echo $html->linkSrc("orders", "checkout"); ?> ><input type="Submit" value="Đặt hàng" style="margin-left: 50%; transform: translateX(-50%)"></a>
         <?php else: ?>
             <p class="title" style="text-align: center; margin: 190px auto;">Vui lòng đặt hàng?</p>
         <?php endif; ?>
