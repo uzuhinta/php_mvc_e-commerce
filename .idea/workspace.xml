@@ -22,7 +22,13 @@
     <list default="true" id="f6f20645-18e4-4857-9f89-545b7ea388e4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/controllers/orderscontroller.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/orderscontroller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/header.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/posts/detail.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/posts/detail.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/users/cart.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/orders/cart.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/framework-20090330111635.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db/framework-20090330111635.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/bootstrap.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/bootstrap.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/generic.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/generic.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,14 +77,15 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\framework\application\views\posts" />
-      <recent name="C:\xampp\htdocs\framework\application\views\products" />
-      <recent name="C:\xampp\htdocs\framework\application\views\users" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\framework\public\img" />
       <recent name="C:\xampp\htdocs\framework\public\css" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\framework\application\views\orders" />
+      <recent name="C:\xampp\htdocs\framework\application\views\posts" />
+      <recent name="C:\xampp\htdocs\framework\application\views\products" />
+      <recent name="C:\xampp\htdocs\framework\application\views\users" />
     </key>
   </component>
   <component name="RunManager">
@@ -170,54 +177,54 @@
       <screen x="0" y="0" width="1440" height="770" />
     </state>
     <state width="464" height="466" key="DebuggerActiveHint/0.0.1440.770@0.0.1440.770" timestamp="1608362990631" />
-    <state width="1398" height="368" key="GridCell.Tab.0.bottom" timestamp="1608485457480">
+    <state width="1398" height="106" key="GridCell.Tab.0.bottom" timestamp="1608490939607">
       <screen x="0" y="0" width="1440" height="770" />
     </state>
-    <state width="1398" height="368" key="GridCell.Tab.0.bottom/0.0.1440.770@0.0.1440.770" timestamp="1608485457480" />
-    <state width="1398" height="368" key="GridCell.Tab.0.center" timestamp="1608485457479">
+    <state width="1398" height="106" key="GridCell.Tab.0.bottom/0.0.1440.770@0.0.1440.770" timestamp="1608490939607" />
+    <state width="1398" height="106" key="GridCell.Tab.0.center" timestamp="1608490939607">
       <screen x="0" y="0" width="1440" height="770" />
     </state>
-    <state width="1398" height="368" key="GridCell.Tab.0.center/0.0.1440.770@0.0.1440.770" timestamp="1608485457479" />
-    <state width="1398" height="368" key="GridCell.Tab.0.left" timestamp="1608485457479">
+    <state width="1398" height="106" key="GridCell.Tab.0.center/0.0.1440.770@0.0.1440.770" timestamp="1608490939607" />
+    <state width="1398" height="106" key="GridCell.Tab.0.left" timestamp="1608490939607">
       <screen x="0" y="0" width="1440" height="770" />
     </state>
-    <state width="1398" height="368" key="GridCell.Tab.0.left/0.0.1440.770@0.0.1440.770" timestamp="1608485457479" />
-    <state width="1398" height="368" key="GridCell.Tab.0.right" timestamp="1608485457480">
+    <state width="1398" height="106" key="GridCell.Tab.0.left/0.0.1440.770@0.0.1440.770" timestamp="1608490939607" />
+    <state width="1398" height="106" key="GridCell.Tab.0.right" timestamp="1608490939607">
       <screen x="0" y="0" width="1440" height="770" />
     </state>
-    <state width="1398" height="368" key="GridCell.Tab.0.right/0.0.1440.770@0.0.1440.770" timestamp="1608485457480" />
-    <state width="1398" height="368" key="GridCell.Tab.1.bottom" timestamp="1608485457480">
+    <state width="1398" height="106" key="GridCell.Tab.0.right/0.0.1440.770@0.0.1440.770" timestamp="1608490939607" />
+    <state width="1398" height="106" key="GridCell.Tab.1.bottom" timestamp="1608490939607">
       <screen x="0" y="0" width="1440" height="770" />
     </state>
-    <state width="1398" height="368" key="GridCell.Tab.1.bottom/0.0.1440.770@0.0.1440.770" timestamp="1608485457480" />
-    <state width="1398" height="368" key="GridCell.Tab.1.center" timestamp="1608485457480">
+    <state width="1398" height="106" key="GridCell.Tab.1.bottom/0.0.1440.770@0.0.1440.770" timestamp="1608490939607" />
+    <state width="1398" height="106" key="GridCell.Tab.1.center" timestamp="1608490939607">
       <screen x="0" y="0" width="1440" height="770" />
     </state>
-    <state width="1398" height="368" key="GridCell.Tab.1.center/0.0.1440.770@0.0.1440.770" timestamp="1608485457480" />
-    <state width="1398" height="368" key="GridCell.Tab.1.left" timestamp="1608485457480">
+    <state width="1398" height="106" key="GridCell.Tab.1.center/0.0.1440.770@0.0.1440.770" timestamp="1608490939607" />
+    <state width="1398" height="106" key="GridCell.Tab.1.left" timestamp="1608490939607">
       <screen x="0" y="0" width="1440" height="770" />
     </state>
-    <state width="1398" height="368" key="GridCell.Tab.1.left/0.0.1440.770@0.0.1440.770" timestamp="1608485457480" />
-    <state width="1398" height="368" key="GridCell.Tab.1.right" timestamp="1608485457480">
+    <state width="1398" height="106" key="GridCell.Tab.1.left/0.0.1440.770@0.0.1440.770" timestamp="1608490939607" />
+    <state width="1398" height="106" key="GridCell.Tab.1.right" timestamp="1608490939607">
       <screen x="0" y="0" width="1440" height="770" />
     </state>
-    <state width="1398" height="368" key="GridCell.Tab.1.right/0.0.1440.770@0.0.1440.770" timestamp="1608485457480" />
-    <state width="1398" height="368" key="GridCell.Tab.2.bottom" timestamp="1608485457480">
+    <state width="1398" height="106" key="GridCell.Tab.1.right/0.0.1440.770@0.0.1440.770" timestamp="1608490939607" />
+    <state width="1398" height="106" key="GridCell.Tab.2.bottom" timestamp="1608490939607">
       <screen x="0" y="0" width="1440" height="770" />
     </state>
-    <state width="1398" height="368" key="GridCell.Tab.2.bottom/0.0.1440.770@0.0.1440.770" timestamp="1608485457480" />
-    <state width="1398" height="368" key="GridCell.Tab.2.center" timestamp="1608485457480">
+    <state width="1398" height="106" key="GridCell.Tab.2.bottom/0.0.1440.770@0.0.1440.770" timestamp="1608490939607" />
+    <state width="1398" height="106" key="GridCell.Tab.2.center" timestamp="1608490939607">
       <screen x="0" y="0" width="1440" height="770" />
     </state>
-    <state width="1398" height="368" key="GridCell.Tab.2.center/0.0.1440.770@0.0.1440.770" timestamp="1608485457480" />
-    <state width="1398" height="368" key="GridCell.Tab.2.left" timestamp="1608485457480">
+    <state width="1398" height="106" key="GridCell.Tab.2.center/0.0.1440.770@0.0.1440.770" timestamp="1608490939607" />
+    <state width="1398" height="106" key="GridCell.Tab.2.left" timestamp="1608490939607">
       <screen x="0" y="0" width="1440" height="770" />
     </state>
-    <state width="1398" height="368" key="GridCell.Tab.2.left/0.0.1440.770@0.0.1440.770" timestamp="1608485457480" />
-    <state width="1398" height="368" key="GridCell.Tab.2.right" timestamp="1608485457480">
+    <state width="1398" height="106" key="GridCell.Tab.2.left/0.0.1440.770@0.0.1440.770" timestamp="1608490939607" />
+    <state width="1398" height="106" key="GridCell.Tab.2.right" timestamp="1608490939607">
       <screen x="0" y="0" width="1440" height="770" />
     </state>
-    <state width="1398" height="368" key="GridCell.Tab.2.right/0.0.1440.770@0.0.1440.770" timestamp="1608485457480" />
+    <state width="1398" height="106" key="GridCell.Tab.2.right/0.0.1440.770@0.0.1440.770" timestamp="1608490939607" />
     <state x="555" y="309" key="NewPhpFileDialog" timestamp="1608374413180">
       <screen x="0" y="0" width="1440" height="770" />
     </state>
@@ -230,10 +237,10 @@
       <screen x="0" y="0" width="1440" height="770" />
     </state>
     <state x="273" y="114" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1440.770@0.0.1440.770" timestamp="1608357085546" />
-    <state x="655" y="64" width="579" height="534" key="find.popup" timestamp="1608485896980">
+    <state x="655" y="64" width="579" height="534" key="find.popup" timestamp="1608496353613">
       <screen x="0" y="0" width="1440" height="770" />
     </state>
-    <state x="655" y="64" width="579" height="534" key="find.popup/0.0.1440.770@0.0.1440.770" timestamp="1608485896980" />
+    <state x="655" y="64" width="579" height="534" key="find.popup/0.0.1440.770@0.0.1440.770" timestamp="1608496353613" />
     <state x="655" y="67" width="579" height="562" key="find.popup/0.0.1440.810@0.0.1440.810" timestamp="1608398494582" />
     <state x="379" y="175" key="run.anything.popup" timestamp="1608439620607">
       <screen x="0" y="0" width="1440" height="770" />
@@ -563,6 +570,16 @@
           <url>file://$PROJECT_DIR$/application/controllers/orderscontroller.php</url>
           <line>20</line>
           <option name="timeStamp" value="174" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/application/controllers/orderscontroller.php</url>
+          <line>56</line>
+          <option name="timeStamp" value="175" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/application/controllers/orderscontroller.php</url>
+          <line>26</line>
+          <option name="timeStamp" value="176" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php-line-method">
           <url>file://$PROJECT_DIR$/library/template.class.php</url>

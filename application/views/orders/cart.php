@@ -9,8 +9,8 @@
                 <input type="text" name="phone" class="register-input1" style="margin-left:2.9%;" placeholder="0353253464" />
 
                 <input type="text" name="address" class="register-input2" placeholder="Ngõ tự do" />
-                <input type="text" name="note" class="register-input2" placeholder="Ghi chú: cho thêm nhiều thịt nhé" />
-                <input type="Submit" value="Đặt hàng">
+<!--                <input type="text" name="note" class="register-input2" placeholder="Ghi chú: cho thêm nhiều thịt nhé" />-->
+
             </form>
 
         </div>
@@ -34,42 +34,24 @@
                 </th>
             </thead>
             <tbody>
+                <?php $counter = 0; ?>
+                <?php  foreach ($infos as $info): ?>
+                    <?php if(($info["Post"]["sale"]) == 0){ $price =  ($info["Post"]["price"]);}else{$price = ($info["Post"]["sale"]);} ?>
+                    <?php $number = $info["orders_posts"]["number"]; ?>
                 <tr>
-                    <td>1</td>
-                    <td>Cơm cháy</td>
+                    <td> <?php echo $counter;  $counter++;?></td>
+                    <td><?php echo ($info["Post"]["title"]); ?></td>
                     <td>
-                        <button>-</button>
-                        1
-                        <button>+</button>
+                        <?php echo $number; ?>
                     </td>
-                    <td>20.000 đ</td>
-                    <td>20.000 đ</td>
+                    <td> <?php echo $price; ?> đ</td>
+                    <td> <?php echo $number * $price;?> đ</td>
                 </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Cơm cháy</td>
-                    <td>
-                        <button>-</button>
-                        1
-                        <button>+</button>
-                    </td>
-                    <td>20.000 đ</td>
-                    <td>20.000 đ</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Cơm cháy</td>
-                    <td>
-                        <button>-</button>
-                        1
-                        <button>+</button>
-                    </td>
-                    <td>20.000 đ</td>
-                    <td>20.000 đ</td>
-                </tr>
+                <?php endforeach; ?>
             </tbody>
         </table>
-        <p class="title" style="text-align: left; font-size: 32px; margin-top: 6px;">Thành tiền: 60.000Đ</p>
+        <p class="title" style="text-align: center;font-size: 32px; margin-top: 16px;">Thành tiền: <?php echo $total;?> đ</p>
+        <input type="Submit" value="Đặt hàng" style="margin-left: 50%; transform: translateX(-50%)">
     </div>
 </main>
 </div>

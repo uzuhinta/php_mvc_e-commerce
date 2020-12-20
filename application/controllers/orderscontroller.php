@@ -28,11 +28,11 @@ class OrdersController extends VanillaController
 //        var_dump($order[0]['Order']['id']);
 //        return var_dump($order[0]["Post"][0]["orders_posts"]["number"]);
 //        return var_dump($orders[0]["Post"][0]["orders_posts"]);
-        var_dump($orders);
+//        var_dump($orders[0]["Order"]["id"]);
         $okAdd = 1;
         if($orders != null){
             foreach ($orders[0]["Post"] as $post){
-                var_dump($post["orders_posts"]["post_id"]);
+//                var_dump($post["orders_posts"]["post_id"]);
                 if(intval($post["orders_posts"]["post_id"]) == $idPost){
 
                     echo "San pham da ton tai trong gio hang";
@@ -54,11 +54,33 @@ class OrdersController extends VanillaController
         }
 
         if($number != 1){
-            $getIfd = $this->Order->customSQL("SELECT * FROM ");
-            $result = $this->Order->customSQL("UPDATE orders_posts SET number = 100 WHERE id = 2; ");
+            $getId = $this->Order->custom("SELECT * FROM orders_posts WHERE order_id = " . $orders[0]["Order"]["id"] . " AND post_id = " . $idPost .  ";");
+            $result = $this->Order->custom("UPDATE orders_posts SET number = ".$number. " WHERE id = " . $getId[0]["Orders_post"]["id"] . "; ");
+            var_dump($getId[0]["Orders_post"]["id"]);
         }
 
-//        return header('Location: ' . BASE_PATH . '/posts/detail/'. $idPost);
+        return header('Location: ' . BASE_PATH . '/posts/detail/'. $idPost);
+    }
+
+    function cart(){
+        $this->Order->where("user_id", 1);
+        $this->Order->showHMABTM();
+        $cart = $this->Order->search();
+//        var_dump($cart[0]["Post"]);
+        $total = 0;
+        foreach ($cart[0]["Post"] as $value){
+            if( $value["Post"]["sale"] != 0){
+                $price = $value["Post"]["sale"];
+            }else{
+                $price = ($value["Post"]["price"]);
+            }
+            $number = ($value["orders_posts"]["number"]);
+//            var_dump($price);
+//            var_dump($number);
+            $total += $price * $number;
+        }
+        $this->set("infos", $cart[0]["Post"]);
+        $this->set("total", $total);
     }
 
 

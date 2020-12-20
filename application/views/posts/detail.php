@@ -24,8 +24,13 @@
                         <?php echo $post["Post"]["description"] ?>
                     </p>
                 </div>
+                <formclass="login-form">
+                    <label class="title" for="number">Số lượng: </label>
+                    <input type="number" min="1" id="numberadd" value="1" onchange="setNumber()" name="name_category" class="register-input2">
+<!--                    <div class="type_submit"><input type="submit" value="Thêm"></div>-->
+                </form>
                 <div class="buttons">
-                    <a href=<?php echo $html->linkSrc("orders", "add", $post["Post"]["id"]) ?> class="button"><i class="fas fa-cart-plus"></i> &nbsp;Thêm vào giỏ hàng</a>
+                    <a id="hrefAdd" href=<?php echo $html->linkSrc("orders", "add", $post["Post"]["id"]) ?> class="button"><i class="fas fa-cart-plus"></i> &nbsp;Thêm vào giỏ hàng</a>
                 </div>
             </div>
 
@@ -65,3 +70,15 @@
     </div>
 </div>
 </div>
+
+<script>
+    function setNumber(){
+        const value = document.getElementById("numberadd").value;
+        console.log(value);
+        var hrefAdd = document.getElementById("hrefAdd").href;
+        hrefAdd = document.getElementById("hrefAdd").href += "/" + value;
+        console.log(hrefAdd)
+    }
+</script>
+</body>
+</html>
