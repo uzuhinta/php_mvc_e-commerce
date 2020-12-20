@@ -1,5 +1,6 @@
 <form action=<?php echo $html->linkSrc("posts", "uploadimg")?> method="post" enctype="multipart/form-data">
     Select image to upload:
+    <input type="text" name="test">
     <input type="file" name="fileToUpload" id="fileToUpload">
     <input type="submit" value="Upload Image" name="submit">
 </form>

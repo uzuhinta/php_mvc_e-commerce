@@ -169,6 +169,7 @@ CREATE TABLE `posts` (
     `category_id` int(10) unsigned NOT NULL,
     `price` int(100) unsigned NOT NULL,
     `sale` int(100) default 0,
+    `img_name` varchar(250) default "com-chay.jpg"
     PRIMARY KEY (`id`)
 );
 

@@ -41,6 +41,8 @@ class UsersController extends VanillaController
                 $info = $this->User->search();
                 if ((isset($info[0]["User"]) == true) && ($info[0]["User"]["password"] == $pwd)) {
                     $_SESSION["loggedin"] = true;
+                    $_SESSION["userid"] = $info[0]["User"]["id"];
+                    $_SESSION["role"] = $info[0]["User"]["role"];
                     return header('Location: ' . BASE_PATH . '/users/home');
                 }
             }
