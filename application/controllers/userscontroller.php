@@ -103,8 +103,30 @@ class UsersController extends VanillaController
         }
     }
 
-    function manager()
+    function manager($pageNumber = 1)
     {
+        if (isset($_SESSION["loggedin"]) == false || $_SESSION["role"] != "admin") {
+            return header('Location: ' . BASE_PATH . '/posts');
+        }
+        $this->User->setPage($pageNumber);
+        $this->User->setLimit('8');
+        $this->User->id = null;
+        $this->User->showHasOne();
+        $users = $this->User->search();
+        $this->set("users", $users);
+        $totalPages = $this->User->totalPages();
+        $this->set('totalPages', $totalPages);
+        $this->set('currentPageNumber', $pageNumber);
+    }
+
+    function delete($id = -1)
+    {
+        if ($id == -1) {
+            return header('Location: ' . BASE_PATH . '/users/manager');
+        }
+        $this->User->id = $id;
+        $this->User->delete();
+        return header('Location: ' . BASE_PATH . '/users/manager');
     }
 
     function edit()
@@ -151,7 +173,9 @@ class UsersController extends VanillaController
         }
     }
 
-    function contact(){}
+    function contact()
+    {
+    }
 
     function afterAction()
     {
