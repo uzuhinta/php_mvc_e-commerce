@@ -1,4 +1,6 @@
-<?php if (isset($message)) {var_dump($message);} ?>
+<?php if (isset($message)) {
+    var_dump($message);
+} ?>
 <div class="admin_wrapper">
     <!-- left_sidebar -->
     <div class="left_sidebar">
@@ -7,6 +9,7 @@
             <li><a href=<?php echo $html->linkSrc("categories", "manager") ?>>Manger Categories</a></li>
             <li class="active"><a href=<?php echo $html->linkSrc("posts", "manager") ?>>Manger Posts</a></li>
             <li><a href=<?php echo $html->linkSrc("orders", "manager") ?>>Manger Orders</a></li>
+            <li><a href=<?php echo $html->linkSrc("blogs", "manager") ?>>Manger Blogs</a></li>
         </ul>
     </div>
     <!--end left_sidebar -->
@@ -23,8 +26,8 @@
                 <div class="right">
                     <label class="title">Loại sản phẩm</label>
                     <select name="category" class="register-input2" required>
-                        <?php foreach ($infoCategory as $info):?>
-                        <option value= <?php echo '"' . $info["Category"]["id"] . '"' ?>> <?php echo $info["Category"]["name"]?> </option>
+                        <?php foreach ($infoCategory as $info) : ?>
+                            <option value=<?php echo '"' . $info["Category"]["id"] . '"' ?>> <?php echo $info["Category"]["name"] ?> </option>
                         <?php endforeach; ?>
                     </select>
                 </div>
@@ -42,14 +45,14 @@
                 </div>
                 <div class="upload_file">
                     <label class="title" for="fileToUpload" required>Ảnh sản phẩm</label>
-<!--                    <div class="file">-->
-<!--                        <label class="file_product" for="file_input"> <i class="fas fa-upload"></i>&nbsp;Chọn ảnh...</label>-->
-<!--                        <span style="color: red">-->
-<!--                            <strong>Chọn file: </strong>-->
-<!--                            <span id="file_name">None</span>-->
-<!--                        </span>-->
-<!--                    </div>-->
-<!--                    <input type="file" name="fileToUpload" id="file_input">-->
+                    <!--                    <div class="file">-->
+                    <!--                        <label class="file_product" for="file_input"> <i class="fas fa-upload"></i>&nbsp;Chọn ảnh...</label>-->
+                    <!--                        <span style="color: red">-->
+                    <!--                            <strong>Chọn file: </strong>-->
+                    <!--                            <span id="file_name">None</span>-->
+                    <!--                        </span>-->
+                    <!--                    </div>-->
+                    <!--                    <input type="file" name="fileToUpload" id="file_input">-->
                     <input type="file" name="fileToUpload" id="fileToUpload">
                 </div>
                 <div class="type_submit"><input type="submit" value="Thêm"></div>

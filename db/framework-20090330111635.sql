@@ -202,3 +202,15 @@ CREATE TABLE `feedbacks`(
 INSERT INTO `feedbacks` (post_id, user_id, content) VALUES (1, 1, "Ngon");
 INSERT INTO `feedbacks` (post_id, user_id, content) VALUES (1, 2, "Bo");
 INSERT INTO `feedbacks` (post_id, user_id, content) VALUES (1, 3, "Re");
+
+CREATE TABLE `blogs`(
+    `id` int(10) unsigned NOT NULL auto_increment,
+    `title` varchar(255) NOT NULL,
+    `content` varchar(1000) NOT NULL,
+    `imgname` varchar(250) default "banhDauXanh.jpg",
+    PRIMARY KEY (`id`)
+);
+
+INSERT INTO `blogs` (title, content) VALUES ("Bánh đậu xanh", "Bánh đậu xanh là một loại bánh ngọt làm từ bột đậu xanh quết nhuyễn với đường và dầu thực vật hay mỡ động vật, thường là mỡ lợn. Bánh được cắt thành từng khối vuông nhỏ, gói giấy bạc thành hộp nhỏ,lớn hay gói giấy thấm mỡ thành từng thỏi vàng. Bánh thường được dùng khi uống trà tàu hay chè xanh, khi đó sẽ tạo cảm giác thư thái. Địa phương làm bánh đậu xanh nổi tiếng là Hải Dương.");
+INSERT INTO `blogs` (title, content) VALUES ("Bánh đậu đỏ", "Bánh đậu xanh là một loại bánh ngọt làm từ bột đậu xanh quết nhuyễn với đường và dầu thực vật hay mỡ động vật, thường là mỡ lợn. Bánh được cắt thành từng khối vuông nhỏ, gói giấy bạc thành hộp nhỏ,lớn hay gói giấy thấm mỡ thành từng thỏi vàng. Bánh thường được dùng khi uống trà tàu hay chè xanh, khi đó sẽ tạo cảm giác thư thái. Địa phương làm bánh đậu xanh nổi tiếng là Hải Dương.");
+INSERT INTO `blogs` (title, content) VALUES ("Bánh đậu vàng", "Bánh đậu xanh là một loại bánh ngọt làm từ bột đậu xanh quết nhuyễn với đường và dầu thực vật hay mỡ động vật, thường là mỡ lợn. Bánh được cắt thành từng khối vuông nhỏ, gói giấy bạc thành hộp nhỏ,lớn hay gói giấy thấm mỡ thành từng thỏi vàng. Bánh thường được dùng khi uống trà tàu hay chè xanh, khi đó sẽ tạo cảm giác thư thái. Địa phương làm bánh đậu xanh nổi tiếng là Hải Dương.");

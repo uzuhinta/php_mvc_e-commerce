@@ -26,7 +26,7 @@
 							<img width="160" height="50" <?php echo $html->includeImg("LogotenTrangchu", "png"); ?> alt="No" /></a>
 					</li>
 					<li>
-						<a href="#">
+						<a href=<?php echo $html->linkSrc("blogs", "detail") ?>>
 							<img width="180" height="50" <?php echo $html->includeImg("Logohomnayangi", "png"); ?> alt="No" /></a>
 					</li>
 					<li>
