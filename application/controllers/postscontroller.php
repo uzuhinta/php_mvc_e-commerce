@@ -31,6 +31,17 @@ class PostsController extends VanillaController
         $this->set("order", $order);
     }
 
+    function detail($id = -1){
+        if($id == -1){
+            return header('Location: ' . BASE_PATH . '/posts');
+        }
+        $this->Post->id = $id;
+        $this->Post->showHasOne();
+        $post = $this->Post->search();
+        var_dump($post);
+        $this->set("post", $post);
+    }
+
     function uploadimg()
     {
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -79,6 +90,13 @@ class PostsController extends VanillaController
 
     function manager()
     {
+        if(isset($_SESSION["loggedin"]) == false || $_SESSION["role"] != "admin"  ){
+            return header('Location: ' . BASE_PATH . '/posts');
+        }
+
+        $this->Post->id = null;
+        $infoPost = $this->Post->search();
+        $this->set("infoPost", $infoPost);
     }
 
     function add()

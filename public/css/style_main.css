@@ -382,6 +382,8 @@ input#file_input {
   height: 80%;
   width: 85%;
   padding: 3rem;
+  border-radius: 5px;
+  object-fit: cover;
 }
 
 .feedback {

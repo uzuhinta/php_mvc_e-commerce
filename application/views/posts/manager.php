@@ -1,3 +1,5 @@
+
+
 <div class="admin_wrapper">
     <!-- left_sidebar -->
     <div class="left_sidebar">
@@ -13,7 +15,7 @@
     <!-- admin_content -->
     <div class="admin_content">
         <div class="button">
-            <a href=<?php echo $html->linkSrc("products", "add") ?>>Thêm sản phẩm</a>
+            <a href=<?php echo $html->linkSrc("posts", "add") ?>>Thêm sản phẩm</a>
         </div>
         <div class="content">
             <h2 class="page_title">Quản lý sản phẩm</h2>

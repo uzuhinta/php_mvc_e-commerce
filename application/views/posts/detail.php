@@ -1,21 +1,28 @@
+<?php $img = explode('.', $post["Post"]["imgname"]);
+    var_dump($post);
+?>
 <div class="detail_main">
     <div class="detail">
         <div class="card_detail">
             <div class="images">
-                <a href="#">
-                    <img <?php echo $html->includeImg("com-chay", "jpg"); ?> alt="No" />
-                </a>
+<!--                <a href="#">-->
+                    <img <?php echo $html->includeImg("$img[0]", $img[1]); ?> >
+<!--                </a>-->
             </div>
             <div class="info">
-                <h1>Name</h1>
+                <h1> <?php echo $post["Post"]["title"] ?></h1>
                 <div class="price">
-                    <h3 class="price-begin">20.000 đ</h3>
-                    <h3>15.000 đ</h3>
+                    <?php if ($post["Post"]["sale"] != 0): ?>
+                        <h3 class="price-begin"> <?php echo $post["Post"]["price"] ?> đ</h3>
+                        <h3> <?php echo $post["Post"]["sale"] ?> đ</h3>
+                    <?php else: ?>
+                        <h3> <?php echo $post["Post"]["price"] ?> đ</h3>
+                    <?php endif; ?>
                 </div>
                 <div class="info-content">
                     <h3>Mô tả</h3>
                     <p>
-                        Do mình thấy nhiều trường hợp mua iPhone nhưng bên trong là cục gạch, nên trước khi nhận hàng mình có gọi cho shop Điện Tử Thuỷ Chi 0333929238, mình yêu cầu bảo đơn hàng có giá trị cao mình muốn kiểm hàng. Xong 1 hồi gọi shop k nghe máy, r mình lấy Sđt khác gọi và shop nghe máy, shop bảo do nhầ
+                        <?php echo $post["Post"]["description"] ?>
                     </p>
                 </div>
                 <div class="buttons">
