@@ -3,7 +3,6 @@
     <div class="left_sidebar">
         <ul>
             <li><a href=<?php echo $html->linkSrc("users", "manager") ?>>Manger Users</a></li>
-            <li><a href=<?php echo $html->linkSrc("categories", "manager") ?>>Manger Categories</a></li>
             <li class="active"><a href=<?php echo $html->linkSrc("posts", "manager") ?>>Manger Posts</a></li>
             <li><a href=<?php echo $html->linkSrc("orders", "manager") ?>>Manger Orders</a></li>
             <li><a href=<?php echo $html->linkSrc("blogs", "manager") ?>>Manger Blogs</a></li>
@@ -42,21 +41,33 @@
                 <tbody>
                     <?php
                     $counter = 1;
-                    foreach ($infoPost as $post): ?>
-                    <tr>
-                        <td> <?php echo $counter; $counter++; ?> </td>
-                        <td> <?php echo $post["Post"]["title"]; ?> </td>
-                        <td><?php echo $post["Category"]["name"]; ?></td>
-                        <td><?php echo $post["Post"]["price"]; ?></td>
-                        <td><?php echo $post["Post"]["sale"]; ?></td>
-<!--                        <td>-->
-<!--                            <a href="" class="edit">Sửa</a>-->
-<!--                        </td>-->
-                        <td><a href="" class="delete">Xóa</a></td>
-<!--                        <td><a href="" class="publish">Ẩn/Hiện</a></td>-->
-                    </tr>
-                    <?php endforeach;?>
+                    foreach ($infoPost as $post) : ?>
+                        <tr>
+                            <td> <?php echo $counter;
+                                    $counter++; ?> </td>
+                            <td> <?php echo $post["Post"]["title"]; ?> </td>
+                            <td><?php echo $post["Category"]["name"]; ?></td>
+                            <td><?php echo $post["Post"]["price"]; ?></td>
+                            <td><?php echo $post["Post"]["sale"]; ?></td>
+                            <td>
+                                <a href=<?php echo $html->linkSrc("posts", "edit", $post["Post"]["id"]) ?> class="edit">Sửa</a>
+                            </td>
+                            <td><a href=<?php echo $html->linkSrc("posts", "delete", $post["Post"]["id"]) ?> class="delete">Xóa</a></td>
+                            <!--                        <td><a href="" class="publish">Ẩn/Hiện</a></td>-->
+                        </tr>
+                    <?php endforeach; ?>
                 </tbody>
+                <div class="pagination">
+                    <?php for ($i = 1; $i <= $totalPages; $i++) : ?>
+                        <?php if ($i == $currentPageNumber) : ?>
+                            <a class="active"><?php echo $currentPageNumber ?></a>
+                        <?php else : ?>
+                            <?php
+                            ?>
+                            <a href=<?php echo $html->linkSrc("posts", "manager", $i) ?>> <?php echo $i; ?> </a>
+                        <?php endif ?>
+                    <?php endfor ?>
+                </div>
             </table>
         </div>
     </div>
