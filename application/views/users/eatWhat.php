@@ -1,24 +1,30 @@
 	<main>
-	    <div class="detail_main">
-	        <div class="detail">
-	            <div class="card_detail">
-	                <div class="images">
-	                    <a href="#">
-	                        <img <?php echo $html->includeImg("nem-nuong", "png"); ?> alt="No" />
-	                    </a>
-	                </div>
-	                <div class="login-form">
-	                    <h2>Nem nướng Nha Trang</h2>
-	                    <p>Trong tiềm thức của các bạn sinh viên Bách - Kinh - Xây, nem nướng Hà Anh là quán ăn vặt bình dân, đồ ăn rẻ lại chất lượng.
-	                        Quán phục vụ nem nướng, bánh bột lọc và một vài loại nước giải khát.
-	                        Nem nướng ở đây rất thơm, làm chuẩn chỉ theo công thức Nha Trang, nướng thủ công trên bếp than.
-	                        Những nguyên liệu như: rau xà lách, dưa chuột có xuất xứ từ Đà Lạt. Và một yếu tố quyết định độ ngon của nem nướng là nước chấm.
-	                        Nước chấm Hà Anh có độ sánh đặc, thơm mùi hành phi, hơi le te cay nơi đầu lưỡi.</p>
-	                </div>
-
-	            </div>
-	        </div>
-
-	    </div>
+		<div class="suggest_main">
+			<td class="text_right">
+				<a class="a_class" href="#">prev</a>
+			</td>
+			<div class="suggest">
+				<div class="card_suggest">
+					<table>
+						<tr>
+							<th>Bánh đậu xanh</th>
+						</tr>
+						<tr>
+							<td style="width:200px;">
+								<a href="#">
+									<img height="200" <?php echo $html->includeImg("banhDauXanh", "jpg"); ?> alt="No" />
+								</a>
+							</td>
+							<td>
+								Bánh đậu xanh là loại bánh đặc sản của Hải Dương mà rất nhiều người, kể cả người nước ngoài đã phải lòng ngay khi nếm thử. Bánh đậu xanh khi thưởng thức cùng nước trà sẽ tạo nên một hương vị rất Việt Nam. Bánh đậu xanh là đặc sản nổi tiếng ở Hải Dương, với rất nhiều thương hiệu khác nhau
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<td>
+				<a class="a_class" href="#">next</a>
+			</td>
+		</div>
 	</main>
 	</div>
