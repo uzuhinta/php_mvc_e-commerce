@@ -114,14 +114,14 @@ main .header-bottom .header-bottom-right ul li .test .content {
   font-size: 13px;
   text-decoration: line-through;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-  "Lucida Sans", Arial, sans-serif;
+    "Lucida Sans", Arial, sans-serif;
 }
 .priceEnd {
   color: #fff;
   font-size: 16px;
   text-decoration: none;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-  "Lucida Sans", Arial, sans-serif;
+    "Lucida Sans", Arial, sans-serif;
 }
 
 #first {
@@ -847,4 +847,19 @@ input#file_input {
 
 .div_display {
   display: inline-block;
+}
+
+.card_contact {
+  top: 16%;
+  left: 15%;
+  max-width: 55%;
+  cursor: auto;
+}
+
+.table_width {
+  width: 750px;
+}
+
+.color_text {
+  color: #b50909;
 }
