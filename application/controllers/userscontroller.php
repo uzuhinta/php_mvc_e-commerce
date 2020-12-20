@@ -60,7 +60,7 @@ class UsersController extends VanillaController
     function register()
     {
         if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] == true) {
-            header('Location: ' . BASE_PATH . '/users/home');
+            header('Location: ' . BASE_PATH . '/posts/index');
         }
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if (

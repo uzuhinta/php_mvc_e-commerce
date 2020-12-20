@@ -7,7 +7,7 @@
 	<?php echo $html->includeCss("header"); ?>
 	<?php echo $html->includeCss("style_login"); ?>
 	<?php echo $html->includeCss("style_main"); ?>
-    <?php echo $html->includeCss("body"); ?>
+	<?php echo $html->includeCss("body"); ?>
 	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
@@ -15,7 +15,7 @@
 
 <body>
 	<div class="container">
-		<header style="position:sticky;">
+		<header>
 			<div class="header">
 				<ul>
 					<li id="logo">
@@ -40,32 +40,36 @@
 				</ul>
 				<div class="header-right">
 					<?php if (isset($_SESSION['loggedin']) && $_SESSION["loggedin"] == true) : ?>
-						<ul>
+						<ul class="header_logged">
 							<li>
-								da dang nhap
+								<i class="fas fa-shopping-cart" style="font-size: 30px;"></i>
+								<small class="number_product">1</small>
 							</li>
-							<li>
-								bang session
+							<li class="dropdown">
+								Xin chào <?php if (isset($_SESSION['user_name']))
+												echo $_SESSION["user_name"] ?> <i class="fas fa-caret-down show"></i>
+								<div class="dropdown-content">
+									<ul>
+										<li><a href="#">Cập nhật thông tin</a></li>
+										<li><a href="#">Đổi mật khẩu</a></li>
+										<li><a href="#">Quản lý giỏ hàng</a></li>
+										<li><a href=<?php echo $html->linkSrc("users", "logout") ?>>Đăng xuất</a></li>
+
+									</ul>
+								</div>
 							</li>
-							<li>
-								<button><a href=<?php echo $html->linkSrc("users", "logout") ?>>dang xuat</a></button>
-							</li>
-							<li>
-								<button><a href=<?php echo $html->linkSrc("users", "logout") ?>>Gio hang</a></button>
-							</li>
-						</ul>
-					<?php else : ?>
-						<ul>
-							<li>
-								<a href=<?php echo $html->linkSrc("users", "login") ?>>
-									<img width="120" height="45" <?php echo $html->includeImg("dangnhap", "png"); ?> alt="No" /></a>
-							</li>
-							<li>
-								<a href=<?php echo $html->linkSrc("users", "register") ?>>
-									<img width="120" height="45" <?php echo $html->includeImg("dangky", "png"); ?> alt="No" /></a>
-							</li>
-						</ul>
-					<?php endif; ?>
+						<?php else : ?>
+							<ul>
+								<li>
+									<a href=<?php echo $html->linkSrc("users", "login") ?>>
+										<img width="120" height="45" <?php echo $html->includeImg("dangnhap", "png"); ?> alt="No" /></a>
+								</li>
+								<li>
+									<a href=<?php echo $html->linkSrc("users", "register") ?>>
+										<img width="120" height="45" <?php echo $html->includeImg("dangky", "png"); ?> alt="No" /></a>
+								</li>
+							</ul>
+						<?php endif; ?>
 				</div>
 			</div>
 		</header>
