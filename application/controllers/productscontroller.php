@@ -27,25 +27,24 @@ class ProductsController extends VanillaController
         $this->set('currentPageNumber', $pageNumber);
     }
 
-    function index($pageNumber = 0){
+    function index($pageNumber = 0)
+    {
         $this->Product->setPage($pageNumber);
         $this->Product->setLimit('11');
         $products = $this->Product->search();
         $totalPages = $this->Product->totalPages();
-        $this->set('totalPages',$totalPages);
-        $this->set('products',$products);
-        $this->set('currentPageNumber',$pageNumber);
+        $this->set('totalPages', $totalPages);
+        $this->set('products', $products);
+        $this->set('currentPageNumber', $pageNumber);
     }
 
-    function findProducts ($categoryId = null, $categoryName = null) {
-        $this->Product->where('category_id',$categoryId);
+    function findProducts($categoryId = null, $categoryName = null)
+    {
+        $this->Product->where('category_id', $categoryId);
         $this->Product->orderBy('name');
         return $this->Product->search();
     }
 
-    function index()
-    {
-    }
     function add()
     {
     }

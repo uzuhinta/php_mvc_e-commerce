@@ -49,7 +49,7 @@
                     </div>
                     <input type="file" name="file_input" id="file_input">
                 </div>
-                <input type="submit" value="Thêm">
+                <div class="type_submit"><input type="submit" value="Thêm"></div>
             </form>
 
         </div>

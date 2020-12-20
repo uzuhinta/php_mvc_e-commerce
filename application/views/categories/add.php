@@ -20,7 +20,7 @@
             <form action=<?php echo $html->linkSrc("categories", "add") ?> method="POST" class="login-form">
                 <label class="title">Tên</label>
                 <input type=" text" name="name_category" class="register-input2">
-                <input type="submit" value="Thêm">
+                <div class="type_submit"><input type="submit" value="Thêm"></div>
             </form>
 
         </div>
