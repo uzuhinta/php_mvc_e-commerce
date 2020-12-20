@@ -30,7 +30,7 @@ class UsersController extends VanillaController
     function login()
     {
         if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] == true) {
-            header('Location: ' . BASE_PATH . '/users/home');
+            header('Location: ' . BASE_PATH . '/posts/index');
         }
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if (isset($_POST['name']) && isset($_POST['password'])) {
@@ -41,9 +41,8 @@ class UsersController extends VanillaController
                 $info = $this->User->search();
                 if ((isset($info[0]["User"]) == true) && ($info[0]["User"]["password"] == $pwd)) {
                     $_SESSION["loggedin"] = true;
-                    $_SESSION["userid"] = $info[0]["User"]["id"];
-                    $_SESSION["role"] = $info[0]["User"]["role"];
-                    return header('Location: ' . BASE_PATH . '/users/home');
+                    $_SESSION["user_name"] = $username;
+                    return header('Location: ' . BASE_PATH . '/posts/index');
                 }
             }
             $_SESSION['loggedin'] = false;
@@ -54,13 +53,13 @@ class UsersController extends VanillaController
     function logout()
     {
         session_destroy();
-        header('Location: ' . BASE_PATH . '/users/home');
+        header('Location: ' . BASE_PATH . '/posts/index');
     }
 
     function register()
     {
         if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] == true) {
-            header('Location: ' . BASE_PATH . '/users/home');
+            header('Location: ' . BASE_PATH . '/posts/index');
         }
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if (

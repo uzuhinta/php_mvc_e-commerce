@@ -36,5 +36,82 @@ header .header ul a {
 
 header .header-right ul li {
   float: right;
-  margin: 20px;
+  font-size: 25px;
+  color: #fff;
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+
+header .header-right .header_logged li {
+  float: right;
+  font-size: 25px;
+  color: #fff;
+  font-weight: bold;
+  padding-bottom: 5px;
+  margin: 1.3rem;
+}
+
+header .header-right ul li .show {
+  cursor: pointer;
+}
+
+.sub_menu {
+  display: none;
+}
+header .header-right ul li:hover .sub_menu {
+  display: block;
+  position: absolute;
+  background: white;
+  margin-right: 8rem;
+}
+
+header .header-right ul li:hover .sub_menu ul li {
+  display: block;
+  position: absolute;
+  background: white;
+  margin-right: 8rem;
+  color: red;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  z-index: 1;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.header-right .header_logged .dropdown li {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.dropdown-content ul li a {
+  color: red;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.dropdown-content a:hover {
+  color: darkred;
+}
+
+small {
+  top: -1.1rem;
+  right: -0.0000009rem;
+  position: relative;
+  border-radius: 2.75rem;
+  min-width: 0.6875rem;
+  padding: 0 0.3125rem;
+  border: 0.125rem solid #ee4d2d;
+  color: #ee4d2d;
+  background-color: #fff;
+  font-size: 15px;
 }
