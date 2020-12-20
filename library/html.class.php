@@ -38,9 +38,12 @@ class HTML
 		return $data;
 	}
 
-	function linkSrc($model, $action, $param = null)
+	function linkSrc($model, $action, $param = null, $order = null)
 	{
 		//	    $data = '"' .BASE_PATH . '/' . $model . '/' . $action . '.php' . '"';
+        if($order != null){
+            return $data = '"' . BASE_PATH . '/' . $model . '/' . $action . '/' . $param . '/' . $order . '"';
+        }
 		if ($param) {
             $data = '"' . BASE_PATH . '/' . $model . '/' . $action . '/' . $param . '"';
 		} else {

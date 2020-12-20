@@ -30,7 +30,7 @@ class UsersController extends VanillaController
     function login()
     {
         if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] == true) {
-            header('Location: ' . BASE_PATH . '/users/home');
+            header('Location: ' . BASE_PATH . '/posts');
         }
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if (isset($_POST['name']) && isset($_POST['password'])) {
@@ -43,7 +43,7 @@ class UsersController extends VanillaController
                     $_SESSION["loggedin"] = true;
                     $_SESSION["userid"] = $info[0]["User"]["id"];
                     $_SESSION["role"] = $info[0]["User"]["role"];
-                    return header('Location: ' . BASE_PATH . '/users/home');
+                    return header('Location: ' . BASE_PATH . '/posts');
                 }
             }
             $_SESSION['loggedin'] = false;
@@ -54,7 +54,7 @@ class UsersController extends VanillaController
     function logout()
     {
         session_destroy();
-        header('Location: ' . BASE_PATH . '/users/home');
+        header('Location: ' . BASE_PATH . '/posts');
     }
 
     function register()

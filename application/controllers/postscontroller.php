@@ -7,31 +7,10 @@ class PostsController extends VanillaController
     {
     }
 
-    function view($id = null)
-    {
-        $this->Product->id = $id;
-        $this->Product->showHasOne();
-        $this->Product->showHMABTM();
-        $product = $this->Product->search();
-        $this->set('product', $product);
-    }
-
-    function page($pageNumber = 1)
-    {
-        $this->Product->setPage($pageNumber);
-        $this->Product->setLimit('2');
-        $products = $this->Product->search();
-        $totalPages = $this->Product->totalPages();
-        $this->set('totalPages', $totalPages);
-        $this->set('products', $products);
-        $this->set('currentPageNumber', $pageNumber);
-    }
-
     function index($pageNumber = 1)
     {
         $this->Post->setPage($pageNumber);
         $this->Post->setLimit('10');
-        //        $this->Post->custom("Select * from posts");
         $posts = $this->Post->search();
         $totalPages = $this->Post->totalPages();
         $this->set('totalPages', $totalPages);
@@ -39,11 +18,17 @@ class PostsController extends VanillaController
         $this->set('currentPageNumber', $pageNumber);
     }
 
-    function findProducts($categoryId = null, $categoryName = null)
+    function orderby($pageNumber = 1, $order = 'ASC')
     {
-        $this->Product->where('category_id', $categoryId);
-        $this->Product->orderBy('name');
-        return $this->Product->search();
+        $this->Post->setPage($pageNumber);
+        $this->Post->setLimit('10');
+        $this->Post->orderBy("price", $order);
+        $posts = $this->Post->search();
+        $totalPages = $this->Post->totalPages();
+        $this->set('totalPages', $totalPages);
+        $this->set('posts', $posts);
+        $this->set('currentPageNumber', $pageNumber);
+        $this->set("order", $order);
     }
 
     function uploadimg()
@@ -99,13 +84,12 @@ class PostsController extends VanillaController
     function add()
     {
 //        Kiem tra quyen
-//        if(isset($_SESSION["loggedin"]) == false || $_SESSION["role"] != "admin"  ){
-//            return header('Location: ' . BASE_PATH . '/posts');
-//        }
-//        if($_SERVER["REQUEST_METHOD"] == "GET" ){
+        if(isset($_SESSION["loggedin"]) == false || $_SESSION["role"] != "admin"  ){
+            return header('Location: ' . BASE_PATH . '/posts');
+        }
             $categories = $this->Post->custom("Select * from categories");
             $this->set("infoCategory", $categories);
-//        }
+
         if($_SERVER["REQUEST_METHOD"] == "POST" ){
             if (isset($_POST['name_product']) && isset($_POST['category']) && isset($_POST['description'])
                 && isset($_POST['price']) && isset($_POST['price_sale'])){

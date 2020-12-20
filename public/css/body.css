@@ -13,7 +13,7 @@
     position: relative;
 }
 
-#panel-input {
+#panel-input{
     position: absolute;
     box-sizing: border-box;
     top: 40%;
@@ -29,6 +29,25 @@
     border-radius: 30px;
     /*background-image: url("../img/banhDauXanh.jpg");*/
 }
+
+#panel-search {
+    position: absolute;
+    box-sizing: border-box;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    height: 60px;
+    border: none;
+    color: #fe2e2e;
+    font-size: 25px;
+    padding-left: 20px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 30px;
+    /*background-image: url("../img/banhDauXanh.jpg");*/
+}
+
+
 
 .filter {
     margin-left: 0px;

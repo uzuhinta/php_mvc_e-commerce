@@ -4,6 +4,7 @@
             <img style="width: 100%; height: auto;" <?php echo $html->includeImg("nen",  "jpg"); ?> alt="No" class="image_main" />
             <form>
                 <input id= "panel-input" type="input" placeholder="Nhập món ăn ưa thích" >
+                <input id="panel-search" type="submit" value="Tìm" style="visibility: hidden; display: none;">
             </form>
         </div>
 
@@ -15,12 +16,12 @@
         <br/>
         <div class="filter">
             <div><img style="margin-left: 0px;" <?php echo $html->includeImg("sortBy", "png"); ?> alt="No" /></div>
-            <div><img <?php echo $html->includeImg("monMan", "png"); ?> alt="No" /></a></div>
-            <div><img <?php echo $html->includeImg("monNgot", "png"); ?> alt="No" /></a></div>
-            <div><img <?php echo $html->includeImg("comboXin", "png"); ?> alt="No" /></a></div>
-            <div><img <?php echo $html->includeImg("priceUp", "png"); ?> alt="No" /></a></div>
-            <div><img <?php echo $html->includeImg("priceDown", "png"); ?> alt="No" /></a></div>
-            <div><input type="text" name="" id="" placeholder="Tìm kiếm đồ ăn yêu thích" /></div>
+            <div><a><img <?php echo $html->includeImg("monMan", "png"); ?> alt="No" /></a></div>
+            <div><a><img <?php echo $html->includeImg("monNgot", "png"); ?> alt="No" /></a></div>
+            <div><a><img <?php echo $html->includeImg("comboXin", "png"); ?> alt="No" /></a></div>
+            <div><a href=<?php echo $html->linkSrc("posts", "orderby") ?> ><img <?php echo $html->includeImg("priceUp", "png"); ?> alt="No" /></a></div>
+            <div><a href=<?php echo $html->linkSrc("posts", "orderby", "1" , "DESC") ?>><img <?php echo $html->includeImg("priceDown", "png"); ?> alt="No" /></a></div>
+            <div><a><input type="text" name="" id="" placeholder="Tìm kiếm đồ ăn yêu thích" /></div>
         </div>
 
         <div class="list-post">
