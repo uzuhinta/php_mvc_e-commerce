@@ -7,6 +7,7 @@
 	<?php echo $html->includeCss("header"); ?>
 	<?php echo $html->includeCss("style_login"); ?>
 	<?php echo $html->includeCss("style_main"); ?>
+    <?php echo $html->includeCss("body"); ?>
 	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">

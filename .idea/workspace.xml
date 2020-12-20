@@ -19,7 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f6f20645-18e4-4857-9f89-545b7ea388e4" name="Default Changelist" comment="" />
+    <list default="true" id="f6f20645-18e4-4857-9f89-545b7ea388e4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/application/views/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/header.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -67,14 +69,14 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\framework\public\img" />
-      <recent name="C:\xampp\htdocs\framework\public\css" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\framework\application\views\posts" />
       <recent name="C:\xampp\htdocs\framework\application\views\products" />
       <recent name="C:\xampp\htdocs\framework\application\views\users" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\framework\public\img" />
+      <recent name="C:\xampp\htdocs\framework\public\css" />
     </key>
   </component>
   <component name="RunManager">
