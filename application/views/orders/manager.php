@@ -64,6 +64,17 @@
                         <td><a href="" class="publish">Ẩn/Hiện</a></td>
                     </tr>
                 </tbody>
+                <div class="pagination">
+                    <?php for ($i = 1; $i <= $totalPages; $i++) : ?>
+                        <?php if ($i == $currentPageNumber) : ?>
+                            <a class="active"><?php echo $currentPageNumber ?></a>
+                        <?php else : ?>
+                            <?php
+                            ?>
+                            <a href=<?php echo $html->linkSrc("orders", "manager", $i) ?>> <?php echo $i; ?> </a>
+                        <?php endif ?>
+                    <?php endfor ?>
+                </div>
             </table>
         </div>
     </div>

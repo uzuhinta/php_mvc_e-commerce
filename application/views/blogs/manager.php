@@ -28,7 +28,7 @@
                     <th>
                         Mô tả
                     </th>
-                    <th colspan="3">
+                    <th colspan="2">
                         Hoạt động
                     </th>
                 </thead>
@@ -41,9 +41,6 @@
                                 $index++; ?>1</td>
                             <td><?php echo  $blog["Blog"]["title"]; ?></td>
                             <td><?php echo  $blog["Blog"]["content"]; ?></td>
-                            <td>
-                                <a href="" class="edit">Sửa</a>
-                            </td>
                             <td><a href=<?php echo $html->linkSrc("blogs", "delete", $blog["Blog"]["id"]) ?> class="delete">Xóa</a></td>
                             <td><a href=<?php echo $html->linkSrc("blogs", "detail", $blog["Blog"]["id"]) ?> class="publish">Xem chi tiết</a></td>
                         </tr>
