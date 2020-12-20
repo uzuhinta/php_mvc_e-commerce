@@ -12,9 +12,9 @@
                 <a href="#" class="forgot">Quên mật khẩu?</a>
                 <div class="type_submit"><input type="submit" value="Đăng nhập"></div>
             </div>
-            <?php if (isset($login) == true) {
-                var_dump($login);
-            }; ?>
+            <?php if (isset($login) == true)
+                echo "Đăng nhập thành công";
+            ?>
         </form>
     </card>
 </div>

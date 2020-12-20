@@ -14,6 +14,12 @@
 
             <div class="type_submit"><input type="submit" value="Cập nhật"></div>
         </form>
+        <?php
+        if (isset($message)) {
+            echo $message;
+        }
+        ?>
     </card>
+
 </div>
 </div>
