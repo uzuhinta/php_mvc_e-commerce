@@ -221,7 +221,8 @@ class PostsController extends VanillaController
             if (
                 isset($_POST['name_product']) && isset($_POST['category']) && isset($_POST['description'])
                 && isset($_POST['price']) && isset($_POST['price_sale'])
-            ) {
+            ) 
+            {
                 $title = $_POST['name_product'];
                 $category_id = $_POST['category'];
                 $description = $_POST['description'];

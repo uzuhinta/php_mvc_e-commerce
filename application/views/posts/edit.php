@@ -17,7 +17,6 @@
         <div class="content">
             <h2 class="page_title">Cập nhật sản phẩm</h2>
             <form action=<?php echo $html->linkSrc("posts", "edit", $post["Post"]["id"]) ?> method="POST" class="login-form" enctype="multipart/form-data">
-
                 <div class="left">
                     <label class="title" for="name_product">Tên</label>
                     <input type="text" name="name_product" class="register-input2" value="<?php echo $post["Post"]["title"]; ?>" id="name_product" required>
@@ -32,7 +31,7 @@
                 </div>
                 <div>
                     <label class="title">Mô tả</label>
-                    <textarea name="description" class="register-input2" rows="3" cols="15" required><?php echo $post["Post"]["description"] ?></textarea>
+                    <textarea name="description" class="register-input2" rows="2" cols="15" required><?php echo $post["Post"]["description"] ?></textarea>
                 </div>
                 <div class="left">
                     <label class="title" for="price">Giá gốc</label>
@@ -45,11 +44,16 @@
                 <div class="upload_file">
                     <label class="title" for="fileToUpload">Ảnh sản phẩm</label>
                     <input type="file" name="fileToUpload" id="fileToUpload" value="<?php echo $post["Post"]["imgname"] ?>">
-                    <img height="200" <?php echo $html->includeImg("$img[0]", "$img[1]"); ?> alt="No" />
+                    <img height="100" <?php echo $html->includeImg("$img[0]", "$img[1]"); ?> alt="No" />
                 </div>
                 <div class="type_submit"><input type="submit" value="Cập nhật"></div>
             </form>
-
+            <?php
+            if (isset($message)) {
+                if ($message == false) {
+                    echo  "Vui lòng cập nhật tất cả các trường";
+                }
+            } ?>
         </div>
     </div>
     <!-- end admin_content -->
