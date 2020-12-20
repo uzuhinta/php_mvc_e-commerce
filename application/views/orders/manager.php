@@ -1,3 +1,5 @@
+<?php $counter = 1; ?>
+
 <div class="admin_wrapper">
     <!-- left_sidebar -->
     <div class="left_sidebar">
@@ -21,48 +23,38 @@
                         STT
                     </th>
                     <th>
-                        Tên sản phẩm
+                        Tên người mua
                     </th>
                     <th>
-                        Loại sản phẩm
+                        Số tiền
                     </th>
                     <th>
-                        Giá tiền
+                        Trạng thái
                     </th>
                     <th colspan="3">
                         Hoạt động
                     </th>
                 </thead>
                 <tbody>
+                    <?php foreach ($carts as $cart): ?>
                     <tr>
-                        <td>1</td>
-                        <td>Cơm cháy</td>
-                        <td>Cơm</td>
-                        <td>20.000 đ</td>
+                        <td> <?php echo $counter; $counter++; ?></td>
+                        <td><?php if(isset($cart["Username"][0]["User"]["name"])){
+                            echo ($cart["Username"][0]["User"]["name"]);
+                            }; ?></td>
+                        <td><?php echo $cart["Order"]["price"]; ?></td>
+                        <td><?php if($cart["Order"]["temp"] == 1){ echo "Giỏ hàng tạm thời";}
+
+                            if($cart["Order"]["temp"] == 0){ echo "Đă đặt hàng";}
+                        ?></td>
                         <td>
                             <a href="" class="edit">Sửa</a>
                         </td>
                         <td><a href="" class="delete">Xóa</a></td>
                         <td><a href="" class="publish">Ẩn/Hiện</a></td>
                     </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Cơm cháy</td>
-                        <td>Cơm</td>
-                        <td>20.000 đ</td>
-                        <td><a href="" class="edit">Sửa</a></td>
-                        <td><a href="" class="delete">Xóa</a></td>
-                        <td><a href="" class="publish">Ẩn/Hiện</a></td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Cơm cháy</td>
-                        <td>Cơm</td>
-                        <td>20.000 đ</td>
-                        <td><a href="" class="edit">Sửa</a></td>
-                        <td><a href="" class="delete">Xóa</a></td>
-                        <td><a href="" class="publish">Ẩn/Hiện</a></td>
-                    </tr>
+                    <?php endforeach; ?>
+
                 </tbody>
                 <div class="pagination">
                     <?php for ($i = 1; $i <= $totalPages; $i++) : ?>

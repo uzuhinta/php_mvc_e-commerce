@@ -100,8 +100,30 @@ class OrdersController extends VanillaController
     }
 
 
-    function manager()
+    function manager($id = null)
     {
+        $this->Order->id = $id;
+        $this->Order->showHMABTM();
+        $carts = $this->Order->search();
+
+        for($i = 0; $i < count($carts); $i++){
+            $user = $this->Order->custom("Select name from users where id = " . $carts[$i]["Order"]["user_id"]);
+//            var_dump($user);
+            $carts[$i]["Username"] = $user;
+
+        }
+//        var_dump($carts);
+
+
+//        foreach ($carts as $cart){
+//          $user = $this->Order->custom("Select name from users where id = " . $cart["Order"]["user_id"]);
+////          var_dump($user);
+//          array_push($cart,$user);
+////          var_dump($cart);
+//          echo "<hr/>";
+//        }
+//                var_dump($carts);
+        $this->set("carts", $carts);
     }
 
     function afterAction()
