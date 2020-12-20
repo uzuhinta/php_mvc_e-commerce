@@ -56,7 +56,11 @@
 										<li><a href=<?php echo $html->linkSrc("users", "edit") ?>>Cập nhật thông tin</a></li>
 										<li><a href=<?php echo $html->linkSrc("users", "change_pass") ?>>Đổi mật khẩu</a></li>
 										<li><a href=<?php echo $html->linkSrc("orders", "cart") ?>>Quản lý giỏ hàng</a></li>
-										<li><a href=<?php echo $html->linkSrc("users", "logout") ?>>Đăng xuất</a></li>
+                                        <?php if ($_SESSION["role"] == "admin"): ?>
+                                        <hr/>
+                                        <li><a href=<?php echo $html->linkSrc("posts", "manager") ?>>Trình quản lý</a></li>
+										<?php endif; ?>
+                                        <li><a href=<?php echo $html->linkSrc("users", "logout") ?>>Đăng xuất</a></li>
 
 									</ul>
 								</div>
