@@ -53,7 +53,11 @@
                 </div>
                 <div class="type_submit"><input type="submit" value="Thêm"></div>
             </form>
-
+            <?php
+            if (isset($message)) {
+                echo $message;
+            }
+            ?>
         </div>
     </div>
     <!-- end admin_content -->

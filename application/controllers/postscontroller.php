@@ -193,6 +193,9 @@ class PostsController extends VanillaController
 
     function delete($id = -1)
     {
+        if (isset($_SESSION["loggedin"]) == false || $_SESSION["role"] != "admin") {
+            return header('Location: ' . BASE_PATH . '/posts');
+        }
         if ($id == -1) {
             return header('Location: ' . BASE_PATH . '/posts/manager');
         }
@@ -218,7 +221,8 @@ class PostsController extends VanillaController
             if (
                 isset($_POST['name_product']) && isset($_POST['category']) && isset($_POST['description'])
                 && isset($_POST['price']) && isset($_POST['price_sale'])
-            ) {
+            ) 
+            {
                 $title = $_POST['name_product'];
                 $category_id = $_POST['category'];
                 $description = $_POST['description'];

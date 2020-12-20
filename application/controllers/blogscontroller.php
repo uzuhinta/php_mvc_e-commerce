@@ -17,6 +17,9 @@ class BlogsController extends VanillaController
     }
     function delete($id = -1)
     {
+        if (isset($_SESSION["loggedin"]) == false || $_SESSION["role"] != "admin") {
+            return header('Location: ' . BASE_PATH . '/posts');
+        }
         if ($id == -1) {
             return header('Location: ' . BASE_PATH . '/blogs/manager');
         }
@@ -27,7 +30,6 @@ class BlogsController extends VanillaController
 
     function detail($id = -1, $isNext = null)
     {
-
         $blogs = $this->Blog->search();
         if (!empty($blogs)) {
             $first = reset($blogs);
@@ -149,11 +151,11 @@ class BlogsController extends VanillaController
                 $result = $this->Blog->save();
 
                 if ($result == -1) {
-                    return $this->set("message", false);
+                    return $this->set("message", "Đã xảy ra lỗi");
                 }
             }
             header('Location: ' . BASE_PATH . '/blogs/manager');
-            return $this->set("message", true);
+            return $this->set("message", "Thêm thành công");
         }
     }
 
