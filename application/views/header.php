@@ -19,10 +19,10 @@
 			<div class="header">
 				<ul>
 					<li id="logo">
-						<a href="#"><img width="160" height="85" <?php echo $html->includeImg("LogoPingPong", "png"); ?> alt="No" /></a>
+						<a href=<?php echo $html->linkSrc("posts", "index") ?>><img width="160" height="85" <?php echo $html->includeImg("LogoPingPong", "png"); ?> alt="No" /></a>
 					</li>
 					<li>
-						<a href="#">
+						<a href=<?php echo $html->linkSrc("posts", "index") ?>>
 							<img width="160" height="50" <?php echo $html->includeImg("LogotenTrangchu", "png"); ?> alt="No" /></a>
 					</li>
 					<li>

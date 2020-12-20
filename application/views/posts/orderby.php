@@ -26,17 +26,19 @@
 
     <div class="list-post">
         <?php foreach ($posts as $post): ?>
-            <div class="card">
-                <?php $img = explode('.', $post["Post"]["imgname"]);?>
-                <img <?php echo $html->includeImg("$img[0]", $img[1]); ?> >
-                <div class="text">
-                    <div class="price"><span><?php echo $post["Post"]["price"] ?> đ</span></div>
-                    <div class="name"><span><?php echo $post["Post"]["title"] ?></span></div>
+            <a href=<?php echo $html->linkSrc("posts", "detail", $post["Post"]["id"]) ?> >
+                <div class="card">
+                    <?php $img = explode('.', $post["Post"]["imgname"]);?>
+                    <img <?php echo $html->includeImg("$img[0]", $img[1]); ?> >
+                    <div class="text">
+                        <div class="price"><span><?php echo $post["Post"]["price"] ?> đ</span></div>
+                        <div class="name"><span><?php echo $post["Post"]["title"] ?></span></div>
+                    </div>
+                    <?php if ($post["Post"]["sale"] != 0): ?>
+                        <div class="sale"><span>Sale</span></div>
+                    <?php endif ?>
                 </div>
-                <?php if ($post["Post"]["sale"] != 0): ?>
-                    <div class="sale"><span>Sale</span></div>
-                <?php endif ?>
-            </div>
+            <a/>
         <?php endforeach; ?>
     </div>
 

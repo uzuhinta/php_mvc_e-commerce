@@ -26,7 +26,7 @@
 
         <div class="list-post">
             <?php foreach ($posts as $post): ?>
-            <a <a href=<?php echo $html->linkSrc("posts", "detail", $post["Post"]["id"]) ?> >
+            <a href=<?php echo $html->linkSrc("posts", "detail", $post["Post"]["id"]) ?> >
                 <div class="card">
                     <?php $img = explode('.', $post["Post"]["imgname"]);?>
                     <img <?php echo $html->includeImg("$img[0]", $img[1]); ?> >

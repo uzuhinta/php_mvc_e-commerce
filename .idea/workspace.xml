@@ -21,14 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="f6f20645-18e4-4857-9f89-545b7ea388e4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/feedbackscontroller.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/feedbackscontroller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/postscontroller.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/postscontroller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/posts/detail.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/posts/detail.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/posts/manager.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/posts/manager.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/shared.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/shared.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/style_main.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style_main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/describeposts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/describeusers" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/posts/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/posts/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/posts/orderby.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/posts/orderby.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +36,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="PhpDebugGeneral" xdebug_debug_port="9090" listening_started="true" />
+  <component name="PhpDebugGeneral" xdebug_debug_port="9090" />
   <component name="PhpServers">
     <servers>
       <server host="localhost" id="9175d92c-5e2d-4888-8114-bfc6c0e4af81" name="localhost" />
@@ -176,54 +171,54 @@
       <screen x="0" y="0" width="1440" height="770" />
     </state>
     <state width="464" height="466" key="DebuggerActiveHint/0.0.1440.770@0.0.1440.770" timestamp="1608362990631" />
-    <state width="1398" height="167" key="GridCell.Tab.0.bottom" timestamp="1608462611356">
+    <state width="1398" height="384" key="GridCell.Tab.0.bottom" timestamp="1608462807515">
       <screen x="0" y="0" width="1440" height="770" />
     </state>
-    <state width="1398" height="167" key="GridCell.Tab.0.bottom/0.0.1440.770@0.0.1440.770" timestamp="1608462611356" />
-    <state width="1398" height="167" key="GridCell.Tab.0.center" timestamp="1608462611356">
+    <state width="1398" height="384" key="GridCell.Tab.0.bottom/0.0.1440.770@0.0.1440.770" timestamp="1608462807515" />
+    <state width="1398" height="384" key="GridCell.Tab.0.center" timestamp="1608462807515">
       <screen x="0" y="0" width="1440" height="770" />
     </state>
-    <state width="1398" height="167" key="GridCell.Tab.0.center/0.0.1440.770@0.0.1440.770" timestamp="1608462611356" />
-    <state width="1398" height="167" key="GridCell.Tab.0.left" timestamp="1608462611356">
+    <state width="1398" height="384" key="GridCell.Tab.0.center/0.0.1440.770@0.0.1440.770" timestamp="1608462807515" />
+    <state width="1398" height="384" key="GridCell.Tab.0.left" timestamp="1608462807515">
       <screen x="0" y="0" width="1440" height="770" />
     </state>
-    <state width="1398" height="167" key="GridCell.Tab.0.left/0.0.1440.770@0.0.1440.770" timestamp="1608462611356" />
-    <state width="1398" height="167" key="GridCell.Tab.0.right" timestamp="1608462611356">
+    <state width="1398" height="384" key="GridCell.Tab.0.left/0.0.1440.770@0.0.1440.770" timestamp="1608462807515" />
+    <state width="1398" height="384" key="GridCell.Tab.0.right" timestamp="1608462807515">
       <screen x="0" y="0" width="1440" height="770" />
     </state>
-    <state width="1398" height="167" key="GridCell.Tab.0.right/0.0.1440.770@0.0.1440.770" timestamp="1608462611356" />
-    <state width="1398" height="167" key="GridCell.Tab.1.bottom" timestamp="1608462611356">
+    <state width="1398" height="384" key="GridCell.Tab.0.right/0.0.1440.770@0.0.1440.770" timestamp="1608462807515" />
+    <state width="1398" height="384" key="GridCell.Tab.1.bottom" timestamp="1608462807515">
       <screen x="0" y="0" width="1440" height="770" />
     </state>
-    <state width="1398" height="167" key="GridCell.Tab.1.bottom/0.0.1440.770@0.0.1440.770" timestamp="1608462611356" />
-    <state width="1398" height="167" key="GridCell.Tab.1.center" timestamp="1608462611356">
+    <state width="1398" height="384" key="GridCell.Tab.1.bottom/0.0.1440.770@0.0.1440.770" timestamp="1608462807515" />
+    <state width="1398" height="384" key="GridCell.Tab.1.center" timestamp="1608462807515">
       <screen x="0" y="0" width="1440" height="770" />
     </state>
-    <state width="1398" height="167" key="GridCell.Tab.1.center/0.0.1440.770@0.0.1440.770" timestamp="1608462611356" />
-    <state width="1398" height="167" key="GridCell.Tab.1.left" timestamp="1608462611356">
+    <state width="1398" height="384" key="GridCell.Tab.1.center/0.0.1440.770@0.0.1440.770" timestamp="1608462807515" />
+    <state width="1398" height="384" key="GridCell.Tab.1.left" timestamp="1608462807515">
       <screen x="0" y="0" width="1440" height="770" />
     </state>
-    <state width="1398" height="167" key="GridCell.Tab.1.left/0.0.1440.770@0.0.1440.770" timestamp="1608462611356" />
-    <state width="1398" height="167" key="GridCell.Tab.1.right" timestamp="1608462611356">
+    <state width="1398" height="384" key="GridCell.Tab.1.left/0.0.1440.770@0.0.1440.770" timestamp="1608462807515" />
+    <state width="1398" height="384" key="GridCell.Tab.1.right" timestamp="1608462807515">
       <screen x="0" y="0" width="1440" height="770" />
     </state>
-    <state width="1398" height="167" key="GridCell.Tab.1.right/0.0.1440.770@0.0.1440.770" timestamp="1608462611356" />
-    <state width="1398" height="167" key="GridCell.Tab.2.bottom" timestamp="1608462611357">
+    <state width="1398" height="384" key="GridCell.Tab.1.right/0.0.1440.770@0.0.1440.770" timestamp="1608462807515" />
+    <state width="1398" height="384" key="GridCell.Tab.2.bottom" timestamp="1608462807515">
       <screen x="0" y="0" width="1440" height="770" />
     </state>
-    <state width="1398" height="167" key="GridCell.Tab.2.bottom/0.0.1440.770@0.0.1440.770" timestamp="1608462611357" />
-    <state width="1398" height="167" key="GridCell.Tab.2.center" timestamp="1608462611357">
+    <state width="1398" height="384" key="GridCell.Tab.2.bottom/0.0.1440.770@0.0.1440.770" timestamp="1608462807515" />
+    <state width="1398" height="384" key="GridCell.Tab.2.center" timestamp="1608462807515">
       <screen x="0" y="0" width="1440" height="770" />
     </state>
-    <state width="1398" height="167" key="GridCell.Tab.2.center/0.0.1440.770@0.0.1440.770" timestamp="1608462611357" />
-    <state width="1398" height="167" key="GridCell.Tab.2.left" timestamp="1608462611356">
+    <state width="1398" height="384" key="GridCell.Tab.2.center/0.0.1440.770@0.0.1440.770" timestamp="1608462807515" />
+    <state width="1398" height="384" key="GridCell.Tab.2.left" timestamp="1608462807515">
       <screen x="0" y="0" width="1440" height="770" />
     </state>
-    <state width="1398" height="167" key="GridCell.Tab.2.left/0.0.1440.770@0.0.1440.770" timestamp="1608462611356" />
-    <state width="1398" height="167" key="GridCell.Tab.2.right" timestamp="1608462611357">
+    <state width="1398" height="384" key="GridCell.Tab.2.left/0.0.1440.770@0.0.1440.770" timestamp="1608462807515" />
+    <state width="1398" height="384" key="GridCell.Tab.2.right" timestamp="1608462807515">
       <screen x="0" y="0" width="1440" height="770" />
     </state>
-    <state width="1398" height="167" key="GridCell.Tab.2.right/0.0.1440.770@0.0.1440.770" timestamp="1608462611357" />
+    <state width="1398" height="384" key="GridCell.Tab.2.right/0.0.1440.770@0.0.1440.770" timestamp="1608462807515" />
     <state x="555" y="309" key="NewPhpFileDialog" timestamp="1608374413180">
       <screen x="0" y="0" width="1440" height="770" />
     </state>
