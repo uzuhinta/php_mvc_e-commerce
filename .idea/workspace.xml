@@ -20,9 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f6f20645-18e4-4857-9f89-545b7ea388e4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/orderscontroller.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/orderscontroller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/orders/cart.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/orders/cart.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/views/users/change_pass.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/blogscontroller.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/blogscontroller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/postscontroller.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/postscontroller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/userscontroller.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/userscontroller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/users/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/users/edit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/users/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/users/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/users/manager.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/users/manager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/users/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/users/register.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

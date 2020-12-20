@@ -7,7 +7,8 @@
 	<?php echo $html->includeCss("header"); ?>
 	<?php echo $html->includeCss("style_login"); ?>
 	<?php echo $html->includeCss("style_main"); ?>
-<!--    --><?php //echo $html->includeJs("generic"); ?>
+	<!--    --><?php //echo $html->includeJs("generic"); 
+				?>
 	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
@@ -52,8 +53,8 @@
 												echo $_SESSION["user_name"] ?> <i class="fas fa-caret-down show"></i>
 								<div class="dropdown-content">
 									<ul>
-										<li><a href="#">Cập nhật thông tin</a></li>
-										<li><a href="#">Đổi mật khẩu</a></li>
+										<li><a href=<?php echo $html->linkSrc("users", "edit") ?>>Cập nhật thông tin</a></li>
+										<li><a href=<?php echo $html->linkSrc("users", "change_pass") ?>>Đổi mật khẩu</a></li>
 										<li><a href=<?php echo $html->linkSrc("orders", "cart") ?>>Quản lý giỏ hàng</a></li>
 										<li><a href=<?php echo $html->linkSrc("users", "logout") ?>>Đăng xuất</a></li>
 

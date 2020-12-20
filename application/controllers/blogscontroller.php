@@ -17,6 +17,9 @@ class BlogsController extends VanillaController
     }
     function delete($id = -1)
     {
+        if (isset($_SESSION["loggedin"]) == false || $_SESSION["role"] != "admin") {
+            return header('Location: ' . BASE_PATH . '/posts');
+        }
         if ($id == -1) {
             return header('Location: ' . BASE_PATH . '/blogs/manager');
         }

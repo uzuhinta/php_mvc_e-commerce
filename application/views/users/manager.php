@@ -23,40 +23,46 @@
                         Tên
                     </th>
                     <th>
+                        Số điện thoại
+                    </th>
+                    <th>
+                        Địa chỉ
+                    </th>
+                    <th>
                         Quyền
                     </th>
-                    <th colspan="3">
+                    <th colspan="1">
                         Hoạt động
                     </th>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Cơm cháy</td>
-                        <td>Cơm</td>
-                        <td>
-                            <a href="" class="edit">Sửa</a>
-                        </td>
-                        <td><a href="" class="delete">Xóa</a></td>
-                        <td><a href="" class="publish">Mở/Khóa</a></td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Cơm cháy</td>
-                        <td>Cơm</td>
-                        <td><a href="" class="edit">Sửa</a></td>
-                        <td><a href="" class="delete">Xóa</a></td>
-                        <td><a href="" class="publish">Mở/Khóa</a></td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Cơm cháy</td>
-                        <td>Cơm</td>
-                        <td><a href="" class="edit">Sửa</a></td>
-                        <td><a href="" class="delete">Xóa</a></td>
-                        <td><a href="" class="publish">Mở/Khóa</a></td>
-                    </tr>
+                    <?php
+                    $counter = 1;
+                    foreach ($users as $user) : ?>
+                        <tr>
+                            <td> <?php echo $counter;
+                                    $counter++; ?> </td>
+                            <td> <?php echo $user["User"]["nameLogin"]; ?> </td>
+                            <td><?php echo $user["User"]["phone"]; ?></td>
+                            <td><?php echo $user["User"]["address"]; ?></td>
+                            <td><?php echo $user["User"]["role"]; ?></td>
+
+                            <td><a href=<?php echo $html->linkSrc("users", "delete", $user["User"]["id"]) ?> class="delete">Xóa</a></td>
+                            <!-- <td><a href="" class="publish">Ẩn/Hiện</a></td> -->
+                        </tr>
+                    <?php endforeach; ?>
                 </tbody>
+                <div class="pagination">
+                    <?php for ($i = 1; $i <= $totalPages; $i++) : ?>
+                        <?php if ($i == $currentPageNumber) : ?>
+                            <a class="active"><?php echo $currentPageNumber ?></a>
+                        <?php else : ?>
+                            <?php
+                            ?>
+                            <a href=<?php echo $html->linkSrc("users", "manager", $i) ?>> <?php echo $i; ?> </a>
+                        <?php endif ?>
+                    <?php endfor ?>
+                </div>
             </table>
         </div>
     </div>
