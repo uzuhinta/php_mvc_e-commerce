@@ -3,11 +3,16 @@
         <div class="login-form" style="max-width: 55rem;">
             <p class="title" style="text-align: center;">Thông tin</p>
             <br>
-            <input type="text" name="name" class="register-input1" placeholder="Mèo béo" />
-            <input type="text" name="phone" class="register-input1" style="margin-left:2.9%;" placeholder="0353253464" />
+            <form>
 
-            <input type="text" name="address" class="register-input2" placeholder="Ngõ tự do" />
-            <input type="text" name="note" class="register-input2" placeholder="Ghi chú: cho thêm nhiều thịt nhé" />
+                <input type="text" name="name" class="register-input1" placeholder="Mèo béo" />
+                <input type="text" name="phone" class="register-input1" style="margin-left:2.9%;" placeholder="0353253464" />
+
+                <input type="text" name="address" class="register-input2" placeholder="Ngõ tự do" />
+                <input type="text" name="note" class="register-input2" placeholder="Ghi chú: cho thêm nhiều thịt nhé" />
+                <input type="Submit" value="Đặt hàng">
+            </form>
+
         </div>
         <p class="title" style="text-align: center; font-size: 32px;">Giỏ hàng có gì?</p>
         <table>

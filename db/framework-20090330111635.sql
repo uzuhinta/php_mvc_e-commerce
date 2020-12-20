@@ -182,6 +182,7 @@ CREATE TABLE `orders_posts`(
     `id` int(10) unsigned NOT NULL auto_increment,
     `order_id`  int(10) unsigned NOT NULL,
     `post_id` int(10) unsigned NOT NULL,
+    `number` int(10) NOT NULL DEFAULT 1,
     PRIMARY KEY  (`id`)
 );
 

@@ -290,6 +290,17 @@ class SQLQuery {
 		return($result);
 	}
 
+    /** Custom insert other table */
+
+    function addOther($query){
+        $this->_result = mysqli_query( $this->_dbHandle, $query);
+        if ($this->_result == 0) {
+            /** Error Generation **/
+            return -1;
+        }
+        return 1;
+    }
+
     /** Describes a Table **/
 
 	protected function _describe() {
@@ -330,7 +341,7 @@ class SQLQuery {
 			/** Error Generation **/
 			return -1;
 		}
-		
+		return 1;
 	}
 
     /** Saves an Object i.e. Updates/Inserts Query **/

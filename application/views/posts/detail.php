@@ -25,7 +25,7 @@
                     </p>
                 </div>
                 <div class="buttons">
-                    <a href="#" class="button"><i class="fas fa-cart-plus"></i> &nbsp;Thêm vào giỏ hàng</a>
+                    <a href=<?php echo $html->linkSrc("orders", "add", $post["Post"]["id"]) ?> class="button"><i class="fas fa-cart-plus"></i> &nbsp;Thêm vào giỏ hàng</a>
                 </div>
             </div>
 

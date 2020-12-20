@@ -43,6 +43,11 @@ class UsersController extends VanillaController
                     $_SESSION["loggedin"] = true;
                     $_SESSION["userid"] = $info[0]["User"]["id"];
                     $_SESSION["role"] = $info[0]["User"]["role"];
+                    if(isset($_SESSION["saveLink"])){
+                        $rurl = "/" .$_SESSION["saveLink"];
+                        unset($_SESSION["saveLink"]);
+                        return header('Location: ' . BASE_PATH . $rurl);
+                    }
                     return header('Location: ' . BASE_PATH . '/posts');
                 }
             }
