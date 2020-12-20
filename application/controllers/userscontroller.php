@@ -44,8 +44,8 @@ class UsersController extends VanillaController
                     $_SESSION["userid"] = $info[0]["User"]["id"];
                     $_SESSION["role"] = $info[0]["User"]["role"];
                     $_SESSION["user_name"] = $username;
-                    if(isset($_SESSION["saveLink"])){
-                        $rurl = "/" .$_SESSION["saveLink"];
+                    if (isset($_SESSION["saveLink"])) {
+                        $rurl = "/" . $_SESSION["saveLink"];
                         unset($_SESSION["saveLink"]);
                         return header('Location: ' . BASE_PATH . $rurl);
                     }
@@ -66,7 +66,7 @@ class UsersController extends VanillaController
     function register()
     {
         if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] == true) {
-            header('Location: ' . BASE_PATH . '/posts/index');
+            header('Location: ' . BASE_PATH . '/posts');
         }
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if (
@@ -105,6 +105,50 @@ class UsersController extends VanillaController
 
     function manager()
     {
+    }
+
+    function edit()
+    {
+        if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] == false) {
+            header('Location: ' . BASE_PATH . '/posts/index');
+        }
+        $this->User->id =  $_SESSION["userid"];
+        $this->User->showHasOne();
+        $user = $this->User->search();
+        $this->set('user', $user);
+
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            if (
+                isset($_POST['name']) && isset($_POST['phone']) && isset($_POST['address']) &&
+                isset($_POST['username']) && isset($_POST['password']) && isset($_POST["typepassword"])
+            ) {
+                $name = $this->validate_input($_POST['name']);
+                $phone = $this->validate_input($_POST['phone']);
+                $address = $this->validate_input($_POST['address']);
+                $nameLogin = $this->validate_input($_POST['username']);
+                $password = $this->validate_input($_POST['password']);
+                $typepassword = $this->validate_input($_POST['typepassword']);
+                if ($password != $typepassword) {
+                    return $this->set("message", "Mat khau khong giong nhau");
+                } else {
+                    $this->User->where("nameLogin", $nameLogin);
+                    $isExist = $this->User->search();
+                    if ($isExist) {
+                        return $this->set("message", "Ten dang nhap ton tai");
+                    }
+                    $this->User->id =  $_SESSION["userid"];
+                    $this->User->name = $name;
+                    $this->User->phone = $phone;
+                    $this->User->address = $address;
+                    $this->User->nameLogin = $nameLogin;
+                    $this->User->password = $password;
+                    $this->User->save();
+                    return header('Location: ' . BASE_PATH . '/posts');
+                }
+            }
+
+            $this->set("message", "Vui long dien cac truong con thieu");
+        }
     }
 
     function afterAction()
