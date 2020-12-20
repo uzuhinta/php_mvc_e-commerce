@@ -26,8 +26,8 @@
         <div class="list-post">
             <?php foreach ($posts as $post): ?>
             <div class="card">
-
-                <img <?php echo $html->includeImg("com-chay", "jpg"); ?> >
+                <?php $img = explode('.', $post["Post"]["imgname"]);?>
+                <img <?php echo $html->includeImg("$img[0]", $img[1]); ?> >
                 <div class="text">
                     <div class="price"><span><?php echo $post["Post"]["price"] ?> đ</span></div>
                     <div class="name"><span><?php echo $post["Post"]["title"] ?></span></div>
