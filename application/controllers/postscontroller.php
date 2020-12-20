@@ -108,26 +108,12 @@ class PostsController extends VanillaController
 //        }
         if($_SERVER["REQUEST_METHOD"] == "POST" ){
             if (isset($_POST['name_product']) && isset($_POST['category']) && isset($_POST['description'])
-                && isset($_POST['price']) && isset($_POST['price_sale']) && isset($_POST['fileToUpload'])){
+                && isset($_POST['price']) && isset($_POST['price_sale'])){
                 $title = $_POST['name_product'];
                 $category_id = $_POST['category'];
                 $description = $_POST['description'];
                 $price = $_POST['price'];
                 $sale = $_POST['price_sale'];
-
-                $this->Post->title = $title;
-                $this->Post->category_id = $category_id;
-                $this->Post->description = $description;
-                $this->Post->price = $price;
-                if($price != "" && $price != 0){
-                    $this->Post->sale = $sale;
-                }
-
-                $result = $this->Post->save();
-
-                if($result == -1){
-                    return $this->set("message", false);
-                }
 
                 $target_dir = ROOT . DS . "public" . DS . "img" . DS;
                 $target_file = $target_dir . $_FILES["fileToUpload"]["name"];
@@ -145,9 +131,9 @@ class PostsController extends VanillaController
                 }
 
                 //check img is already exist
-                if (file_exists($target_file)) {
-                    $uploadOk = 0;
-                }
+//                if (file_exists($target_file)) {
+//                    $uploadOk = 0;
+//                }
 
                 //check file size limit 10Mb
                 if ($_FILES["fileToUpload"]["size"] > 10000000) {
@@ -166,11 +152,26 @@ class PostsController extends VanillaController
                 } else {
                     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
 //                        $this->set("message", "Upload anh thanh cong");
-                        return $this->set("message", false);
+//                        return $this->set("message", false);
                     } else {
 //                        $this->set("message", "Khong tai duoc file, thu lai");
                         return $this->set("message", false);
                     }
+                }
+
+                $this->Post->title = $title;
+                $this->Post->category_id = $category_id;
+                $this->Post->description = $description;
+                $this->Post->price = $price;
+                if($sale != "" && $sale != 0){
+                    $this->Post->sale = $sale;
+                }
+                $this->Post->imgname = $_FILES["fileToUpload"]["name"];
+
+                $result = $this->Post->save();
+
+                if($result == -1){
+                    return $this->set("message", false);
                 }
             }
             return $this->set("message", true);
