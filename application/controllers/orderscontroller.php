@@ -75,7 +75,9 @@ class OrdersController extends VanillaController
         $this->Order->showHMABTM();
         $cart = $this->Order->search();
 
-//        var_dump($cart[0]["Post"]);
+        $users = $this->Order->custom("Select * from users where id = ". $cart[0]["Order"]["user_id"]);
+        $this->set("users", $users);
+
         $total = 0;
         foreach ($cart[0]["Post"] as $value){
             if( $value["Post"]["sale"] != 0){
@@ -102,6 +104,9 @@ class OrdersController extends VanillaController
 
     function manager($id = null)
     {
+        if (isset($_SESSION["loggedin"]) == false || $_SESSION["role"] != "admin") {
+            return header('Location: ' . BASE_PATH . '/posts');
+        }
         $this->Order->id = $id;
         $this->Order->showHMABTM();
         $carts = $this->Order->search();

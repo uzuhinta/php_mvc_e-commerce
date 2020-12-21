@@ -111,14 +111,14 @@ class PostsController extends VanillaController
     function search(){
         if($_SERVER["REQUEST_METHOD"] == "GET"){
             if (isset($_GET["value"])){
-                $this->Post->like("title",$_GET["value"]);
-                $posts = $this->Post->search();
-                var_dump($posts);
+//                $this->Post->like("title",$_GET["value"]);
+//                $posts = $this->Post->search();
+
             }
-
-
-
         }
+        $posts = $this->Post->custom("Select * from posts limit 10;");
+        var_dump($posts);
+        var_dump($_GET["valueSearch"]);
     }
 
     function manager($pageNumber = 1)

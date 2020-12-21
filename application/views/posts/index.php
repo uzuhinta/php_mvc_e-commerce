@@ -6,7 +6,7 @@
 
             </form>
             <form method="GET" action=<?php echo $html->linkSrc("posts", "search"); ?> >
-                <input id= "panel-input" type="input" name="value" placeholder="Nhập món ăn ưa thích" >
+                <input id= "panel-input" type="text" name="valueSearch" placeholder="Nhập món ăn ưa thích" >
                 <input id="panel-search" type="submit" value="Tìm" style="visibility: hidden; display: none;">
             </form>
         </div>

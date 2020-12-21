@@ -6,10 +6,10 @@
             <br>
             <form>
 
-                <input type="text" name="name" class="register-input1" placeholder="Mèo béo" />
-                <input type="text" name="phone" class="register-input1" style="margin-left:2.9%;" placeholder="0353253464" />
+                <input type="text" name="name" class="register-input1" value="<?php echo $users[0]["User"]["name"]?>" disabled />
+                <input type="text" name="phone" class="register-input1" style="margin-left:2.9%;" disabled value="<?php echo $users[0]["User"]["phone"]?>" />
 
-                <input type="text" name="address" class="register-input2" placeholder="Ngõ tự do" />
+                <input type="text" name="address" class="register-input2" disabled value="<?php echo $users[0]["User"]["address"]?>"  />
 <!--                <input type="text" name="note" class="register-input2" placeholder="Ghi chú: cho thêm nhiều thịt nhé" />-->
 
             </form>
