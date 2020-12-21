@@ -2,8 +2,11 @@
 
         <div class="panel">
             <img style="width: 100%; height: auto;" <?php echo $html->includeImg("nen",  "jpg"); ?> alt="No" class="image_main" />
-            <form>
-                <input id= "panel-input" type="input" placeholder="Nhập món ăn ưa thích" >
+            <form action="#" method="post">
+
+            </form>
+            <form method="GET" action=<?php echo $html->linkSrc("posts", "search"); ?> >
+                <input id= "panel-input" type="input" name="value" placeholder="Nhập món ăn ưa thích" >
                 <input id="panel-search" type="submit" value="Tìm" style="visibility: hidden; display: none;">
             </form>
         </div>

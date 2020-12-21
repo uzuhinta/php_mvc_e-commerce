@@ -108,6 +108,19 @@ class PostsController extends VanillaController
         }
     }
 
+    function search(){
+        if($_SERVER["REQUEST_METHOD"] == "GET"){
+            if (isset($_GET["value"])){
+                $this->Post->like("title",$_GET["value"]);
+                $posts = $this->Post->search();
+                var_dump($posts);
+            }
+
+
+
+        }
+    }
+
     function manager($pageNumber = 1)
     {
         if (isset($_SESSION["loggedin"]) == false || $_SESSION["role"] != "admin") {
