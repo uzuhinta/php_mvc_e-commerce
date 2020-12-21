@@ -5,7 +5,7 @@
     <div class="left_sidebar">
         <ul>
             <li><a href=<?php echo $html->linkSrc("users", "manager") ?>>Manger Users</a></li>
-            <li><a href=<?php echo $html->linkSrc("categories", "manager") ?>>Manger Categories</a></li>
+<!--            <li><a href=<?php //echo $html->linkSrc("categories", "manager") ?> Manger Categories</a></li>-->
             <li><a href=<?php echo $html->linkSrc("posts", "manager") ?>>Manger Posts</a></li>
             <li class="active"><a href=<?php echo $html->linkSrc("orders", "manager") ?>>Manger Orders</a></li>
             <li><a href=<?php echo $html->linkSrc("blogs", "manager") ?>>Manger Blogs</a></li>

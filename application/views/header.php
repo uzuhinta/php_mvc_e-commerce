@@ -31,7 +31,7 @@
 							<img width="180" height="50" <?php echo $html->includeImg("Logohomnayangi", "png"); ?> alt="No" /></a>
 					</li>
 					<li>
-						<a href="#">
+						<a href=<?php echo $html->linkSrc("posts", "salehot") ?>>
 							<img width="200" height="50" <?php echo $html->includeImg("LogoSieusalesieuhot", "png"); ?> alt="No" /></a>
 					</li>
 					<li>

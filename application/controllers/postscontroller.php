@@ -31,6 +31,23 @@ class PostsController extends VanillaController
         $this->set("order", $order);
     }
 
+    function salehot(){
+        $this->Post->id = null;
+        $posts = $this->Post->search();
+//        echo count($posts);
+        for($i = 0; $i < count($posts); $i++){
+//            var_dump(intval($posts[$i]["Post"]["sale"]));;
+//            echo "<br/>";
+            if(intval($posts[$i]["Post"]["sale"]) == 0){
+                $posts[$i]["Post"]["show"] = 0;
+            }else{
+                $posts[$i]["Post"]["show"] = 1;
+            }
+        }
+//        var_dump($posts);
+        $this->set('posts', $posts);
+    }
+
     function detail($id = -1)
     {
         if ($id == -1) {

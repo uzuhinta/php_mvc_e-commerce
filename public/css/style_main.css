@@ -167,6 +167,7 @@ main .header-bottom .header-bottom-right ul li .test .content {
   background-color: #ff0000;
 }
 .admin_wrapper .admin_content {
+  height: auto;
   flex: 8;
   height: 100%;
   padding: 40px 100px 100px;
