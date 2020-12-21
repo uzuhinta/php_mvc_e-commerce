@@ -1,6 +1,6 @@
 <?php
 
-class BlogsController extends VanillaController
+class BlogsController extends BaseController
 {
 
     function beforeAction()

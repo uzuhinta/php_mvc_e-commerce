@@ -1,6 +1,6 @@
 <?php
 
-class UsersController extends VanillaController
+class UsersController extends BaseController
 {
 
     function beforeAction()
@@ -39,7 +39,8 @@ class UsersController extends VanillaController
                 $pwd = $this->validate_input($_POST['password']);
                 $this->User->where("nameLogin", $username);
                 $info = $this->User->search();
-                if ((isset($info[0]["User"]) == true) && ($info[0]["User"]["password"] == $pwd)) {
+
+                if ((isset($info[0]["User"]) == true) && ($info[0]["User"]["password"] == md5($pwd))) {
                     $_SESSION["loggedin"] = true;
                     $_SESSION["userid"] = $info[0]["User"]["id"];
                     $_SESSION["role"] = $info[0]["User"]["role"];
@@ -93,7 +94,7 @@ class UsersController extends VanillaController
                     $this->User->phone = $phone;
                     $this->User->address = $address;
                     $this->User->nameLogin = $nameLogin;
-                    $this->User->password = $password;
+                    $this->User->password = md5($password);
                     $this->User->save();
                     return header('Location: ' . BASE_PATH . '/users/login');
                 }
@@ -166,7 +167,7 @@ class UsersController extends VanillaController
                     $this->User->phone = $phone;
                     $this->User->address = $address;
                     $this->User->nameLogin = $nameLogin;
-                    $this->User->password = $password;
+                    $this->User->password = md5($password);
                     $this->User->save();
                     return header('Location: ' . BASE_PATH . '/posts');
                 }

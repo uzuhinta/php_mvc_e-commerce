@@ -1,5 +1,5 @@
 <?php
 
-class Blog extends VanillaModel
+class Blog extends BaseModel
 {
 }

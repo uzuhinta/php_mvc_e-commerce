@@ -1,6 +1,6 @@
 <?php
 
-class PostsController extends VanillaController
+class PostsController extends BaseController
 {
 
     function beforeAction()
@@ -31,20 +31,21 @@ class PostsController extends VanillaController
         $this->set("order", $order);
     }
 
-    function salehot(){
+    function salehot()
+    {
         $this->Post->id = null;
         $posts = $this->Post->search();
-//        echo count($posts);
-        for($i = 0; $i < count($posts); $i++){
-//            var_dump(intval($posts[$i]["Post"]["sale"]));;
-//            echo "<br/>";
-            if(intval($posts[$i]["Post"]["sale"]) == 0){
+        //        echo count($posts);
+        for ($i = 0; $i < count($posts); $i++) {
+            //            var_dump(intval($posts[$i]["Post"]["sale"]));;
+            //            echo "<br/>";
+            if (intval($posts[$i]["Post"]["sale"]) == 0) {
                 $posts[$i]["Post"]["show"] = 0;
-            }else{
+            } else {
                 $posts[$i]["Post"]["show"] = 1;
             }
         }
-//        var_dump($posts);
+        //        var_dump($posts);
         $this->set('posts', $posts);
     }
 
@@ -108,17 +109,19 @@ class PostsController extends VanillaController
         }
     }
 
-    function search(){
-        if($_SERVER["REQUEST_METHOD"] == "GET"){
-            if (isset($_GET["value"])){
-//                $this->Post->like("title",$_GET["value"]);
-//                $posts = $this->Post->search();
+    function search()
+    {
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            if (isset($_POST["value"])) {
+                //                $this->Post->like("title",$_GET["value"]);
+                //                $posts = $this->Post->search();
 
             }
+            $posts = $this->Post->custom("Select * from posts limit 10;");
+            var_dump($posts);
+            var_dump($_POST["valueSearch"]);
         }
-        $posts = $this->Post->custom("Select * from posts limit 10;");
-        var_dump($posts);
-        var_dump($_GET["valueSearch"]);
+        var_dump($_POST["valueSearch"]);
     }
 
     function manager($pageNumber = 1)
@@ -251,8 +254,7 @@ class PostsController extends VanillaController
             if (
                 isset($_POST['name_product']) && isset($_POST['category']) && isset($_POST['description'])
                 && isset($_POST['price']) && isset($_POST['price_sale'])
-            ) 
-            {
+            ) {
                 $title = $_POST['name_product'];
                 $category_id = $_POST['category'];
                 $description = $_POST['description'];

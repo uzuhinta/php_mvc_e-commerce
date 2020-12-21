@@ -5,7 +5,7 @@
             <form action="#" method="post">
 
             </form>
-            <form method="GET" action=<?php echo $html->linkSrc("posts", "search"); ?> >
+            <form method="POST" action=<?php echo $html->linkSrc("posts", "search"); ?> >
                 <input id= "panel-input" type="text" name="valueSearch" placeholder="Nhập món ăn ưa thích" >
                 <input id="panel-search" type="submit" value="Tìm" style="visibility: hidden; display: none;">
             </form>
@@ -37,6 +37,7 @@
                         <div class="price"><span><?php echo $post["Post"]["price"] ?> đ</span></div>
                         <div class="name"><span><?php echo $post["Post"]["title"] ?></span></div>
                     </div>
+<!--                    <div class="addCard">fjdsfkasfa</div>-->
                     <?php if ($post["Post"]["sale"] != 0): ?>
                         <div class="sale"><span>Sale</span></div>
                     <?php endif ?>

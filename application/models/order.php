@@ -1,7 +1,7 @@
 <?php
 
 
-class Order extends VanillaModel
+class Order extends BaseModel
 {
     var $hasOne = array("User" => "User");
     var $hasManyAndBelongsToMany = array("Post" => "Post");

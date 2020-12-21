@@ -1,5 +1,6 @@
 <?php
 
-class Admin extends VanillaModel {
-		var $abstract = true;
+class Admin extends BaseModel
+{
+	var $abstract = true;
 }
