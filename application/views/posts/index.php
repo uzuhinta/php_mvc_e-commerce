@@ -17,7 +17,7 @@
 
         <br/>
         <div class="filter">
-            <div><img style="margin-left: 0px;" <?php echo $html->includeImg("sortBy", "png"); ?> alt="No" /></div>
+            <div><img style="margin-left: 0px;" <?php echo $html->includeImg("sortby", "png"); ?> alt="No" /></div>
             <div><a><img <?php echo $html->includeImg("monMan", "png"); ?> alt="No" /></a></div>
             <div><a><img <?php echo $html->includeImg("monNgot", "png"); ?> alt="No" /></a></div>
             <div><a><img <?php echo $html->includeImg("comboXin", "png"); ?> alt="No" /></a></div>
