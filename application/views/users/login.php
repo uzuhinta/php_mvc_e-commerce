@@ -7,7 +7,7 @@
             <div class="input-icon">
                 <input type="password" name="password" class="register-input2" placeholder="Password" />
             </div>
-
+            <?php if (isset($message)){echo $message;} ?>
             <div class="button">
                 <a href="#" class="forgot">Quên mật khẩu?</a>
                 <div class="type_submit"><input type="submit" value="Đăng nhập"></div>

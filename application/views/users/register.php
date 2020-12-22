@@ -12,7 +12,7 @@
             <!--            <input type="text" name="email" class="register-input2" placeholder="Email" />-->
             <input type="password" name="password" class="register-input1" placeholder="Mật khẩu" />
             <input type="password" name="typepassword" class="register-input1" style="margin-left:2.9%;" placeholder="Xác nhận mật khẩu" />
-
+                <?php if (isset($message)){echo $message;} ?>
             <div class="type_submit"><input type="submit" value="Đăng ký"></div>
         </form>
         <?php
