@@ -109,19 +109,16 @@ class PostsController extends BaseController
         }
     }
 
-    function search()
+    function search($valueS = null)
     {
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            if (isset($_POST["value"])) {
-                //                $this->Post->like("title",$_GET["value"]);
-                //                $posts = $this->Post->search();
-
+            if(isset($_POST["valueSearch"])){
+                $this->Post->like("title", $this->validate_input($_POST["valueSearch"]));
+                $posts = $this->Post->search();
+                return $this->set("posts", $posts);
             }
-            $posts = $this->Post->custom("Select * from posts limit 10;");
-            var_dump($posts);
-            var_dump($_POST["valueSearch"]);
         }
-        var_dump($_POST["valueSearch"]);
+
     }
 
     function manager($pageNumber = 1)

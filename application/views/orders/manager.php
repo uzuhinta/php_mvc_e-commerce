@@ -5,7 +5,6 @@
     <div class="left_sidebar">
         <ul>
             <li><a href=<?php echo $html->linkSrc("users", "manager") ?>>Manger Users</a></li>
-<!--            <li><a href=<?php //echo $html->linkSrc("categories", "manager") ?> Manger Categories</a></li>-->
             <li><a href=<?php echo $html->linkSrc("posts", "manager") ?>>Manger Posts</a></li>
             <li class="active"><a href=<?php echo $html->linkSrc("orders", "manager") ?>>Manger Orders</a></li>
             <li><a href=<?php echo $html->linkSrc("blogs", "manager") ?>>Manger Blogs</a></li>
@@ -46,27 +45,18 @@
                         <td><?php if($cart["Order"]["temp"] == 1){ echo "Giỏ hàng tạm thời";}
 
                             if($cart["Order"]["temp"] == 0){ echo "Đă đặt hàng";}
+                            if($cart["Order"]["temp"] == 2){ echo "Đă hủy đơn";}
                         ?></td>
+
                         <td>
                             <a href="" class="edit">Sửa</a>
                         </td>
                         <td><a href="" class="delete">Xóa</a></td>
-                        <td><a href="" class="publish">Ẩn/Hiện</a></td>
+<!--                        <td><a href="" class="publish">Ẩn/Hiện</a></td>-->
                     </tr>
                     <?php endforeach; ?>
 
                 </tbody>
-<!--                <div class="pagination">-->
-<!--                    --><?php //for ($i = 1; $i <= $totalPages; $i++) : ?>
-<!--                        --><?php //if ($i == $currentPageNumber) : ?>
-<!--                            <a class="active">--><?php //echo $currentPageNumber ?><!--</a>-->
-<!--                        --><?php //else : ?>
-<!--                            --><?php
-//                            ?>
-<!--                            <a href=--><?php //echo $html->linkSrc("orders", "manager", $i) ?><!--> --><?php //echo $i; ?><!-- </a>-->
-<!--                        --><?php //endif ?>
-<!--                    --><?php //endfor ?>
-<!--                </div>-->
             </table>
         </div>
     </div>

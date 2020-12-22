@@ -10,7 +10,8 @@
 
 
     <div class="salehot">
-        <img width="50" height="220" <?php echo $html->includeImg("salehot", "png"); ?> alt="No" />
+        <a href=<?php echo $html->linkSrc("posts", "salehot") ?>>
+            <img width="50" height="220" <?php echo $html->includeImg("salehot", "png"); ?> alt="No" /></a>
     </div>
 
     <br/>
@@ -25,6 +26,7 @@
     </div>
 
     <div class="list-post">
+        <?php if (isset($posts[0])): ?>
         <?php foreach ($posts as $post): ?>
             <a href=<?php echo $html->linkSrc("posts", "detail", $post["Post"]["id"]) ?> >
                 <div class="card">
@@ -40,6 +42,10 @@
                 </div>
             </a>
         <?php endforeach; ?>
+        <?php else: echo "khong tin thay key qua";?>
+
+        <?php endif; ?>
+
     </div>
 </main>
 </div>

@@ -65,7 +65,8 @@ class OrdersController extends BaseController
             var_dump($getId[0]["Orders_post"]["id"]);
         }
 
-        return header('Location: ' . BASE_PATH . '/posts/detail/' . $idPost);
+//        return header('Location: ' . BASE_PATH . '/posts/detail/' . $idPost);
+        return header('Location: ' . BASE_PATH . '/orders/cart/');
     }
 
     function cart()

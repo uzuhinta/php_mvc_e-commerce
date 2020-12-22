@@ -10,7 +10,8 @@
 
 
     <div class="salehot">
-        <img width="50" height="220" <?php echo $html->includeImg("salehot", "png"); ?> alt="No" />
+        <a href=<?php echo $html->linkSrc("posts", "salehot") ?>>
+            <img width="50" height="220" <?php echo $html->includeImg("salehot", "png"); ?> alt="No" /></a>
     </div>
 
     <br/>
