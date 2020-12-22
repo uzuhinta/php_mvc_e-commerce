@@ -22,11 +22,12 @@
         <div><a><img <?php echo $html->includeImg("comboXin", "png"); ?> alt="No" /></a></div>
         <div><a href=<?php echo $html->linkSrc("posts", "orderby") ?> ><img <?php echo $html->includeImg("priceUp", "png"); ?> alt="No" /></a></div>
         <div><a href=<?php echo $html->linkSrc("posts", "orderby", "1" , "DESC") ?>><img <?php echo $html->includeImg("priceDown", "png"); ?> alt="No" /></a></div>
-        <div><input type="text" name="" id="" placeholder="Tìm kiếm đồ ăn yêu thích" /></div>
+        <div><a><input type="text" name="" id="" placeholder="Tìm kiếm đồ ăn yêu thích" /></div>
     </div>
 
     <div class="list-post">
         <?php foreach ($posts as $post): ?>
+            <?php if ($post["Post"]["show"] == 1): ?>
             <a href=<?php echo $html->linkSrc("posts", "detail", $post["Post"]["id"]) ?> >
                 <div class="card">
                     <?php $img = explode('.', $post["Post"]["imgname"]);?>
@@ -39,19 +40,10 @@
                         <div class="sale"><span>Sale</span></div>
                     <?php endif ?>
                 </div>
-            <a/>
+            </a>
+            <?php endif; ?>
         <?php endforeach; ?>
     </div>
-
-    <div class="pagination">
-        <?php for ($i = 1; $i <= $totalPages; $i++):?>
-            <?php if ($i == $currentPageNumber):?>
-                <a class="active" ><?php echo $currentPageNumber?></a>
-            <?php else: ?>
-                <?php // echo $html->link($i,'posts/index/'.$i)?>
-                <a href= <?php echo $html->linkSrc("posts", "orderby", $i, $order)?>  > <?php echo $i; ?> </a>
-            <?php endif?>
-        <?php endfor?>
     </div>
 
 

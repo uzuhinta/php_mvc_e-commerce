@@ -1,8 +1,8 @@
 <?php
 
 
-class User extends VanillaModel
+class User extends BaseModel
 {
-//    var $hasMany = array('Post' => 'Post');
+    //    var $hasMany = array('Post' => 'Post');
     var $hasOne = array('Avatar' => 'Avatar');
 }

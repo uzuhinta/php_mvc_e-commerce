@@ -1,4 +1,5 @@
 <?php
-class Post extends VanillaModel {
+class Post extends BaseModel
+{
     var $hasOne = array('Category' => 'Category');
 }

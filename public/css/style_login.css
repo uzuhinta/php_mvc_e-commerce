@@ -96,5 +96,6 @@ card {
 }
 
 .login-form input[type="submit"] {
+  cursor: pointer;
   display: inline-block;
 }

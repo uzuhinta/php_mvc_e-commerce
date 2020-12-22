@@ -31,7 +31,7 @@
 							<img width="180" height="50" <?php echo $html->includeImg("Logohomnayangi", "png"); ?> alt="No" /></a>
 					</li>
 					<li>
-						<a href="#">
+						<a href=<?php echo $html->linkSrc("posts", "salehot") ?>>
 							<img width="200" height="50" <?php echo $html->includeImg("LogoSieusalesieuhot", "png"); ?> alt="No" /></a>
 					</li>
 					<li>
@@ -50,7 +50,7 @@
 							</li>
 							<li class="dropdown">
 								Xin chào <?php if (isset($_SESSION['user_name']))
-												echo $_SESSION["user_name"] ?> <i class="fas fa-caret-down show"></i>
+												echo ucfirst($_SESSION["user_name"]) ?> <i class="fas fa-caret-down show"></i>
 								<div class="dropdown-content">
 									<ul>
 										<li><a href=<?php echo $html->linkSrc("users", "edit") ?>>Cập nhật thông tin</a></li>

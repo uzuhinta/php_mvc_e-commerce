@@ -21,7 +21,7 @@
     <div class="admin_content">
         <div class="content">
             <h2 class="page_title">Thêm blog</h2>
-            <form action=<?php echo $html->linkSrc("blogs", "add") ?> method="POST" class="login-form" enctype="multipart/form-data">
+            <form action=<?php echo $html->linkSrc("blogs", "add"); ?> method="POST" class="login-form" enctype="multipart/form-data">
                 <div>
                     <label class="title" for="title_blog">Tên</label>
                     <input type="text" name="title_blog" class="register-input2" id="title_blog" required>

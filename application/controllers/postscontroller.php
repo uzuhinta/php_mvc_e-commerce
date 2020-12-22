@@ -1,6 +1,6 @@
 <?php
 
-class PostsController extends VanillaController
+class PostsController extends BaseController
 {
 
     function beforeAction()
@@ -29,6 +29,24 @@ class PostsController extends VanillaController
         $this->set('posts', $posts);
         $this->set('currentPageNumber', $pageNumber);
         $this->set("order", $order);
+    }
+
+    function salehot()
+    {
+        $this->Post->id = null;
+        $posts = $this->Post->search();
+        //        echo count($posts);
+        for ($i = 0; $i < count($posts); $i++) {
+            //            var_dump(intval($posts[$i]["Post"]["sale"]));;
+            //            echo "<br/>";
+            if (intval($posts[$i]["Post"]["sale"]) == 0) {
+                $posts[$i]["Post"]["show"] = 0;
+            } else {
+                $posts[$i]["Post"]["show"] = 1;
+            }
+        }
+        //        var_dump($posts);
+        $this->set('posts', $posts);
     }
 
     function detail($id = -1)
@@ -89,6 +107,18 @@ class PostsController extends VanillaController
                 }
             }
         }
+    }
+
+    function search($valueS = null)
+    {
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            if(isset($_POST["valueSearch"])){
+                $this->Post->like("title", $this->validate_input($_POST["valueSearch"]));
+                $posts = $this->Post->search();
+                return $this->set("posts", $posts);
+            }
+        }
+
     }
 
     function manager($pageNumber = 1)
@@ -221,8 +251,7 @@ class PostsController extends VanillaController
             if (
                 isset($_POST['name_product']) && isset($_POST['category']) && isset($_POST['description'])
                 && isset($_POST['price']) && isset($_POST['price_sale'])
-            ) 
-            {
+            ) {
                 $title = $_POST['name_product'];
                 $category_id = $_POST['category'];
                 $description = $_POST['description'];

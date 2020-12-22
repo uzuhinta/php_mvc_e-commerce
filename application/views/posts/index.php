@@ -2,15 +2,17 @@
 
         <div class="panel">
             <img style="width: 100%; height: auto;" <?php echo $html->includeImg("nen",  "jpg"); ?> alt="No" class="image_main" />
-            <form>
-                <input id= "panel-input" type="input" placeholder="Nhập món ăn ưa thích" >
-                <input id="panel-search" type="submit" value="Tìm" style="visibility: hidden; display: none;">
+
+            <form action=<?php echo $html->linkSrc("posts", "search"); ?> method="POST" >
+                <input id= "panel-input" type="text" name="valueSearch" placeholder="Nhập món ăn ưa thích" >
+                <input id="panel-search" type="submit" value="Tìm">
             </form>
         </div>
 
 
         <div class="salehot">
-            <img width="50" height="220" <?php echo $html->includeImg("salehot", "png"); ?> alt="No" />
+            <a href=<?php echo $html->linkSrc("posts", "salehot") ?>>
+                <img width="50" height="220" <?php echo $html->includeImg("salehot", "png"); ?> alt="No" /></a>
         </div>
 
         <br/>
@@ -34,6 +36,7 @@
                         <div class="price"><span><?php echo $post["Post"]["price"] ?> đ</span></div>
                         <div class="name"><span><?php echo $post["Post"]["title"] ?></span></div>
                     </div>
+<!--                    <div class="addCard">fjdsfkasfa</div>-->
                     <?php if ($post["Post"]["sale"] != 0): ?>
                         <div class="sale"><span>Sale</span></div>
                     <?php endif ?>

@@ -1,6 +1,6 @@
 <?php
 
-class CategoriesController extends VanillaController
+class CategoriesController extends BaseController
 {
 
     function beforeAction()
@@ -44,8 +44,8 @@ class CategoriesController extends VanillaController
 
     }
 
-    function list(){
-
+    function list()
+    {
     }
 
     function manager()

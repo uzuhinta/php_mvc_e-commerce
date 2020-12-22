@@ -1,8 +1,10 @@
 <?php
 
 
-class Feedback extends VanillaModel
+class Feedback extends BaseModel
 {
-    var $hasOne = array("User" => "User",
-                        "Post" => "Post");
+    var $hasOne = array(
+        "User" => "User",
+        "Post" => "Post"
+    );
 }

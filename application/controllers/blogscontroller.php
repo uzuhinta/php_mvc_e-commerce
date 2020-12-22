@@ -1,6 +1,6 @@
 <?php
 
-class BlogsController extends VanillaController
+class BlogsController extends BaseController
 {
 
     function beforeAction()
@@ -89,7 +89,7 @@ class BlogsController extends VanillaController
         }
 
         $this->Blog->setPage($pageNumber);
-        $this->Blog->setLimit('5');
+        $this->Blog->setLimit('2');
         $blogs = $this->Blog->search();
         $totalPages = $this->Blog->totalPages();
         $this->set('totalPages', $totalPages);
