@@ -21,14 +21,6 @@ function stripSlashesDeep($value) {
 	return $value;
 }
 
-function removeMagicQuotes() {
-    if ((function_exists("get_magic_quotes_gpc") && get_magic_quotes_gpc())    || (ini_get('magic_quotes_sybase') && (strtolower(ini_get('magic_quotes_sybase'))!="off"))) {
-        $_GET    = stripSlashesDeep($_GET   );
-        $_POST   = stripSlashesDeep($_POST  );
-        $_COOKIE = stripSlashesDeep($_COOKIE);
-    }
-}
-
 /** Check register globals and remove them **/
 
 function unregisterGlobals() {
@@ -156,7 +148,6 @@ $cache = new Cache();
 $inflect = new Inflection();
 
 setReporting();
-removeMagicQuotes();
 unregisterGlobals();
 callHook();
 
