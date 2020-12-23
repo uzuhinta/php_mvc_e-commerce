@@ -22,7 +22,12 @@
         <div><a><img <?php echo $html->includeImg("comboXin", "png"); ?> alt="No" /></a></div>
         <div><a href=<?php echo $html->linkSrc("posts", "orderby") ?> ><img <?php echo $html->includeImg("priceUp", "png"); ?> alt="No" /></a></div>
         <div><a href=<?php echo $html->linkSrc("posts", "orderby", "1" , "DESC") ?>><img <?php echo $html->includeImg("priceDown", "png"); ?> alt="No" /></a></div>
-        <div><a><input type="text" name="" id="" placeholder="Tìm kiếm đồ ăn yêu thích" /></div>
+        <div>
+            <form action=<?php echo $html->linkSrc("posts", "search"); ?> method="POST" >
+                <input type="text" name="" id="" placeholder="Tìm kiếm đồ ăn yêu thích" />
+                <input id="panel-search" type="submit" value="Tìm" hidden>
+            </form>
+        </div>
     </div>
 
     <div class="list-post">
@@ -42,8 +47,8 @@
                 </div>
             </a>
         <?php endforeach; ?>
-        <?php else: echo "khong tin thay key qua";?>
-
+        <?php else:?>
+            <p class="title" style="text-align: center; margin: 190px auto;">Không có kết quả phù hợp</p>
         <?php endif; ?>
 
     </div>

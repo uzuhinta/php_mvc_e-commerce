@@ -8,18 +8,13 @@
             <input type="text" name="phone" class="register-input1" style="margin-left:2.9%;" placeholder="SĐT" />
             <input type="text" name="address" class="register-input2" placeholder="Địa chỉ" />
 
-            <input type="text" name="username" class="register-input2" placeholder="Tên đăng nhập" />
+            <input type="text" name="username" class="register-input2" minlength="8" placeholder="Tên đăng nhập" />
             <!--            <input type="text" name="email" class="register-input2" placeholder="Email" />-->
-            <input type="password" name="password" class="register-input1" placeholder="Mật khẩu" />
+            <input type="password" name="password" minlength="6" class="register-input1" placeholder="Mật khẩu" />
             <input type="password" name="typepassword" class="register-input1" style="margin-left:2.9%;" placeholder="Xác nhận mật khẩu" />
                 <?php if (isset($message)){echo $message;} ?>
             <div class="type_submit"><input type="submit" value="Đăng ký"></div>
         </form>
-        <?php
-        if (isset($message)) {
-            echo $message;
-        }
-        ?>
     </card>
 </div>
 </div>

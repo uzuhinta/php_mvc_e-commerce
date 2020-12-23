@@ -98,6 +98,7 @@
     transform: rotate(-45deg);
 }
 
+
 .list-post .card .sale span{
     display: block;
     margin-top: 25px;
@@ -169,6 +170,17 @@
     padding: 10px;
 }
 
+.list-post .card .hoverCard {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    z-index: 99;
+}
+
+
 /*hover card */
 .card:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -191,6 +203,10 @@
     font-size: 25px;
 }
 
+.card:hover .hoverCard{
+    background: rgba(251,51,0, 0.3);
+}
+
 .pagination {
     display: flex;
     margin-bottom: 10px;
@@ -210,3 +226,13 @@
 }
 
 .pagination a:hover:not(.active) {background-color: #ddd;}
+
+@media (max-width: 969px) {
+    .salehot {
+        top: 40%;
+    }
+    .salehot img{
+        height: 150px;
+        width: auto;
+    }
+}

@@ -2,9 +2,9 @@
 
     <div class="panel">
         <img style="width: 100%; height: auto;" <?php echo $html->includeImg("nen",  "jpg"); ?> alt="No" class="image_main" />
-        <form>
-            <input id= "panel-input" type="input" placeholder="Nhập món ăn ưa thích" >
-            <input id="panel-search" type="submit" value="Tìm" style="visibility: hidden; display: none;">
+        <form action=<?php echo $html->linkSrc("posts", "search"); ?> method="POST" >
+            <input id= "panel-input" type="text" name="valueSearch" placeholder="Nhập món ăn ưa thích" >
+            <input id="panel-search" type="submit" value="Tìm" hidden>
         </form>
     </div>
 
@@ -22,12 +22,17 @@
         <div><a><img <?php echo $html->includeImg("comboXin", "png"); ?> alt="No" /></a></div>
         <div><a href=<?php echo $html->linkSrc("posts", "orderby") ?> ><img <?php echo $html->includeImg("priceUp", "png"); ?> alt="No" /></a></div>
         <div><a href=<?php echo $html->linkSrc("posts", "orderby", "1" , "DESC") ?>><img <?php echo $html->includeImg("priceDown", "png"); ?> alt="No" /></a></div>
-        <div><input type="text" name="" id="" placeholder="Tìm kiếm đồ ăn yêu thích" /></div>
+        <div>
+            <form action=<?php echo $html->linkSrc("posts", "search"); ?> method="POST" >
+                <input type="text" name="" id="" placeholder="Tìm kiếm đồ ăn yêu thích" />
+                <input id="panel-search" type="submit" value="Tìm" hidden>
+            </form>
+        </div>
     </div>
 
     <div class="list-post">
         <?php foreach ($posts as $post): ?>
-            <a href=<?php echo $html->linkSrc("posts", "detail", $post["Post"]["id"]) ?> >
+            <a href= <?php echo $html->linkSrc("posts", "detail", $post["Post"]["id"]) ?> >
                 <div class="card">
                     <?php $img = explode('.', $post["Post"]["imgname"]);?>
                     <img <?php echo $html->includeImg("$img[0]", $img[1]); ?> >
@@ -39,7 +44,7 @@
                         <div class="sale"><span>Sale</span></div>
                     <?php endif ?>
                 </div>
-            <a/>
+            </a>
         <?php endforeach; ?>
     </div>
 

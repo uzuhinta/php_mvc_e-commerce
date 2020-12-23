@@ -5,7 +5,7 @@
 
             <form action=<?php echo $html->linkSrc("posts", "search"); ?> method="POST" >
                 <input id= "panel-input" type="text" name="valueSearch" placeholder="Nhập món ăn ưa thích" >
-                <input id="panel-search" type="submit" value="Tìm">
+                <input id="panel-search" type="submit" value="Tìm" hidden>
             </form>
         </div>
 
@@ -23,24 +23,30 @@
             <div><a><img <?php echo $html->includeImg("comboXin", "png"); ?> alt="No" /></a></div>
             <div><a href=<?php echo $html->linkSrc("posts", "orderby") ?> ><img <?php echo $html->includeImg("priceUp", "png"); ?> alt="No" /></a></div>
             <div><a href=<?php echo $html->linkSrc("posts", "orderby", "1" , "DESC") ?>><img <?php echo $html->includeImg("priceDown", "png"); ?> alt="No" /></a></div>
-            <div><a><input type="text" name="" id="" placeholder="Tìm kiếm đồ ăn yêu thích" /></div>
+            <div>
+                <form action=<?php echo $html->linkSrc("posts", "search"); ?> method="POST" >
+                    <input type="text" name="" id="" placeholder="Tìm kiếm đồ ăn yêu thích" />
+                    <input id="panel-search" type="submit" value="Tìm" hidden>
+                </form>
+            </div>
         </div>
 
         <div class="list-post">
-            <?php foreach ($posts as $post): ?>
-            <a href= <?php echo $html->linkSrc("posts", "detail", $post["Post"]["id"]) ?> >
-                <div class="card">
-                    <?php $img = explode('.', $post["Post"]["imgname"]);?>
-                    <img <?php echo $html->includeImg("$img[0]", $img[1]); ?> >
-                    <div class="text">
-                        <div class="price"><span><?php echo $post["Post"]["price"] ?> đ</span></div>
-                        <div class="name"><span><?php echo $post["Post"]["title"] ?></span></div>
+            <?php foreach ($posts as $post):?>
+                <a href= <?php echo $html->linkSrc("posts", "detail", $post["Post"]["id"]) ?> >
+                    <div class="card">
+                        <?php $img = explode('.', $post["Post"]["imgname"]);?>
+                        <img <?php echo $html->includeImg("$img[0]", $img[1]); ?> >
+                        <div class="text">
+                            <div class="price"><span><?php echo $post["Post"]["price"] ?> đ</span></div>
+                            <div class="name"><span><?php echo $post["Post"]["title"] ?></span></div>
+                        </div>
+                        <?php if ($post["Post"]["sale"] != 0): ?>
+                            <div class="sale"><span>Sale</span></div>
+                        <?php endif ?>
+<!--                        <a href=<?php //echo $html->linkSrc("orders", "add", $post["Post"]["id"]) ?> class="hoverCard"></a>-->
                     </div>
-                    <?php if ($post["Post"]["sale"] != 0): ?>
-                        <div class="sale"><span>Sale</span></div>
-                    <?php endif ?>
-                </div>
-            </a>
+                </a>
             <?php endforeach; ?>
         </div>
 

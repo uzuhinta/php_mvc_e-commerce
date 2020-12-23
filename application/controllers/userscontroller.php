@@ -159,9 +159,7 @@ class UsersController extends BaseController
                 } else {
                     $this->User->where("nameLogin", $nameLogin);
                     $isExist = $this->User->search();
-                    if ($isExist) {
-                        return $this->set("message", "Tên đăng nhập đã tồn tại");
-                    }
+
                     $this->User->id =  $_SESSION["userid"];
                     $this->User->name = $name;
                     $this->User->phone = $phone;
