@@ -2,9 +2,9 @@
 
     <div class="panel">
         <img style="width: 100%; height: auto;" <?php echo $html->includeImg("nen",  "jpg"); ?> alt="No" class="image_main" />
-        <form>
-            <input id= "panel-input" type="input" placeholder="Nhập món ăn ưa thích" >
-            <input id="panel-search" type="submit" value="Tìm" style="visibility: hidden; display: none;">
+        <form action=<?php echo $html->linkSrc("posts", "search"); ?> method="POST" >
+            <input id= "panel-input" type="text" name="valueSearch" placeholder="Nhập món ăn ưa thích" >
+            <input id="panel-search" type="submit" value="Tìm" hidden>
         </form>
     </div>
 
@@ -24,8 +24,8 @@
         <div><a href=<?php echo $html->linkSrc("posts", "orderby", "1" , "DESC") ?>><img <?php echo $html->includeImg("priceDown", "png"); ?> alt="No" /></a></div>
         <div>
             <form action=<?php echo $html->linkSrc("posts", "search"); ?> method="POST" >
-                <input type="text" name="" id="" placeholder="Tìm kiếm đồ ăn yêu thích" />
-                <input id="panel-search" type="submit" value="Tìm" hidden>
+                <input type="text" name="valueSearch" placeholder="Nhập món ăn ưa thích" >
+                <input type="submit" value="Tìm" hidden>
             </form>
         </div>
     </div>
