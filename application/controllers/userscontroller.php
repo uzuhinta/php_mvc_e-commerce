@@ -198,7 +198,7 @@ class UsersController extends BaseController
                 $old_password = $this->validate_input($_POST['old_password']);
                 $password = $this->validate_input($_POST['password']);
                 $reset_password = $this->validate_input($_POST['reset_password']);
-                if ($old_password != $user["User"]["password"]) {
+                if (md5($old_password) != $user["User"]["password"]) {
                     return $this->set("message", "Vui lòng nhập chính xác mật khẩu cũ");
                 }
                 if ($old_password == $password) {
@@ -208,7 +208,7 @@ class UsersController extends BaseController
                     return $this->set("message", "Mật khẩu không giống nhau");
                 } else {
                     $this->User->id =  $_SESSION["userid"];
-                    $this->User->password = $password;
+                    $this->User->password = md5($password);
                     $this->User->save();
                     return header('Location: ' . BASE_PATH . '/users/login');
                 }

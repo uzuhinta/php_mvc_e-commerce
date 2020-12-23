@@ -9,7 +9,7 @@
             <input type="text" name="address" class="register-input2" placeholder="Địa chỉ" value="<?php echo $user["User"]["address"]; ?>" required />
 
             <input type="text" name="username" class="register-input2" placeholder="Tên đăng nhập" value="<?php echo $user["User"]["nameLogin"]; ?>" required />
-            <input type="password" name="password" class="register-input1" placeholder="Mật khẩu" value="<?php echo $user["User"]["password"]; ?>" required />
+            <input type="password" name="password" class="register-input1" placeholder="Mật khẩu" value="" required />
             <input type="password" name="typepassword" class="register-input1" style="margin-left:2.9%;" placeholder="Xác nhận mật khẩu" required />
 
             <div class="type_submit"><input type="submit" value="Cập nhật"></div>
