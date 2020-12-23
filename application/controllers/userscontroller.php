@@ -110,7 +110,7 @@ class UsersController extends BaseController
             return header('Location: ' . BASE_PATH . '/posts');
         }
         $this->User->setPage($pageNumber);
-        $this->User->setLimit('8');
+        $this->User->setLimit('4');
         $this->User->id = null;
         $this->User->showHasOne();
         $users = $this->User->search();

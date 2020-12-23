@@ -147,7 +147,7 @@ class PostsController extends BaseController
             return header('Location: ' . BASE_PATH . '/posts');
         }
         $this->Post->setPage($pageNumber);
-        $this->Post->setLimit('6');
+        $this->Post->setLimit('4');
         $this->Post->id = null;
         $this->Post->showHasOne();
         $infoPost = $this->Post->search();
