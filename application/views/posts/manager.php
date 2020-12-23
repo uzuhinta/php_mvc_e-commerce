@@ -32,7 +32,7 @@
                         Giá tiền
                     </th>
                     <th>
-                        Giá tiền
+                        Giá sale
                     </th>
                     <th colspan="3">
                         Hoạt động
@@ -48,7 +48,11 @@
                             <td> <?php echo $post["Post"]["title"]; ?> </td>
                             <td><?php echo $post["Category"]["name"]; ?></td>
                             <td><?php echo $post["Post"]["price"]; ?></td>
-                            <td><?php echo $post["Post"]["sale"]; ?></td>
+                            <?php if ($post["Post"]["sale"] != 0): ?>
+                                <td><?php echo $post["Post"]["sale"]; ?></td>
+                            <?php else: ?>
+                                <td>----</td>
+                            <?php endif; ?>
                             <td>
                                 <a href=<?php echo $html->linkSrc("posts", "edit", $post["Post"]["id"]) ?> class="edit">Sửa</a>
                             </td>
