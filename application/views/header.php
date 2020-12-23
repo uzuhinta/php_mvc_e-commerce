@@ -4,6 +4,7 @@
 <head>
 	<meta charset="UTF-8" />
 	<title>Ping Pong</title>
+    <link rel="icon" href=<?php echo '"' . BASE_PATH . '/img/icon.jpg"' ?>>
 	<?php echo $html->includeCss("header"); ?>
 	<?php echo $html->includeCss("style_login"); ?>
 	<?php echo $html->includeCss("style_main"); ?>
