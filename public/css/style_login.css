@@ -1,3 +1,13 @@
+@font-face {
+  font-family: SemiB;
+  src: url(../SemiB.ttf);
+}
+
+@font-face {
+  font-family: SVNSmirk;
+  src: url(../SVNSmirk.ttf);
+}
+
 card {
   cursor: pointer;
   max-width: 40%;

@@ -1,3 +1,13 @@
+@font-face {
+  font-family: SemiB;
+  src: url(../SemiB.ttf);
+}
+
+@font-face {
+  font-family: SVNSmirk;
+  src: url(../SVNSmirk.ttf);
+}
+
 main .header-main {
   padding: 0px;
   height: 423px;
@@ -100,7 +110,7 @@ main .header-bottom .header-bottom-right ul li .test .content {
   text-align: right;
   margin: 5px;
   color: white;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-family: SVNSmirk,Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 
   font-weight: bold;
 }
@@ -113,14 +123,14 @@ main .header-bottom .header-bottom-right ul li .test .content {
   color: #fff;
   font-size: 13px;
   text-decoration: line-through;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+  font-family: SVNSmirk,"Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
 }
 .priceEnd {
   color: #fff;
   font-size: 16px;
   text-decoration: none;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+  font-family: SVNSmirk,"Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
 }
 
@@ -299,7 +309,6 @@ input#file_input {
   display: flex;
   align-items: center;
   justify-content: center;
-  display: relative;
   background-image: url("../img/back.jpg");
   background-size: 100%;
 }
@@ -383,7 +392,7 @@ input#file_input {
 }
 
 .image {
-  display: absolute;
+  /*display: absolute;*/
 }
 
 .images img {
@@ -501,7 +510,7 @@ main .header-bottom .header-bottom-right ul li .test .content {
   text-align: right;
   margin: 5px;
   color: white;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-family: SVNSmirk ,Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 
   font-weight: bold;
 }
@@ -514,14 +523,14 @@ main .header-bottom .header-bottom-right ul li .test .content {
   color: #fff;
   font-size: 13px;
   text-decoration: line-through;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+  font-family: SVNSmirk, "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
 }
 .priceEnd {
   color: #fff;
   font-size: 16px;
   text-decoration: none;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+  font-family: SVNSmirk, "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
 }
 
@@ -647,7 +656,7 @@ td {
   display: flex;
   align-items: center;
   justify-content: center;
-  display: relative;
+  /*display: relative;*/
   background-image: url("../img/back.jpg");
   background-size: 100%;
 }
@@ -703,7 +712,7 @@ input#file_input {
   display: flex;
   align-items: center;
   justify-content: center;
-  display: relative;
+  /*display: relative;*/
   background-image: url("../img/back.jpg");
   background-size: 100%;
 }
@@ -736,7 +745,7 @@ input#file_input {
   display: flex;
   align-items: center;
   justify-content: center;
-  display: relative;
+  /*display: relative;*/
   background-image: url("../img/back.jpg");
   background-size: 100%;
 }
@@ -818,7 +827,7 @@ input#file_input {
 }
 
 .image {
-  display: absolute;
+  /*display: absolute;*/
 }
 
 .images img {

@@ -6,8 +6,8 @@
         <div class="suggest">
             <div class="card_suggest">
                 <table>
-                    <tr>
-                        <th><?php echo  $blog[0]["Blog"]["title"]; ?></th>
+                    <tr >
+                        <th colspan="2" style="font-size: 25px; text-align: center;"><?php echo  $blog[0]["Blog"]["title"]; ?></th>
                     </tr>
                     <tr>
                         <td style="width:200px;">
@@ -16,7 +16,7 @@
                             <img height="200" <?php echo $html->includeImg("$img[0]", "$img[1]"); ?> alt="No" />
 
                         </td>
-                        <td>
+                        <td style="font-family: SemiB;">
                             <?php echo  $blog[0]["Blog"]["content"]; ?>
                         </td>
                     </tr>
