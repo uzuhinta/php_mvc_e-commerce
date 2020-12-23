@@ -89,7 +89,7 @@ class BlogsController extends BaseController
         }
 
         $this->Blog->setPage($pageNumber);
-        $this->Blog->setLimit('2');
+        $this->Blog->setLimit('1');
         $blogs = $this->Blog->search();
         $totalPages = $this->Blog->totalPages();
         $this->set('totalPages', $totalPages);

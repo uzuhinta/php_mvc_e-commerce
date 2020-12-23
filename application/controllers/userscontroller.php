@@ -129,7 +129,14 @@ class UsersController extends BaseController
             return header('Location: ' . BASE_PATH . '/users/manager');
         }
         $this->User->id = $id;
-        $this->User->delete();
+        $user = $this->User->search();
+        if($user["User"]["role"] == "admin"){
+            $this->set("message", "Bạn không thể xóa quyền quản trị");
+        }else{
+            $this->User->id = $id;
+            $this->User->delete();
+            $this->set("message", "Xóa thành công");
+        }
         return header('Location: ' . BASE_PATH . '/users/manager');
     }
 

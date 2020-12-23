@@ -98,6 +98,34 @@ class OrdersController extends BaseController
         $this->set("total", $total);
     }
 
+    function detail($id = -1){
+        if (isset($_SESSION["loggedin"]) == false || $_SESSION["role"] != "admin") {
+            return header('Location: ' . BASE_PATH . '/posts');
+        }
+        $this->Order->where("id", $id);
+        $this->Order->showHMABTM();
+        $cart = $this->Order->search();
+
+        $users = $this->Order->custom("Select * from users where id = " . $cart[0]["Order"]["user_id"]);
+        $this->set("users", $users);
+
+        $total = 0;
+        foreach ($cart[0]["Post"] as $value) {
+            if ($value["Post"]["sale"] != 0) {
+                $price = $value["Post"]["sale"];
+            } else {
+                $price = ($value["Post"]["price"]);
+            }
+            $number = ($value["orders_posts"]["number"]);
+            //            var_dump($price);
+            //            var_dump($number);
+            $total += $price * $number;
+        }
+        $this->Order->custom("UPDATE orders SET price = " . $total . " WHERE user_id = " . $_SESSION["userid"] . ";");
+        $this->set("infos", $cart[0]["Post"]);
+        $this->set("total", $total);
+    }
+
     function checkout()
     {
         $this->Order->custom("UPDATE orders SET temp = 0 WHERE id = " . $_SESSION["orderid"] . ";");
@@ -127,18 +155,16 @@ class OrdersController extends BaseController
             //            var_dump($user);
             $carts[$i]["Username"] = $user;
         }
-        //        var_dump($carts);
-
-
-        //        foreach ($carts as $cart){
-        //          $user = $this->Order->custom("Select name from users where id = " . $cart["Order"]["user_id"]);
-        ////          var_dump($user);
-        //          array_push($cart,$user);
-        ////          var_dump($cart);
-        //          echo "<hr/>";
-        //        }
-        //                var_dump($carts);
         $this->set("carts", $carts);
+    }
+
+    function delete($id = null){
+        if (isset($_SESSION["loggedin"]) == false || $_SESSION["role"] != "admin") {
+            return header('Location: ' . BASE_PATH . '/posts');
+        }
+        $this->Order->id = $id;
+        $this->Order->delete();
+        return header('Location: ' . BASE_PATH . '/orders/manager');
     }
 
     function afterAction()

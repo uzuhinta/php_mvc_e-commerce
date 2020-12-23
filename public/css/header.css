@@ -89,6 +89,7 @@ header .header-right ul li:hover .sub_menu ul li {
   background-color: #f1f1f1;
   min-width: 160px;
   z-index: 1;
+  transition: all 0.4s ease;
 }
 .dropdown:hover .dropdown-content {
   display: block;

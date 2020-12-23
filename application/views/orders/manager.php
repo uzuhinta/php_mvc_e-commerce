@@ -25,12 +25,12 @@
                         Tên người mua
                     </th>
                     <th>
-                        Số tiền
+                        Thời gian
                     </th>
                     <th>
                         Trạng thái
                     </th>
-                    <th colspan="3">
+                    <th colspan="2" style="align-content: center;">
                         Hoạt động
                     </th>
                 </thead>
@@ -41,17 +41,17 @@
                         <td><?php if(isset($cart["Username"][0]["User"]["name"])){
                             echo ($cart["Username"][0]["User"]["name"]);
                             }; ?></td>
-                        <td><?php echo $cart["Order"]["price"]; ?></td>
+                        <td><?php echo $cart["Order"]["date"]; ?></td>
                         <td><?php if($cart["Order"]["temp"] == 1){ echo "Giỏ hàng tạm thời";}
 
-                            if($cart["Order"]["temp"] == 0){ echo "Đă đặt hàng";}
-                            if($cart["Order"]["temp"] == 2){ echo "Đă hủy đơn";}
+                            if($cart["Order"]["temp"] == 0){ echo "Đã đặt hàng";}
+                            if($cart["Order"]["temp"] == 2){ echo "Đã hủy đơn";}
                         ?></td>
 
                         <td>
-                            <a href="" class="edit">Sửa</a>
+                            <a href=<?php echo $html->linkSrc("orders", "detail", $cart["Order"]["id"]) ?> class="edit">Xem chi tiết</a>
                         </td>
-                        <td><a href="" class="delete">Xóa</a></td>
+                        <td><a href=<?php echo $html->linkSrc("orders", "delete", $cart["Order"]["id"]) ?> class="delete">Xóa</a></td>
 <!--                        <td><a href="" class="publish">Ẩn/Hiện</a></td>-->
                     </tr>
                     <?php endforeach; ?>
