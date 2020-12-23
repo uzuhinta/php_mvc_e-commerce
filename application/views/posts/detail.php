@@ -41,7 +41,7 @@
 
 <div class="feedback">
     <form class="login-form" method="post" action=<?php echo $html->linkSrc("feedbacks", "add", $post["Post"]["id"]) ?>>
-        <input type="text" name="content" class="register-input2" placeholder="Bạn có thích sản phẩm này không?" />
+        <input type="text" name="content" class="register-input2" minlength="5" placeholder="Bạn có thích sản phẩm này không?" />
         <div class="type_submit"><input type="submit" value="Đánh giá"></div>
     </form>
     <div>

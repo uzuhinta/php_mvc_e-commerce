@@ -34,7 +34,11 @@ class FeedbacksController extends BaseController
                 $this->Feedback->id = null;
                 $this->Feedback->content = $content;
                 $this->Feedback->post_id = $post_id;
-                $this->Feedback->user_id = $_SESSION['userid'];
+                if(isset($_SESSION['userid'])){
+                    $this->Feedback->user_id = $_SESSION['userid'];
+                }else{
+                    $this->Feedback->user_id = 1;
+                }
                 $result = $this->Feedback->save();
                 if ($result == -1 || $result == null) {
                     $this->set("message", false);
