@@ -60,6 +60,8 @@ class PostsController extends BaseController
             if (intval($posts[$i]["Post"]["category_id"]) == $category_id) {
                 $posts[$i]["Post"]["show"] = 1;
                 $count++;
+            }else{
+                $posts[$i]["Post"]["show"] = 0;
             }
         }
         //        var_dump($posts);
