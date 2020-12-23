@@ -31,23 +31,27 @@
     </div>
 
     <div class="list-post">
-        <?php foreach ($posts as $post): ?>
-            <?php if ($post["Post"]["show"] == 1): ?>
-            <a href= <?php echo $html->linkSrc("posts", "detail", $post["Post"]["id"]) ?> >
-                <div class="card">
-                    <?php $img = explode('.', $post["Post"]["imgname"]);?>
-                    <img <?php echo $html->includeImg("$img[0]", $img[1]); ?> >
-                    <div class="text">
-                        <div class="price"><span><?php echo $post["Post"]["price"] ?> đ</span></div>
-                        <div class="name"><span><?php echo $post["Post"]["title"] ?></span></div>
-                    </div>
-                    <?php if ($post["Post"]["sale"] != 0): ?>
-                        <div class="sale"><span>Sale</span></div>
-                    <?php endif ?>
-                </div>
-            </a>
-            <?php endif; ?>
-        <?php endforeach; ?>
+        <?php if ($count != 0): ?>
+            <?php foreach ($posts as $post): ?>
+                <?php if ($post["Post"]["show"] == 1): ?>
+                    <a href= <?php echo $html->linkSrc("posts", "detail", $post["Post"]["id"]) ?> >
+                        <div class="card">
+                            <?php $img = explode('.', $post["Post"]["imgname"]);?>
+                            <img <?php echo $html->includeImg("$img[0]", $img[1]); ?> >
+                            <div class="text">
+                                <div class="price"><span><?php echo $post["Post"]["price"] ?> đ</span></div>
+                                <div class="name"><span><?php echo $post["Post"]["title"] ?></span></div>
+                            </div>
+                            <?php if ($post["Post"]["sale"] != 0): ?>
+                                <div class="sale"><span>Sale</span></div>
+                            <?php endif ?>
+                        </div>
+                    </a>
+                <?php endif; ?>
+            <?php endforeach; ?>
+        <?php else: ?>
+            <p class="title" style="text-align: center; margin: 190px auto;">Không có kết quả phù hợp</p>
+        <?php endif; ?>
     </div>
     </div>
 

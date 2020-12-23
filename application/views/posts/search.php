@@ -16,10 +16,10 @@
 
     <br/>
     <div class="filter">
-        <div><img style="margin-left: 0px;" <?php echo $html->includeImg("sortby", "png"); ?> alt="No" /></div>
-        <div><a><img <?php echo $html->includeImg("monMan", "png"); ?> alt="No" /></a></div>
-        <div><a><img <?php echo $html->includeImg("monNgot", "png"); ?> alt="No" /></a></div>
-        <div><a><img <?php echo $html->includeImg("comboXin", "png"); ?> alt="No" /></a></div>
+        <div><img style="margin-left: 0px; cursor: default;" <?php echo $html->includeImg("sortby", "png"); ?> alt="No" /></div>
+        <div><a href=<?php echo $html->linkSrc("posts", "findcategory", "1") ?> ><img <?php echo $html->includeImg("monMan", "png"); ?> alt="No" /></a></div>
+        <div><a href=<?php echo $html->linkSrc("posts", "findcategory", "2") ?> ><img <?php echo $html->includeImg("monNgot", "png"); ?> alt="No" /></a></div>
+        <div><a href=<?php echo $html->linkSrc("posts", "findcategory", "3") ?> ><img <?php echo $html->includeImg("comboXin", "png"); ?> alt="No" /></a></div>
         <div><a href=<?php echo $html->linkSrc("posts", "orderby") ?> ><img <?php echo $html->includeImg("priceUp", "png"); ?> alt="No" /></a></div>
         <div><a href=<?php echo $html->linkSrc("posts", "orderby", "1" , "DESC") ?>><img <?php echo $html->includeImg("priceDown", "png"); ?> alt="No" /></a></div>
         <div>

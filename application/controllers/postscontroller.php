@@ -49,6 +49,24 @@ class PostsController extends BaseController
         $this->set('posts', $posts);
     }
 
+    function findcategory($category_id = null){
+        if ($category_id == null || $category_id < 1 || $category_id > 3){
+            return header('Location: ' . BASE_PATH . '/posts');
+        }
+        $this->Post->id = null;
+        $posts = $this->Post->search();
+        $count = 0;
+        for ($i = 0; $i < count($posts); $i++) {
+            if (intval($posts[$i]["Post"]["category_id"]) == $category_id) {
+                $posts[$i]["Post"]["show"] = 1;
+                $count++;
+            }
+        }
+        //        var_dump($posts);
+        $this->set('posts', $posts);
+        $this->set("count", $count);
+    }
+
     function detail($id = -1)
     {
         if ($id == -1) {
