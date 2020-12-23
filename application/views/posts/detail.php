@@ -13,24 +13,24 @@
                 <div class="price">
                     <?php if ($post["Post"]["sale"] != 0): ?>
                         <h3 class="price-begin"> <?php echo $post["Post"]["price"] ?> đ</h3>
-                        <h3> <?php echo $post["Post"]["sale"] ?> đ</h3>
+                        <h3 style="font-family: SemiB;"> <?php echo $post["Post"]["sale"] ?> đ</h3>
                     <?php else: ?>
-                        <h3> <?php echo $post["Post"]["price"] ?> đ</h3>
+                        <h3 style="font-family: SemiB;"> <?php echo $post["Post"]["price"] ?> đ</h3>
                     <?php endif; ?>
                 </div>
                 <div class="info-content">
-                    <h3>Mô tả</h3>
-                    <p>
+                    <h3 style="font-family: SemiB;font-size: 25px;">Mô tả</h3>
+                    <p style="font-family: SemiB;">
                         <?php echo $post["Post"]["description"] ?>
                     </p>
                 </div>
                 <formclass="login-form">
-                    <label class="title" for="number">Số lượng: </label>
-                    <input type="number" min="1" id="numberadd" value="1" onchange="setNumber()" name="name_category" class="register-input2">
+                    <label class="title" for="number" style="font-family: SemiB; ">Số lượng: </label>
+                    <input type="number" min="1" id="numberadd" value="1" onchange="setNumber()" name="name_category" class="register-input2" style="padding-left: 10%; font-size: 20px;font-family: SemiB;">
 <!--                    <div class="type_submit"><input type="submit" value="Thêm"></div>-->
                 </form>
-                <div class="buttons">
-                    <a id="hrefAdd" href=<?php echo $html->linkSrc("orders", "add", $post["Post"]["id"]) ?> class="button"><i class="fas fa-cart-plus"></i> &nbsp;Thêm vào giỏ hàng</a>
+                <div class="buttons" style="width: 290px; ">
+                    <a id="hrefAdd" href=<?php echo $html->linkSrc("orders", "add", $post["Post"]["id"]) ?> class="button" style="width: 290px;"><i class="fas fa-cart-plus"></i> &nbsp;Thêm vào giỏ hàng</a>
                 </div>
             </div>
 

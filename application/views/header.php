@@ -49,9 +49,9 @@
                                 </a>
 							</li>
 							<li class="dropdown">
-								Xin chào <?php if (isset($_SESSION['user_name']))
-												echo ucfirst($_SESSION["user_name"]) ?> <i class="fas fa-caret-down show"></i>
-								<div class="dropdown-content">
+								<div style="font-family: SVNSmirk; font-size: 20px;">Xin chào <?php if (isset($_SESSION['user_name'])){
+                                        echo ucfirst($_SESSION["user_name"]). "   ";} ?><i class="fas fa-caret-down show"></i></div>
+                                <div class="dropdown-content">
 									<ul>
 										<li><a href=<?php echo $html->linkSrc("users", "edit") ?>>Cập nhật thông tin</a></li>
 										<li><a href=<?php echo $html->linkSrc("users", "change_pass") ?>>Đổi mật khẩu</a></li>
